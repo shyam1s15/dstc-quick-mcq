@@ -411,11 +411,37 @@ header,
                 <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
             
                 <!--Grid row-->
-                <div class="row">
+                <div class="row justify-content-md-center">
             
                 <!--Grid column-->
-                <div class="col-lg-5 col-md-12">
-            
+                <div class="col-md-8">
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                      <!-- Form contact -->
+                      <form class="p-5 grey-text">
+                        <div class="md-form form-sm"> <i class="fas fa-user prefix"></i>
+                          <input type="text" id="form3" class="form-control form-control-sm">
+                          <label for="form3">Your name</label>
+                        </div>
+                        <div class="md-form form-sm"> <i class="fas fa-envelope prefix"></i>
+                          <input type="text" id="form2" class="form-control form-control-sm">
+                          <label for="form2">Your email</label>
+                        </div>
+                        <div class="md-form form-sm"> <i class="fas fa-tag prefix"></i>
+                          <input type="text" id="form32" class="form-control form-control-sm">
+                          <label for="form34">Subject</label>
+                        </div>
+                        <div class="md-form form-sm"> <i class="fas fa-pencil-alt prefix"></i>
+                          <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                          <label for="form8">Your message</label>
+                        </div>
+                        <div class="text-center mt-4">
+                          <button class="btn btn-primary">Send <i class="far fa-paper-planeml-1"></i></button>
+                        </div>
+                      </form>
+                      <!-- Form contact -->
+                    </div>
+                    <!--Grid column-->
             
             
                 </div>
