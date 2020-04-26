@@ -22,6 +22,6 @@ Route::get('testExample', function () {
 });
 
 
-Route::get('/', function($id) {
+Route::get('/', function() {
     return view('index.welcome');
 });
