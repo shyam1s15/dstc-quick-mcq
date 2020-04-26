@@ -23,5 +23,22 @@ Route::get('testExample', function () {
 
 
 Route::get('/', function() {
-    return view('index.welcome');
+    return view('base.base');
 });
+
+
+Route::get('/test/ui', function() {
+    return view('test.testUIimages');
+});
+
+
+Route::get('/test/ui2', function() {
+    //
+    return view('test.UI2');
+});
+
+Route::get('/test/ui3', function() {
+    //
+    return view('test.UI3');
+});
+
