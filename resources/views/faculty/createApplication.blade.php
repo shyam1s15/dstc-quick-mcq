@@ -369,10 +369,20 @@
 </script>
 
 <script>
+    var fileSelected = false;
     $("#questionImageBtn").click(function(){
         $("#questionImageFile").click();
     });
 
+    $("#questionImageFile").change(function(){
+        if(fileSelected == false){
+            $("#questionImageBtn").attr("class","fas fa-image prefix green-text");
+            fileSelected = true;
+        }else{
+            $("#questionImageBtn").attr("class","fas fa-image prefix red-text");
+            fileSelected = false;
+        }
+    })
     {{--  var $img = $($("#questionImageFile").val());  --}}
     
       {{--  $img.next().attr()  $("#questionImageFile").attr("class","fas fa-image prefix green-text");  --}}
