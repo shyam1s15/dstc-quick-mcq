@@ -42,3 +42,23 @@ Route::get('/test/ui3', function() {
     return view('test.UI3');
 });
 
+Route::get('/test/ui4', function() {
+    //
+    return view('test.UI4');
+});
+
+
+Route::get('welcome', function() {
+    //
+    return view('index.welcome');
+});
+
+
+Route::get('faculty/create/app', function() {
+    return view('faculty.createApplication');
+});
+
+
+Route::get('test/uiBtns', function() {
+    return view('test.uiBtns');
+});

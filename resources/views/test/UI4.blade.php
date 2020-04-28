@@ -1,6 +1,71 @@
-@extends('base.header_onlyFooterSocialMedia')
+@extends('base.base')
 
-@section('main-content')
+<style>
+    
+</style>
+
+@section('content')
+
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+
+        <div class="container">
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- Links -->
+
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+            <!-- Collapsible content -->
+
+        </div>
+
+    </nav>
+    <!--/.Navbar-->
+
+</header>
 <main>
     <div class="container">
         
@@ -39,10 +104,7 @@
                                                     rows="4"></textarea>
                                                 <label for="form8">Any messages for us</label>
                                             </div>
-                                            <button type="submit" class="btn btn-primary col-lg col-md">
-                                                 <i class="fab fa-google-plus-g white-text fa-lg mr-2"></i>
-                                                 sign up
-                                            </button>
+                                            <button type="submit" class="btn btn-primary col-lg col-md"> sign up</button>
                                         </form>
                                         <!-- Form contact -->
                                     </div>
@@ -77,7 +139,9 @@
                         <!--Title-->
                         <h4 class="card-title">DSTC welcome&#39;s you to club</h4>
                         <!--Text-->
-                        <p class="card-text">Here in the DSTC, we respect the knowledge, Our goals are straight for sharing and caring of knowledge</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card content.</p>
                     </div>
                 </div>
             </div>
@@ -85,5 +149,6 @@
     </div>
 
 </main>
+
 
 @endsection
