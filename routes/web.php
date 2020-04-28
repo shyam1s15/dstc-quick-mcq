@@ -62,3 +62,9 @@ Route::get('faculty/create/app', function() {
 Route::get('test/uiBtns', function() {
     return view('test.uiBtns');
 });
+
+
+Route::get('test/opData', 'testAjaxController@unique');
+
+
+Route::get('faculty/create/app/nextLevel', 'nextLevelController@index');
