@@ -152,13 +152,11 @@
                                         <div class="col-md-8 col-lg-10">
                                             <div class="symmentric-padding-2 mr-2 ml-2">
                                                 <form class="p-1 grey-text">
-                                                    <div class="md-form form-sm"> <i
-                                                            class="fas fa-user prefix green-text"></i>
+                                                    <div class="md-form form-sm"> <i class="fas fa-image prefix red-text" id="questionImageBtn"></i>
                                                         <input type="text" id="form3"
                                                             class="form-control form-control-sm" required>
-                                                        <label for="form3" class="required">A question is What is
-                                                            Question
-                                                            ??</label>
+                                                        <input type="file" style="display: none" id="questionImageFile">
+                                                        <label for="form3" class="required">A question is What is Question ??</label>
                                                     </div>
                                                 </form>
                                             </div>
@@ -368,5 +366,16 @@
         console.log("clicked");
         $(this).load("http://localhost:8000/test/opData");
     });
+</script>
+
+<script>
+    $("#questionImageBtn").click(function(){
+        $("#questionImageFile").click();
+    });
+
+    {{--  var $img = $($("#questionImageFile").val());  --}}
+    
+      {{--  $img.next().attr()  $("#questionImageFile").attr("class","fas fa-image prefix green-text");  --}}
+    
 </script>
 @endsection
