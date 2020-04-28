@@ -307,7 +307,7 @@
         if (coin == 0){
             detachedQuestionPage = $("#questionPage").detach();
             coin++;
-            $("#nextLevelPage").load("{{ config('APP_URL') }}/faculty/create/app/nextLevel",function(){
+            $("#nextLevelPage").load("{{ env('APP_URL') }}/faculty/create/app/nextLevel",function(){
             });
         }else{
                 $("#futureAppendQuestionPage").append(detachedQuestionPage);
