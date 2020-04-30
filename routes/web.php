@@ -68,3 +68,11 @@ Route::get('test/opData', 'testAjaxController@unique');
 
 
 Route::get('faculty/create/app/nextLevel', 'nextLevelController@index');
+
+Route::get('faculty/showApps', 'facultyViewAppController@showApps');
+
+
+Route::get('/response/faculty/create/app', 'facultyViewAppController@createApp');
+
+Route::post('/faculty/make/app', 'makeAppController@store');
+Route::get('/faculty/make/app', 'makeAppController@store');

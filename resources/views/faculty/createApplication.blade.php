@@ -1,11 +1,13 @@
 @extends('base.header_onlyFooterSocialMedia')
 
-
+@section('csrf')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 @section('main-content')
 
 
 <main>
-    <div class="container">
+    <div class="container" id="formCreateContent">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-8">
                 <div class="card" id="app_createForm1">
@@ -16,17 +18,19 @@
 
                             <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Create Application Form</h2>
 
+                            {{--  <form action="#" method="get" name="createAppForm">  --}}
                             <!--Grid row-->
                             <div class="row justify-content-md-center">
-
                                 <!--Grid column-->
                                 <div class="col-md-8 col-lg-10">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
+                                        {{--  changed from form to span  --}}
                                         <form class="p-1 grey-text">
                                             <div class="md-form form-sm"> <i class="fas fa-user prefix green-text"></i>
-                                                <input type="text" id="form3" class="form-control form-control-sm"
-                                                    required>
-                                                <label for="form3" class="required">Specify Application Heading</label>
+                                                <input type="text" class="form-control form-control-sm" required
+                                                    id="app_head">
+                                                <label for="app_head" class="required">Specify Application
+                                                    Heading</label>
                                             </div>
                                         </form>
                                     </div>
@@ -42,9 +46,9 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
                                             <div class="md-form form-sm"><i class="fas fa-pen prefix green-text"></i>
-                                                <input type="text" id="form3" class="form-control form-control-sm"
-                                                    required>
-                                                <label for="form3" class="required">Application title 1</label>
+                                                <input type="text" class="form-control form-control-sm" required
+                                                    id="title1">
+                                                <label for="title1" class="required">Application title 1</label>
                                             </div>
                                         </form>
                                     </div>
@@ -56,9 +60,9 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
                                             <div class="md-form form-sm"> <i class="fas fa-pen prefix green-text"></i>
-                                                <input type="text" id="form3" class="form-control form-control-sm"
-                                                    required>
-                                                <label for="form3" class="required">Application title 2</label>
+                                                <input type="text" class="form-control form-control-sm" required
+                                                    id="title2">
+                                                <label for="title2" class="required">Application title 2</label>
                                             </div>
                                         </form>
                                     </div>
@@ -73,8 +77,10 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
                                             <div class="md-form form-sm"> <i class="fas fa-clock prefix green-text"></i>
-                                                <input type="date" name="" id="" class="form-control form-control-sm">
-                                                <label for="form3" class="required">When your form must start?</label>
+                                                <input type="date" name="start_date" id=""
+                                                    class="form-control form-control-sm">
+                                                <label for="start_date" class="required">When your form must
+                                                    start?</label>
 
                                             </div>
                                         </form>
@@ -87,8 +93,10 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
                                             <div class="md-form form-sm"> <i class="fas fa-clock prefix green-text"></i>
-                                                <input type="date" name="" id="" class="form-control form-control-sm">
-                                                <label for="form3" class="required">When your form must end?</label>
+                                                <input type="date" name="" id="finish_date"
+                                                    class="form-control form-control-sm">
+                                                <label for="finish_date" class="required">When your form must
+                                                    end?</label>
                                             </div>
                                         </form>
                                     </div>
@@ -98,7 +106,7 @@
                             <div class="row">
                                 <div class="col-md-10">
                                     <button type="submit" class="btn btn-primary float-right mr-5" id="form1Btn">
-                                        create
+                                        Make
                                         <i class="fas fa-arrow-right ml-2 fa-lg"></i>
                                     </button>
                                 </div>
@@ -125,17 +133,17 @@
                         <!--Section: Contact-->
                         <section id="question-page">
                             <!-- Heading -->
-                            <div class="row">
-                                <div class="col-6 align-content-center">
-                                    <button type="submit" class="btn btn-danger float-left ml-5" id="">
-                                        <i class="fas fa-hand-paper fa-lg mr-2"></i>
+                            <div class="row justify-content-md-center">
+                                <div class="col-6 align-content-center  previous">
+                                    <button type="submit" class="btn btn-danger float-left ml-5 " id="">
+                                        <i class="fas fa-hand-paper fa-md mr-2"></i>
                                         Finish
                                     </button>
                                 </div>
-                                <div class="col-6">
-                                    <button type="submit" class="btn btn-primary float-right mr-5" id="nextLevelBtn">
+                                <div class="col-6  align-content-center next">
+                                    <button type="submit" class="btn btn-primary float-right mr-5 " id="nextLevelBtn">
                                         Next Level
-                                        <i class="fas fa-arrow-right ml-2 fa-lg"></i>
+                                        <i class="fas fa-arrow-right ml-2 fa-md"></i>
                                     </button>
                                 </div>
                             </div>
@@ -152,11 +160,14 @@
                                         <div class="col-md-8 col-lg-10">
                                             <div class="symmentric-padding-2 mr-2 ml-2">
                                                 <form class="p-1 grey-text">
-                                                    <div class="md-form form-sm"> <i class="fas fa-image prefix red-text" id="questionImageBtn"></i>
+                                                    <div class="md-form form-sm"> <i
+                                                            class="fas fa-image prefix red-text"
+                                                            id="questionImageBtn"></i>
                                                         <input type="text" id="form3"
                                                             class="form-control form-control-sm" required>
                                                         <input type="file" style="display: none" id="questionImageFile">
-                                                        <label for="form3" class="required">A question is What is Question ??</label>
+                                                        <label for="form3" class="required">A question is What is
+                                                            Question ??</label>
                                                     </div>
                                                 </form>
                                             </div>
@@ -297,10 +308,10 @@
     var temp;
     var coin = 0;
     var detachedQuestionPage;
+
     function validateSave(id){
-        {{--  alert($(id).val());  --}}
         temp = $("input[name="+correctAns+"]").val();
-        alert(temp);
+
     }
 
     function nextLevelPage(){
@@ -329,8 +340,11 @@
     });
 
     $("#form1Btn").click(function(){
-        $("#app_createForm2").fadeToggle();
-        $("#app_createForm1").fadeToggle();
+        console.log( );
+       
+            $("#app_createForm2").fadeToggle();
+            $("#app_createForm1").fadeToggle();
+        
     });
     $("#form1BtnBack").click(function(){
         $("#app_createForm2").fadeToggle();
@@ -388,4 +402,45 @@
       {{--  $img.next().attr()  $("#questionImageFile").attr("class","fas fa-image prefix green-text");  --}}
     
 </script>
+
+{{--  Make request to server to create Application  --}}
+<script>
+    var default_date,date,month,year,dateStr;
+    var application = {
+        app_head : '',
+        title1 : '',
+        title2 : '',
+        start_date : '',
+        finis_date : '',
+        created_by : ''
+    }
+
+    
+    function makeApp(){
+        default_date = new Date();
+        date = default_date.getDate();
+        month = default_date.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
+        year = default_date.getFullYear();
+        dateStr = date + "/" + month + "/" + year;
+        
+        application.app_head = $('#app_head').val() != "" ? $('#app_head').val() : "No Heading";
+        application.title1 = $('#title1').val() != "" ? $('#title1').val() : "No title";
+        application.title2 = $("#title2").val()  != "" ? $('#title2').val() : "No title";
+        application.start_date = $("#start_date").val()  != null? $('#start_date').val() : dateStr;
+        application.finis_date = $("#finish_date").val() != null? $('#start_date').val() : dateStr;
+        
+        $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+        $.post('{{ env("APP_URL") }}/faculty/make/app',{app:application},function(data){
+            //console.log( data.success_msg == "done" );
+        });
+    }
+
+    {{--  application.created_by =   --}}
+</script>
+{{--  Application req ended  --}}
+
 @endsection
