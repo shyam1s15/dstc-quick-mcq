@@ -15,7 +15,7 @@
             <div class="card" id="app_createForm1">
                 <div class="">
                     <!--Card body-->
-                    <h1>hello</h1>
+                    
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -37,11 +37,15 @@
             </div>
         </div>
 
-        <div class="col-md-12 col-lg-4 mb-3 mt-3  align-items-stretch">
+        @foreach ($Apps as $App)
+            
+        <div class="col-md-12 col-lg-4 mb-3 mt-3  align-items-stretch mb-3">
             <div class="card z-depth-1" id="app_createForm1">
                 <div class="view overlay">
                     <!--Card body-->
-                    <h1>hello</h1>
+                    <h1 class="mb-1 mt-1 font-weight-bold text-center red-text">{{ $App->app_head }}</h1>
+                    <h4 class="mb-1 mt-1 font-weight-bold text-center blue-text">- {{ $App->title1 }}</h4>
+                    <h4 class="mb-1 mt-1 font-weight-bold text-center blue-text">- {{ $App->title2 }}</h4>
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -61,7 +65,8 @@
 
             </div>
         </div>
-
+   
+        @endforeach
     </div>
 </div>
 <!--Apps section Ended-->

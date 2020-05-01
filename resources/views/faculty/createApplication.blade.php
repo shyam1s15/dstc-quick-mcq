@@ -8,7 +8,7 @@
 
 <main>
     <div class="container" id="formCreateContent">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="parentRow">
             <div class="col-md-12 col-lg-8">
                 <div class="card" id="app_createForm1">
                     <div class="">
@@ -77,7 +77,7 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
                                             <div class="md-form form-sm"> <i class="fas fa-clock prefix green-text"></i>
-                                                <input type="date" name="start_date" id=""
+                                                <input type="date" name="start_date" id="start_date"
                                                     class="form-control form-control-sm">
                                                 <label for="start_date" class="required">When your form must
                                                     start?</label>
@@ -135,7 +135,7 @@
                             <!-- Heading -->
                             <div class="row justify-content-md-center">
                                 <div class="col-6 align-content-center  previous">
-                                    <button type="submit" class="btn btn-danger float-left ml-5 " id="">
+                                    <button type="submit" class="btn btn-danger float-left ml-5 " id="finishAppBtn">
                                         <i class="fas fa-hand-paper fa-md mr-2"></i>
                                         Finish
                                     </button>
@@ -163,10 +163,10 @@
                                                     <div class="md-form form-sm"> <i
                                                             class="fas fa-image prefix red-text"
                                                             id="questionImageBtn"></i>
-                                                        <input type="text" id="form3"
+                                                        <input type="text" id="oriQuestion"
                                                             class="form-control form-control-sm" required>
                                                         <input type="file" style="display: none" id="questionImageFile">
-                                                        <label for="form3" class="required">A question is What is
+                                                        <label for="oriQuestion" class="required">A question is What is
                                                             Question ??</label>
                                                     </div>
                                                 </form>
@@ -292,14 +292,39 @@
 
 {{--  class script  --}}
 <script>
-    function Question(){
-        this.question = "unknown";
-        this.option1 = "unknown";
-        this.option2 = "unknown";
-        this.option3 = "unknown";
-        this.option4 = "unknown";
-        this.correctAns = "unknown";
+    var Question = {
+        question : "unknown",
+        option1 : "unknown",
+        option2 : "unknown",
+        option3 : "unknown",
+        option4 : "unknown",
+        correctAns : "unknown",
+        questionImage: "",
+        app_id : '',//it will be added later
     }
+    var application = {
+        
+        app_head : '',
+        title1 : '',
+        title2 : '',
+        start_date : '',
+        finis_date : '',
+        created_by : '',
+
+
+    }
+
+    var app_level_info = {
+        app_id : '',//it will assosiated later when server responds
+        branch_name : '',
+        passing_marks : '',
+        passing_message : '',
+        elite_marks :'',
+        elite_message : '',
+
+     question_series: [],
+   }
+
 </script>
 {{--  class script over  --}}
 
@@ -308,10 +333,54 @@
     var temp;
     var coin = 0;
     var detachedQuestionPage;
+    var fd,files;//used to upload image
+    var questionImage;
 
-    function validateSave(id){
+    function validateSaveAndStore(id){
         temp = $("input[name="+correctAns+"]").val();
+        Question.question = $("#oriQuestion").val();
+        Question.option1 =  $("input[name=option1").val();
+        Question.option2 =  $("input[name=option2").val();
+        Question.option3 =  $("input[name=option3").val();
+        Question.option4 =  $("input[name=option4").val();
+        Question.correctAns = correctAns;
 
+        if($("#questionImageFile").val()){
+            fd = new FormData();
+            files = $("#questionImageFile")[0].files[0];
+            fd.append('file',files);
+            Question.questionImage = fd;
+        }
+
+        $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+        $.post("{{ env('APP_URL') }}/faculty/make/app/question",{que:Question}, 
+        function(data){
+            console.log(data.success_msg);
+            app_level_info.question_series.push(data.success_msg);
+        });
+
+        if($("#questionImageFile").val()){
+            fd = new FormData();
+            fd.append('file',$("#questionImageFile")[0].files[0]);
+            $.ajax({
+                type:'POST',
+                url:'{{ env("APP_URL") }}/faculty/make/app/question/image',
+                data:  fd,
+                processData: false,
+                cache: false,
+                contentType: false,
+                dataType: 'JSON',
+                success: function(data){
+                    console.log(data.success_msg);
+                    //app_level_info.question_series.push(data.success_msg);
+                },
+            });
+        }
+        
     }
 
     function nextLevelPage(){
@@ -323,6 +392,7 @@
         }else{
                 $("#futureAppendQuestionPage").append(detachedQuestionPage);
                 coin--;
+                nextLevelDataUpload();
                 detachedQuestionPage = $("#nextLevelPage").empty();
         }
     }
@@ -340,18 +410,13 @@
     });
 
     $("#form1Btn").click(function(){
-        console.log( );
-       
+        
+            makeApp();
             $("#app_createForm2").fadeToggle();
             $("#app_createForm1").fadeToggle();
         
     });
-    $("#form1BtnBack").click(function(){
-        $("#app_createForm2").fadeToggle();
-        $("#app_createForm1").fadeToggle();
-        
-    });
-
+    
     $("#option1, #option2, #option3, #option4").click(function(){
         $("#option1, #option2, #option3, #option4").attr("class","fas fa-thumbs-up prefix red-text"); 
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
@@ -363,7 +428,7 @@
         $( this ).effect( "shake","slow",function(){
             $(this).attr("class","btn btn-primary float-left ml-5");
         } );
-        validateSave($(this).attr("id"));
+        validateSaveAndStore($(this).attr("id"));
       });
 </script>
 
@@ -372,13 +437,6 @@
         level++;
         $("#levelIndicator").text("Your Application is in level " + level);
         nextLevelPage();
-    });
-</script>
-
-<script>
-    $("#unique").click(function(){
-        console.log("clicked");
-        $(this).load("http://localhost:8000/test/opData");
     });
 </script>
 
@@ -406,28 +464,37 @@
 {{--  Make request to server to create Application  --}}
 <script>
     var default_date,date,month,year,dateStr;
-    var application = {
-        app_head : '',
-        title1 : '',
-        title2 : '',
-        start_date : '',
-        finis_date : '',
-        created_by : ''
-    }
-
+    
     
     function makeApp(){
         default_date = new Date();
         date = default_date.getDate();
         month = default_date.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
         year = default_date.getFullYear();
-        dateStr = date + "/" + month + "/" + year;
+        dateStr = year + "/" + month + "/" + date;
         
         application.app_head = $('#app_head').val() != "" ? $('#app_head').val() : "No Heading";
         application.title1 = $('#title1').val() != "" ? $('#title1').val() : "No title";
         application.title2 = $("#title2").val()  != "" ? $('#title2').val() : "No title";
-        application.start_date = $("#start_date").val()  != null? $('#start_date').val() : dateStr;
-        application.finis_date = $("#finish_date").val() != null? $('#start_date').val() : dateStr;
+       
+        default_date = new Date( $("#start_date").val() );
+        date = default_date.getDate();
+        month = default_date.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
+        year = default_date.getFullYear();
+        dateStr = year + "-" + month + "-" + date;
+        application.start_date = dateStr; // != "" ? $('#start_date').val() : dateStr;
+        
+        console.log(dateStr);
+
+
+        default_date = new Date( $("#finish_date").val() );
+        date = default_date.getDate();
+        month = default_date.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
+        year = default_date.getFullYear();
+        dateStr = year + "-" + month + "-" + date;
+        
+        application.finis_date = dateStr //!= "" ? $('#start_date').val() : dateStr;
+        console.log(dateStr);
         
         $.ajaxSetup({
             headers: {
@@ -435,7 +502,10 @@
             }
           });
         $.post('{{ env("APP_URL") }}/faculty/make/app',{app:application},function(data){
-            //console.log( data.success_msg == "done" );
+            
+            console.log(data.success_msg);
+            app_level_info.app_id = data.success_msg;
+            Question.app_id = data.success_msg;
         });
     }
 
@@ -443,4 +513,45 @@
 </script>
 {{--  Application req ended  --}}
 
+{{--  next level page data upload  --}}
+<script>
+    var logicalIndicator = false;
+    $(document).delegate("#logicalIndicator","click",function(){
+        if(logicalIndicator){
+            $(this).attr("class","fa fa-puzzle-piece prefix red-text");
+        }else{
+            $(this).attr("class","fa fa-puzzle-piece prefix green-text");
+        }
+        logicalIndicator = ! logicalIndicator;
+    });
+    function nextLevelDataUpload(){
+        if(logicalIndicator){
+            app_level_info.branch_name = "Logical";
+
+        }else{
+            app_level_info.branch_name = $("#branchName").val();
+        }
+
+        app_level_info.passing_marks = $("#passingMarks").val();
+        app_level_info.passing_message = $("#passingMsg").val();
+        app_level_info.elite_marks = $("#EliteMarks").val();
+        app_level_info.elite_message = $("EliteMsg").val();
+
+        $.post('{{ env("APP_URL") }}/faculty/make/app/nextLevel',{level_info:app_level_info},function(data){
+            console.log(data.success_msg);
+            app_level_info.question_series = [];
+        });
+        
+    }
+</script>
+
+<script>
+    $("#finishAppBtn").click(function(){
+        $("#formCreateContent").empty();
+        $("#formCreateContent").load("{{ env('APP_URL') }}/faculty/finishApp",{app_id:app_level_info.app_id},function(){
+        });
+        
+    });
+</script>
+{{--  next level data over  --}}
 @endsection

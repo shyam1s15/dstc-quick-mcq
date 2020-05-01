@@ -23,6 +23,10 @@ class CreateNextLevelModelsTable extends Migration
             $table->integer('Elite')->unsigned()->nullable()->default(12);
             $table->text('Elite_msg')->nullable()->default('Congratulations for becoming Elite of all');
 
+            $table->foreignId('app_id')
+                ->constrained('appFormData')
+                ->onDelete('cascade');
+
         });
     }
 

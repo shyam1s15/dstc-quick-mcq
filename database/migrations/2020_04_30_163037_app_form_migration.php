@@ -16,11 +16,12 @@ class AppFormMigration extends Migration
         Schema::create('appFormData', function (Blueprint $table) {
             $table->id();
             $table->char('app_head', 80)->default('DSTC FORMS');
-            $table->char('title1', 40)->default('Title1');
-            $table->char('title2', 40)->default('Title2');
+            $table->char('title1', 90)->default('Title1');
+            $table->char('title2', 200)->default('Title2');
             $table->date('created_at')->nullable();
             $table->date('finish_at')->nullable();
             $table->char('created_by', 40)->default('professor');
+            
             
         });
     }

@@ -69,7 +69,9 @@ Route::get('test/opData', 'testAjaxController@unique');
 Route::get('test/nextLevel', function() {
     return view("faculty.nextLevel");   
 });
-
+Route::get('/test/finish',function(){
+    return view("faculty.finishPage");
+});
 
 Route::get('faculty/create/app/nextLevel', 'nextLevelController@index');
 
@@ -78,5 +80,19 @@ Route::get('faculty/showApps', 'facultyViewAppController@showApps');
 
 Route::get('/response/faculty/create/app', 'facultyViewAppController@createApp');
 
-Route::post('/faculty/make/app', 'makeAppController@store');
 Route::get('/faculty/make/app', 'makeAppController@store');
+Route::post('/faculty/make/app', 'makeAppController@store');
+
+Route::post('/faculty/make/app/nextLevel', 'nextLevelController@makeLevel');
+
+
+Route::post('/faculty/make/app/question','saveQuestionController@store');
+
+Route::get('/faculty/finishApp', 'facultyViewAppController@finishApp');
+Route::post('/faculty/finishApp', 'facultyViewAppController@finishApp');
+
+
+// still remaining
+Route::post('/faculty/make/app/question/image','saveQuestionController@storeImage');
+
+Route::get('student/showChoices', 'showChoicesToStudentsController@showChoices');
