@@ -66,6 +66,10 @@ Route::get('test/uiBtns', function() {
 
 Route::get('test/opData', 'testAjaxController@unique');
 
+Route::get('test/nextLevel', function() {
+    return view("faculty.nextLevel");   
+});
+
 
 Route::get('faculty/create/app/nextLevel', 'nextLevelController@index');
 
