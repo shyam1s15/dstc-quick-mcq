@@ -60,7 +60,7 @@
                     <!--Text-->
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card content.</p>
-                    <a href="{{ env('APP_URL') }}" class="btn btn-primary"> pilot </a>
+                    <a href="{{ env('APP_URL') }}/faculty/manage" class="btn btn-primary"> pilot </a>
                 </div>
 
             </div>

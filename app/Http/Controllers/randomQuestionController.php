@@ -8,11 +8,12 @@ class randomQuestionController extends Controller
 {
     //
     public function randomQuestions(Request $req){
-        $notInclude = array();
-        $notInclude = $req->input("haveQuestions");
-        $App = appFormDataModel::find( $req->input("app_id") );
-        $questions = $App->questions;
+        // $notInclude = array();
+        // $notInclude = $req->input("haveQuestions");
+        // $App = appFormDataModel::find( $req->input("app_id") );
+        // $questions = $App->questions;
 
-        $randomQuestion = array();
+        // $randomQuestion = array();
+        return \response( view("load.mcqs") );
     }
 }

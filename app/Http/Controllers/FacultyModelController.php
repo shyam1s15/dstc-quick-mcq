@@ -22,6 +22,8 @@ class FacultyModelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function create()
     {
         //
@@ -47,6 +49,8 @@ class FacultyModelController extends Controller
     public function show(facultyModel $facultyModel)
     {
         //
+
+        return \view("faculty.showFaculty")->with([ "professors"=>$facultyModel::all() ]);
     }
 
     /**
@@ -81,5 +85,10 @@ class FacultyModelController extends Controller
     public function destroy(facultyModel $facultyModel)
     {
         //
+    }
+
+    public function loadFaculty(facultyModel $facultyModel){
+        //
+        return \response(\view("load.faculty")->with([ "professors"=>$facultyModel::all() ]) );
     }
 }

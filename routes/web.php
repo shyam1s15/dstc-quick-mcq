@@ -102,3 +102,10 @@ Route::get('student/showChoices', 'showChoicesToStudentsController@showChoices')
 Route::get('faculty/showApps', 'facultyViewAppController@showApps');
 
 Route::get('faculty/', 'facultyViewAppController@index');
+
+Route::get('faculty/manage', 'FacultyModelController@show');
+
+
+Route::get('load/faculty', 'FacultyModelController@loadFaculty');
+
+Route::get('load/app/appMcq', 'randomQuestionController@randomQuestions');
