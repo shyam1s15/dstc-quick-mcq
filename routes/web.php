@@ -75,7 +75,6 @@ Route::get('/test/finish',function(){
 
 Route::get('faculty/create/app/nextLevel', 'nextLevelController@index');
 
-Route::get('faculty/showApps', 'facultyViewAppController@showApps');
 
 
 Route::get('/response/faculty/create/app', 'facultyViewAppController@createApp');
@@ -96,3 +95,10 @@ Route::post('/faculty/finishApp', 'facultyViewAppController@finishApp');
 Route::post('/faculty/make/app/question/image','saveQuestionController@storeImage');
 
 Route::get('student/showChoices', 'showChoicesToStudentsController@showChoices');
+
+
+
+// showing options to faculty
+Route::get('faculty/showApps', 'facultyViewAppController@showApps');
+
+Route::get('faculty/', 'facultyViewAppController@index');

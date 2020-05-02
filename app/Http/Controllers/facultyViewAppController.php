@@ -27,4 +27,8 @@ class facultyViewAppController extends Controller
         // }
         return \response(\view("faculty.finishPage")->with([ "levels"=>$App->levels ]));       
     }
+
+    public function index(){
+        return \view("faculty.index");
+    }
 }
