@@ -3,7 +3,8 @@
 
 @section('main-content')
 <!-- Grid row -->
-<div class="row">
+
+<div class="row ustify-content-center">
 
     @foreach ($Apps as $App)
 
