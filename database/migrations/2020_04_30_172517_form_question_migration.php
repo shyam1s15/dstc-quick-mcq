@@ -24,7 +24,7 @@ class FormQuestionMigration extends Migration
             $table->foreign('level_id')->references('id')->on('next_level_models')->onDelete('cascade');
             
 
-            $table->longText('question')->nullable()->default('It is a question');
+            $table->longText('question')->nullable();
             
             $table->text('option1')->nullable();
             $table->text('option2')->nullable();
