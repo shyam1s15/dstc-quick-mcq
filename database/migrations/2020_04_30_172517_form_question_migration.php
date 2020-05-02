@@ -26,14 +26,14 @@ class FormQuestionMigration extends Migration
 
             $table->longText('question')->nullable()->default('It is a question');
             
-            $table->text('option1')->nullable()->default('option1');
-            $table->text('option2')->nullable()->default('option2');
-            $table->text('option3')->nullable()->default('option3');
-            $table->text('option4')->nullable()->default('option4');
+            $table->text('option1')->nullable();
+            $table->text('option2')->nullable();
+            $table->text('option3')->nullable();
+            $table->text('option4')->nullable();
 
             $table->char('ans', 10)->default('NO');
             
-            $table->text('img_directory')->nullable()->default('');            
+            $table->text('img_directory')->nullable();         
         });
     }
 

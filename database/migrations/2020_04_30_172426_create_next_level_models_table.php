@@ -16,12 +16,12 @@ class CreateNextLevelModelsTable extends Migration
         Schema::create('next_level_models', function (Blueprint $table) {
             $table->id();
             $table->char('branch_subject', 50)->default('Engineering');
-            $table->integer('passing')->unsigned()->default(12);
-            $table->text('passing_msg')->nullable()->default('Congratulations for passing');
+            $table->integer('passing')->unsigned()->nullable()->default(12);
+            $table->text('passing_msg')->nullable();
             
 
             $table->integer('Elite')->unsigned()->nullable()->default(12);
-            $table->text('Elite_msg')->nullable()->default('Congratulations for becoming Elite of all');
+            $table->text('Elite_msg')->nullable();
 
             $table->foreignId('app_id')
                 ->constrained('appFormData')
