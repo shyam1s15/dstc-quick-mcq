@@ -2,6 +2,8 @@
 <div id="cover">
     <div class="row justify-content-center" id="parentRow">
         <div class="col-md-12 col-lg-8">
+            <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Make Your Questions
+            </h2>
             
             <div class="card mt-3" id="app_createForm2">
                 <div class="">
@@ -15,8 +17,6 @@
                         <div id="futureAppendQuestionPage">
                             <!--Questioning Page-->
                             <div id="questionPage">
-                                <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Make Your Questions
-                                </h2>
                                 <!--Grid row-->
                                 <div class="row justify-content-md-center">
 
@@ -153,8 +153,6 @@
                         <div id="futureAppendQuestionPage">
                             <!--Questioning Page-->
                             <div id="questionPage">
-                                <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Make Your Questions
-                                </h2>
                                 <!--Grid row-->
                                 <div class="row justify-content-md-center">
 
