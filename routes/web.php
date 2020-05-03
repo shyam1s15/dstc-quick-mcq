@@ -110,6 +110,8 @@ Route::get('load/faculty', 'FacultyModelController@loadFaculty');
 
 Route::get('load/app/appMcq', 'randomQuestionController@randomQuestions');
 Route::post('load/app/appMcq', 'randomQuestionController@randomQuestions');
+Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions');
+
 
 Route::get('participate/app/{app_id}', 'randomQuestionController@randomQuestions');
 
