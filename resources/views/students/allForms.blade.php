@@ -79,7 +79,7 @@
         $("#cover").empty();
         
         $("#cover").load(
-            "{{ env('APP_URL') }}/load/app/questions",
+            "{{ env('APP_URL') }}/test/app/questions",
             {   
                 Logic    :   logic, 
 

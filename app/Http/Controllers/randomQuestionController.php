@@ -31,7 +31,7 @@ class randomQuestionController extends Controller
 
     public function testRandomQuestions(Request $req)
     {
-        $app_id = $req->input("application_id");
+        $app_id = $req->input("Logic.app_id");
         $app = appFormDataModel::find($app_id);
         // $app->randomQuestions
         // return  \view("load.mcqs") -> with([ "question" => $app->questions]) ;
