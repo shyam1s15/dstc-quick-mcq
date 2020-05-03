@@ -1,5 +1,6 @@
 @extends('base.header_onlyFooterSocialMedia')
 
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 @section('main-content')
 <!-- Grid row -->
@@ -32,7 +33,7 @@
 
                     <p class="card-text">{{ $App->title2 }}</p>
                     {{--  here in button using id is not recommended as it have only 1 specific value   --}}
-                    <button class="btn btn-success" value="{{ $App->id }}" name="btnApp">Complete</button>
+                    <button class="btn btn-success"  value="{{ $App->id }}" name="btnApp" id="{{ $App->id }}">Complete</button>
                 </div>
 
             </div>
@@ -45,20 +46,29 @@
     </div>
 </div>
 
-{{--  root levels scripts  --}}
-<script>
-    var logic = {
+
+
+    {{--  root levels scripts  --}}
+    <script>
+        var logic = {
         branch : [],
         questionSeries : [],
     }
     var correctAns;
-</script>
+    </script>
 
-{{--  root level scripts are over  --}}
-<script>
+    {{--  root level scripts are over  --}}
+    <script>
+        $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+          
     function loadAppQuestions(app_id){
+        alert(app_id);
         $("#cover").empty();
-        $("#cover").load("{{ env('APP_URL') }}/load/app/appMcq");
+        $("#cover").load("{{ env('APP_URL') }}/test/app/questions",{application_id:app_id},function(){});
     }
 
     $("#cover").delegate("#option1, #option2, #option3, #option4",  "click" ,function(){
@@ -74,17 +84,17 @@
         } );
         //validateSaveAndStore($(this).attr("id"));
       });
-</script>
-{{--  The Driver scripts  --}}
-<script>
-    
-    $("button[name=btnApp]").click(function(){
+    </script>
+    {{--  The Driver scripts  --}}
+    <script>
+        $("button[name=btnApp]").click(function(){
         logic.questionSeries = [];
+    
         loadAppQuestions($(this).val());
     });
 
-</script>
-{{--  Driver scirpts over  --}}
+    </script>
+    {{--  Driver scirpts over  --}}
 
 <!-- Grid row -->
 @endsection

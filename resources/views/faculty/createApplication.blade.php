@@ -501,6 +501,7 @@
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
           });
+        
         $.post('{{ env("APP_URL") }}/faculty/make/app',{app:application},function(data){
             
             console.log(data.success_msg);
