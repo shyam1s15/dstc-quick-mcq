@@ -1,7 +1,7 @@
 <div id="cover">
     <div class="row justify-content-center" id="parentRow">
         <div class="col-md-12 col-lg-8">
-            <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">All the best, Har Har Mahadev
+            <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">All the best
             </h2>
 
             @foreach ($questions as $question)
