@@ -66,7 +66,6 @@
           });
           
     function loadAppQuestions(app_id){
-        alert(app_id);
         $("#cover").empty();
         $("#cover").load("{{ env('APP_URL') }}/test/app/questions",{application_id:app_id},function(){});
     }
