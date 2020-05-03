@@ -55,7 +55,7 @@
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option1" disabled>
                                                     <label for="form3" class="required">{{ $question->option1 }}
-                                                        ??</label>
+                                                        </label>
                                                 </div>
                                             </form>
                                         </div>
@@ -74,7 +74,7 @@
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option2" disabled>
                                                     <label for="form3" class="required">{{ $question->option2 }}
-                                                        ??</label>
+                                                        </label>
                                                 </div>
                                             </form>
                                         </div>
@@ -98,7 +98,7 @@
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option3" disabled>
                                                     <label for="form3" class="required">{{ $question->option3 }}
-                                                        ??</label>
+                                                        </label>
 
                                                 </div>
                                             </form>
@@ -117,7 +117,7 @@
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option4" disabled>
                                                     <label for="form3" class="required">{{ $question->option4 }}
-                                                        ??</label>
+                                                        </label>
                                                 </div>
                                             </form>
                                         </div>
