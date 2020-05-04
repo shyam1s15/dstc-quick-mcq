@@ -120,6 +120,7 @@ Route::post('/test/app/questions', 'randomQuestionController@testRandomQuestions
 // getting random question of limit 5
 Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions');
 Route::get('generate/app/questionSeries', 'randomQuestionController@sendRandomSeries');
+
 Route::post('complile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 
 

@@ -100,51 +100,53 @@ class randomQuestionController extends Controller
         $hadQuestions = $req->input("Logic.questionSeries");
         $randomIndex = 0;
 
-        if($hadQuestions == null){
-            $hadQuestions = array();
-        }
+        // if($hadQuestions == null){
+        //     $hadQuestions = array();
+        // }
 
-        $app = appFormDataModel::find($app_id);
+        // $app = appFormDataModel::find($app_id);
         
-        $send = array();
-        $sendWithDetails = array();
-        $quesTemp = array();
+        // $send = array();
+        // $sendWithDetails = array();
+        // $quesTemp = array();
 
-        foreach ($app->questions as $question) {
-            array_push( $quesTemp ,$question->id );
-        }
+        // foreach ($app->questions as $question) {
+        //     array_push( $quesTemp ,$question->id );
+        // }
 
-        if($hadQuestions !== null){
-            foreach ($hadQuestions as $hadQues) {
-                $key = \array_search($hadQues, $quesTemp);
+        // if($hadQuestions !== null){
+        //     foreach ($hadQuestions as $hadQues) {
+        //         $key = \array_search($hadQues, $quesTemp);
                 
-                if (false !== $key) {
-                    unset( $quesTemp[$key] );
-                }
-            }
-        }
+        //         if (false !== $key) {
+        //             unset( $quesTemp[$key] );
+        //         }
+        //     }
+        // }
         
 
-        for ($i= 0; $i < 5 && $i < count( $quesTemp ) ; $i++ ) { 
-            $randomIndex = array_rand($quesTemp);
+        // for ($i= 0; $i < 5 && $i < count( $quesTemp ) ; $i++ ) { 
+        //     $randomIndex = array_rand($quesTemp);
 
-            array_push( $send ,  $quesTemp[ $randomIndex ] );
-            unset( $quesTemp[$randomIndex] );
+        //     array_push( $send ,  $quesTemp[ $randomIndex ] );
+        //     unset( $quesTemp[$randomIndex] );
 
-        }
+        // }
 
-        foreach($send as $question){
-            if( questionModel::find( $question )->level()->exists() ){
-                $que = questionModel::find( $question );
-                $level_id = $que->level->id;
+        // foreach($send as $question){
+        //     if( questionModel::find( $question )->level()->exists() ){
+        //         $que = questionModel::find( $question );
+        //         $level_id = $que->level->id;
                 
-                $correctAns = $que->ans !== null ? $que->ans : "";
+        //         $correctAns = $que->ans !== null ? $que->ans : "";
 
-                array_push( $sendWithDetails, array( $que->id,$level_id,$correctAns ) );
-            }
-        }
+        //         array_push( $sendWithDetails, array( $que->id,$level_id,$correctAns ) );
+        //     }
+        // }
 
-        return  response(  )->json([ "questionSeries" => $sendWithDetails]);
+        // return  response(  )->json([ "questionSeries" => $sendWithDetails]);
+        return  response(  )->json([ "questionSeries" => $hadQuestions,$app_id]);
+
     
     }
 

@@ -112,7 +112,7 @@
             },
             function(data){
                 logic.obtainedSeries = data.questionSeries  ;
-                console.log(logic.obtainedSeries);
+                console.log(logic);
                 $("#cover").empty();
 
 
