@@ -380,6 +380,11 @@
                 },
             });
         }
+        $("#oriQuestion").val('');
+        $("input[name=option1").val('');
+        $("input[name=option2").val('');
+        $("input[name=option3").val('');
+        $("input[name=option4").val('');
         
     }
 
