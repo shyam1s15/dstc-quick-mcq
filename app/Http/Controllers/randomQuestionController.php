@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\appFormDataModel;
 use App\facultyModel;
+
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+
 use App\questionModel;
 
 class randomQuestionController extends Controller
@@ -22,11 +24,11 @@ class randomQuestionController extends Controller
         // dd(facultyModel::all());
         $c = collect();
         $c->add($App->questions);
-        dd($c[0]);
-        dd($App->questions);
+        dd($App->questions->count());
+        // dd($App->questions);
         // $randomQuestion = array();
         // return \response(\view("load.faculty")->with([ "professors"=>$facultyModel::all() ]) );
-        return \response(\view("load.mcqs")->with(["questions" => $App->questions]));
+        return \response(\view("test.app.mcqs")->with(["questions" => $App->questions]));
     }
 
     public function testRandomQuestions(Request $req)
@@ -45,35 +47,125 @@ class randomQuestionController extends Controller
         
         $app_id = $req->input("Logic.app_id");
         $hadQuestions = $req->input("Logic.questionSeries");
+        $randomIndex = 0;
+
+        if($hadQuestions == null){
+            $hadQuestions = array();
+        }
 
         $app = appFormDataModel::find($app_id);
         $questionCollection = collect();
-        $questionCollection->add($app->questions);
+        // $questionCollection->add($app->questions);
         $send = array();
         
-        // $quesTemp = array();
-        // foreach ($app->questions as $question) {
-        //     $quesTemp[] = $question->id;
-        // }
+        $quesTemp = array();
 
-        // foreach ($hadQuestions as $hadQues) {
-        //     $key = array_search($hadQues, $quesTemp);
-        //     $temp = array();
-        //     if (false !== $key) {
-        //         unset($quesTemp[$key]);
-        //     }
-        // }
-        // for ($i= 0; $i < 5 ; $i++ ) { 
-        //     $randomIndex = array_rand($quesTemp);
+        foreach ($app->questions as $question) {
+            array_push( $quesTemp ,$question->id );
+        }
 
-        //     $questionCollection->push( questionModel::find( $quesTemp[$randomIndex] ) );
-        //     $send[] = $quesTemp[$randomIndex];
-        //     unset($quesTemp[$randomIndex]);
-
-        // }
-
-
+        if($hadQuestions !== null){
+            foreach ($hadQuestions as $hadQues) {
+                $key = \array_search($hadQues, $quesTemp);
+                
+                if (false !== $key) {
+                    unset( $quesTemp[$key] );
+                }
+            }
+        }
         
-        return  response( \view("load.mcqs")->with(["questions" => $questionCollection[0]]) )->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+
+        for ($i= 0; $i < 5 && $i < count( $quesTemp ) ; $i++ ) { 
+            $randomIndex = array_rand($quesTemp);
+
+            $questionCollection->push( questionModel::find( $quesTemp[$randomIndex] ) );
+            array_push( $send ,  $quesTemp[ $randomIndex ] );
+            unset( $quesTemp[$randomIndex] );
+
+        }
+
+        // return  response( \view("load.mcqs")->with(["questions" => $questionCollection ]) );//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        // return  response(  )->view("load.mcqs", ["questions" => $questionCollection ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        return  response(  )->view("test.app.mcqs", ["questions" => $questionCollection ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        
+        // $randomIndex = array_rand($quesTemp);
+
+        // $val = $app->questions->count();
+
+        // return  response(  )->json([ "questionSeries" => $randomIndex, "size "=>sizeof($quesTemp)  ,"send" => $send, "merged" => array_merge($send,$hadQuestions)]);
+    }
+
+    public function sendRandomSeries(Request $req){
+        $app_id = $req->input("Logic.app_id");
+        $hadQuestions = $req->input("Logic.questionSeries");
+        $randomIndex = 0;
+
+        if($hadQuestions == null){
+            $hadQuestions = array();
+        }
+
+        $app = appFormDataModel::find($app_id);
+        
+        $send = array();
+        $sendWithDetails = array();
+        $quesTemp = array();
+
+        foreach ($app->questions as $question) {
+            array_push( $quesTemp ,$question->id );
+        }
+
+        if($hadQuestions !== null){
+            foreach ($hadQuestions as $hadQues) {
+                $key = \array_search($hadQues, $quesTemp);
+                
+                if (false !== $key) {
+                    unset( $quesTemp[$key] );
+                }
+            }
+        }
+        
+
+        for ($i= 0; $i < 5 && $i < count( $quesTemp ) ; $i++ ) { 
+            $randomIndex = array_rand($quesTemp);
+
+            array_push( $send ,  $quesTemp[ $randomIndex ] );
+            unset( $quesTemp[$randomIndex] );
+
+        }
+
+        foreach($send as $question){
+            if( questionModel::find( $question )->level()->exists() ){
+                $que = questionModel::find( $question );
+                $level_id = $que->level->id;
+                
+                $correctAns = $que->ans !== null ? $que->ans : "";
+
+                array_push( $sendWithDetails, array( $que->id,$level_id,$correctAns ) );
+            }
+        }
+
+        return  response(  )->json([ "questionSeries" => $sendWithDetails]);
+    
+    }
+
+    public function compileAndShowQuestions(Request $req)
+    {
+
+        $questions = $req->input("Logic");
+        $randomIndex = 0;
+        $questionCollection = collect();
+        // $questionCollection->add($app->questions);
+       
+        if($questions == null){
+            $questions = array();
+        }
+        foreach($questions as $question){
+            $mcq = questionModel::find($question[0]);
+            $questionCollection->add($mcq);
+        }
+
+        return  response(  )->view("test.app.mcqs", ["questions" => $questionCollection ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        // return  response(  )->json( ["questions" => $questions ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+
     }
 }

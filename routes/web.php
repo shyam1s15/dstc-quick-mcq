@@ -110,10 +110,16 @@ Route::get('load/faculty', 'FacultyModelController@loadFaculty');
 
 Route::get('load/app/appMcq', 'randomQuestionController@randomQuestions');
 Route::post('load/app/appMcq', 'randomQuestionController@randomQuestions');
-Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions');
 
 
 Route::get('participate/app/{app_id}', 'randomQuestionController@randomQuestions');
 
 
 Route::post('/test/app/questions', 'randomQuestionController@testRandomQuestions');
+
+// getting random question of limit 5
+Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions');
+Route::get('generate/app/questionSeries', 'randomQuestionController@sendRandomSeries');
+Route::post('complile/app/questions', 'randomQuestionController@compileAndShowQuestions');
+
+

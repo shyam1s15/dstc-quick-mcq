@@ -55,6 +55,7 @@
             branch : [],
             questionSeries : [],
             app_id : '',
+            obtainedSeries : [],
         }
         var correctAns;
         var pageFresh = true;
@@ -67,6 +68,33 @@
         });
 </script>
 
+{{--  mcq thumbs  --}}
+<script>
+    $("#cover").delegate("#option11, #option21, #option31, #option41",  "click" ,function(){
+        $("#option11, #option21, #option31, #option41").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $(this).attr("class","fas fa-thumbs-up prefix green-text");
+        correctAns = $(this).attr("id");
+    });
+    $("#cover").delegate("#option12, #option22, #option32, #option42",  "click" ,function(){
+        $("#option12, #option22, #option32, #option42").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $(this).attr("class","fas fa-thumbs-up prefix green-text");
+        correctAns = $(this).attr("id");
+    });$("#cover").delegate("#option13, #option23, #option33, #option43",  "click" ,function(){
+        $("#option13, #option23, #option33, #option43").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $(this).attr("class","fas fa-thumbs-up prefix green-text");
+        correctAns = $(this).attr("id");
+    });$("#cover").delegate("#option14, #option24, #option34, #option44",  "click" ,function(){
+        $("#option14, #option24, #option34, #option44").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $(this).attr("class","fas fa-thumbs-up prefix green-text");
+        correctAns = $(this).attr("id");
+    });
+    $("#cover").delegate("#option15, #option25, #option35, #option45",  "click" ,function(){
+        $("#option15, #option25, #option35, #option45").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $(this).attr("class","fas fa-thumbs-up prefix green-text");
+        correctAns = $(this).attr("id");
+    });
+</script>
+{{--  mcq thumbs over  --}}
 {{--  root level scripts are over  --}}
 <script>
     $.ajaxSetup({
@@ -75,25 +103,39 @@
             }
           });
           
+    
     function loadAppQuestions(){
-        $("#cover").empty();
         
-        $("#cover").load(
-            "{{ env('APP_URL') }}/test/app/questions",
-            {   
-                Logic    :   logic, 
-
+        $.get("{{ env('APP_URL') }}/generate/app/questionSeries",
+            {
+                Logic : logic,
             },
             function(data){
-                logic.questionSeries = data.questionSeries;
-        });
+                logic.obtainedSeries = data.questionSeries  ;
+                console.log(logic.obtainedSeries);
+                $("#cover").empty();
+
+
+                $("#cover").load(
+                    "{{ env('APP_URL') }}/complile/app/questions",
+                    {   
+                        Logic    :   logic.obtainedSeries , 
+                    },
+                    function(data){
+                    });
+                }
+        );
+
     }
 
-    $("#cover").delegate("#option1, #option2, #option3, #option4",  "click" ,function(){
+    
+
+    {{--  $("#cover").delegate("#optInp1, #optInp2, #optInp2, #optInp3,",  "click" ,function(){
         $("#option1, #option2, #option3, #option4").attr("class","fas fa-thumbs-up prefix red-text"); 
+        
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns = $(this).attr("id");
-    });
+    });  --}}
 
     $("cover").delegate("button [name=btnApp]",loadAppQuestions);
 </script>
@@ -102,6 +144,7 @@
     $("button[name=btnApp]").click(function(){
         logic.app_id = $(this).val();
         loadAppQuestions();
+        
     });
 
 </script>
