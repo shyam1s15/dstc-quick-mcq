@@ -153,7 +153,7 @@ class randomQuestionController extends Controller
             $questionCollection->add($mcq);
         }
 
-        return  response()->view("test.app.mcqs", ["questions" => $questionCollection]); //->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        return  response(view("test.app.mcqs", ["questions" => $questionCollection]) ); //->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
         // return  response(  )->json( ["questions" => $questions ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
 
     }
