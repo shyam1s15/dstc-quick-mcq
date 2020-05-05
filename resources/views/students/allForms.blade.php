@@ -106,7 +106,7 @@
           
     
     function loadAppQuestions(){
-        
+        logic.obtainedSeries = [];
         $.get("{{ env('APP_URL') }}/generate/app/questionSeries",
             {
                 questionSeries : logic.questionSeries,
@@ -118,9 +118,9 @@
                     logic.obtainedSeries.push( value[0] );
                 });
                 logic.questionSeries = $.merge( logic.questionSeries,logic.obtainedSeries );
-                console.log(data);
+                //console.log(data);
                 $("#cover").empty();
-
+                console.log(logic.obtainedSeries);
 
                 $("#cover").load(
                     "{{ env('APP_URL') }}/complile/app/questions",
@@ -128,6 +128,7 @@
                         Logic    :   logic.obtainedSeries , 
                     },
                     function(data){
+
                     });
                 }
         );
