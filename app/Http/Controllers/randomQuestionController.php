@@ -149,7 +149,7 @@ class randomQuestionController extends Controller
             $questions = array();
         }
         foreach ($questions as $question) {
-            $mcq = questionModel::find($question[0]);
+            $mcq = questionModel::find($question);
             $questionCollection->add($mcq);
         }
 
