@@ -56,6 +56,7 @@
             questionSeries : [],
             app_id : '',
             obtainedSeries : [],
+            rawQuestionData : [],
         }
         var correctAns;
         var pageFresh = true;
@@ -108,11 +109,16 @@
         
         $.get("{{ env('APP_URL') }}/generate/app/questionSeries",
             {
-                Logic : logic,
+                questionSeries : logic.questionSeries,
+                app_id: logic.app_id,
             },
             function(data){
-                logic.obtainedSeries = data.questionSeries  ;
-                console.log(logic);
+                logic.rawQuestionData = data.questionSeries;
+                $.each(data.questionSeries, function(index,value){
+                    logic.obtainedSeries.push( value[0] );
+                });
+                logic.questionSeries = $.merge( logic.questionSeries,logic.obtainedSeries );
+                console.log(data);
                 $("#cover").empty();
 
 
@@ -137,15 +143,18 @@
         correctAns = $(this).attr("id");
     });  --}}
 
-    $("cover").delegate("button [name=btnApp]",loadAppQuestions);
+    $("#cover").delegate("#loadNextQuestions","click",loadAppQuestions);
+
 </script>
 {{--  The Driver scripts  --}}
 <script>
     $("button[name=btnApp]").click(function(){
-        logic.app_id = $(this).val();
+        if(logic.app_id !== null){
+            logic.app_id = $(this).val();
+        }
         loadAppQuestions();
-        
     });
+
 
 </script>
 {{--  Driver scirpts over  --}}

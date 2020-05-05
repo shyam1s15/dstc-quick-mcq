@@ -44,12 +44,12 @@ class randomQuestionController extends Controller
     public function sendRandomQuestions(Request $req)
     {
 
-        
+
         $app_id = $req->input("Logic.app_id");
         $hadQuestions = $req->input("Logic.questionSeries");
         $randomIndex = 0;
 
-        if($hadQuestions == null){
+        if ($hadQuestions == null) {
             $hadQuestions = array();
         }
 
@@ -57,37 +57,36 @@ class randomQuestionController extends Controller
         $questionCollection = collect();
         // $questionCollection->add($app->questions);
         $send = array();
-        
+
         $quesTemp = array();
 
         foreach ($app->questions as $question) {
-            array_push( $quesTemp ,$question->id );
+            array_push($quesTemp, $question->id);
         }
 
-        if($hadQuestions !== null){
+        if ($hadQuestions !== null) {
             foreach ($hadQuestions as $hadQues) {
                 $key = \array_search($hadQues, $quesTemp);
-                
+
                 if (false !== $key) {
-                    unset( $quesTemp[$key] );
+                    unset($quesTemp[$key]);
                 }
             }
         }
-        
 
-        for ($i= 0; $i < 5 && $i < count( $quesTemp ) ; $i++ ) { 
+
+        for ($i = 0; $i < 5 && $i < count($quesTemp); $i++) {
             $randomIndex = array_rand($quesTemp);
 
-            $questionCollection->push( questionModel::find( $quesTemp[$randomIndex] ) );
-            array_push( $send ,  $quesTemp[ $randomIndex ] );
-            unset( $quesTemp[$randomIndex] );
-
+            $questionCollection->push(questionModel::find($quesTemp[$randomIndex]));
+            array_push($send,  $quesTemp[$randomIndex]);
+            unset($quesTemp[$randomIndex]);
         }
 
         // return  response( \view("load.mcqs")->with(["questions" => $questionCollection ]) );//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
         // return  response(  )->view("load.mcqs", ["questions" => $questionCollection ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
-        return  response(  )->view("test.app.mcqs", ["questions" => $questionCollection ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
-        
+        return  response()->view("test.app.mcqs", ["questions" => $questionCollection]); //->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+
         // $randomIndex = array_rand($quesTemp);
 
         // $val = $app->questions->count();
@@ -95,59 +94,47 @@ class randomQuestionController extends Controller
         // return  response(  )->json([ "questionSeries" => $randomIndex, "size "=>sizeof($quesTemp)  ,"send" => $send, "merged" => array_merge($send,$hadQuestions)]);
     }
 
-    public function sendRandomSeries(Request $req){
-        $app_id = $req->input("Logic.app_id");
-        $hadQuestions = $req->input("Logic.questionSeries");
+    public function sendRandomSeries(Request $req)
+    {
+        $app_id = $req->input("app_id");
+        $hadQuestions = $req->input("questionSeries") == null ? array() : $req->input("questionSeries");
         $randomIndex = 0;
 
-        if($hadQuestions == null){
-            $hadQuestions = array();
-        }
-
         $app = appFormDataModel::find($app_id);
-        
         $send = array();
         $sendWithDetails = array();
-        $quesTemp = array();
+        $gotQuestions = array();
+        $index = 0;
 
         foreach ($app->questions as $question) {
-            array_push( $quesTemp ,$question->id );
+            array_push($gotQuestions, $question->id);
         }
 
-        if($hadQuestions !== null){
-            foreach ($hadQuestions as $hadQues) {
-                $key = \array_search($hadQues, $quesTemp);
-                
-                if (false !== $key) {
-                    unset( $quesTemp[$key] );
-                }
+        $difference = array_diff($gotQuestions, $hadQuestions);
+
+        if (count($difference) > 0) {
+            for ($i = 0; $i < 5 && $i < count($difference); $i++) {
+                $randomIndex = array_rand($difference);
+
+                array_push($send,  $difference[$randomIndex]);
+                unset($difference[$randomIndex]);
             }
         }
-        
 
-        for ($i= 0; $i < 5 && $i < count( $quesTemp ) ; $i++ ) { 
-            $randomIndex = array_rand($quesTemp);
-
-            array_push( $send ,  $quesTemp[ $randomIndex ] );
-            unset( $quesTemp[$randomIndex] );
-
-        }
-
-        foreach($send as $question){
-            if( questionModel::find( $question )->level()->exists() ){
-                $que = questionModel::find( $question );
+        foreach ($send as $question) {
+            if (questionModel::find($question)->level()->exists()) {
+                $que = questionModel::find($question);
                 $level_id = $que->level->id;
-                
+
                 $correctAns = $que->ans !== null ? $que->ans : "";
 
-                array_push( $sendWithDetails, array( $que->id,$level_id,$correctAns ) );
+                array_push($sendWithDetails, array($que->id, $level_id, $correctAns));
             }
         }
 
-        return  response(  )->json([ "questionSeries" => $sendWithDetails]);
+        // return  response(  )->json([ "questionSeries" => $sendWithDetails]);
         // return  response(  )->json([ "questionSeries" => $hadQuestions,$app_id]);
-
-    
+        return  response()->json(["questionSeries" => $sendWithDetails]);
     }
 
     public function compileAndShowQuestions(Request $req)
@@ -157,16 +144,16 @@ class randomQuestionController extends Controller
         $randomIndex = 0;
         $questionCollection = collect();
         // $questionCollection->add($app->questions);
-       
-        if($questions == null){
+
+        if ($questions == null) {
             $questions = array();
         }
-        foreach($questions as $question){
+        foreach ($questions as $question) {
             $mcq = questionModel::find($question[0]);
             $questionCollection->add($mcq);
         }
 
-        return  response(  )->view("test.app.mcqs", ["questions" => $questionCollection ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        return  response()->view("test.app.mcqs", ["questions" => $questionCollection]); //->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
         // return  response(  )->json( ["questions" => $questions ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
 
     }
