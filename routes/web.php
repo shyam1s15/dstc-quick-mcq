@@ -122,5 +122,6 @@ Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions'
 Route::get('generate/app/questionSeries', 'randomQuestionController@sendRandomSeries');
 
 Route::post('complile/app/questions', 'randomQuestionController@compileAndShowQuestions');
+Route::get('complile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 
 
