@@ -121,7 +121,9 @@ Route::post('/test/app/questions', 'randomQuestionController@testRandomQuestions
 Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions');
 Route::get('generate/app/questionSeries', 'randomQuestionController@sendRandomSeries');
 
-Route::post('complile/app/questions', 'randomQuestionController@compileAndShowQuestions');
-Route::get('complile/app/questions', 'randomQuestionController@compileAndShowQuestions');
+Route::post('compile/app/questions', 'randomQuestionController@compileAndShowQuestions');
+Route::get('compiile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 
+Route::post("compile/app/result","resultsPageController@showResults");
+Route::get("test/app/result","resultsPageController@showTestResults");
 

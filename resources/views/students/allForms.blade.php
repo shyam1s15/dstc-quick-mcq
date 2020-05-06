@@ -124,13 +124,17 @@
             },
             function(data){
                 logic.rawQuestionData = data.questionSeries;
-               
+                if( data.questionSeries.length == 0 ) {
+                    endMcq();
+                    return 0;
+                }
+
                 $.each(data.questionSeries, function(index,value){
                     logic.obtainedSeries.push( value[0] );
                 });
                 
-
-                //console.log(logic.obtainedSeries);
+                console.log("series obtained");
+                console.log(logic.obtainedSeries);
 
                 logic.questionSeries = $.merge( logic.questionSeries,logic.obtainedSeries );
                 //console.log(data);
@@ -138,7 +142,7 @@
                 //console.log(logic.rawQuestionData);
 
                 $("#cover").load(
-                    "{{ env('APP_URL') }}/complile/app/questions",
+                    "{{ env('APP_URL') }}/compile/app/questions",
                     {   
                         Logic    :   logic.obtainedSeries , 
                     },
@@ -148,7 +152,6 @@
                 }
         );
     }
-
     function saveAndProceed(){
         //console.log(correctAns);
         $.each(logic.rawQuestionData,function(index,value){
@@ -171,6 +174,16 @@
         console.log( marks );
         loadAppQuestions();
         
+    }
+    function endMcq(){
+        $("#cover").load(
+                    "{{ env('APP_URL') }}/compile/app/result",
+                    {   
+                        Marks    :   marks , 
+                    },
+                    function(data){
+
+                    });
     }
 
     
