@@ -78,7 +78,7 @@
         $("#option11, #option21, #option31, #option41").attr("class","fas fa-thumbs-up prefix red-text"); 
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[0] = $(this).attr("id").slice(0,7);
-        console.log(correctAns[0]);
+        //console.log(correctAns[0]);
     });
 
     $("#cover").delegate("#option12, #option22, #option32, #option42",  "click" ,function(){
@@ -130,7 +130,7 @@
                 });
                 
 
-                console.log(logic.obtainedSeries);
+                //console.log(logic.obtainedSeries);
 
                 logic.questionSeries = $.merge( logic.questionSeries,logic.obtainedSeries );
                 //console.log(data);
