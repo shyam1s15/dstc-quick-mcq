@@ -135,7 +135,7 @@
                 logic.questionSeries = $.merge( logic.questionSeries,logic.obtainedSeries );
                 //console.log(data);
                 $("#cover").empty();
-                console.log(logic.rawQuestionData);
+                //console.log(logic.rawQuestionData);
 
                 $("#cover").load(
                     "{{ env('APP_URL') }}/complile/app/questions",
@@ -150,7 +150,7 @@
     }
 
     function saveAndProceed(){
-        console.log(correctAns);
+        //console.log(correctAns);
         $.each(logic.rawQuestionData,function(index,value){
             if ( correctAns[index] == null ) correctAns[index] = "null";
             //logic.rawQuestionData[index] =  $.merge( logic.rawQuestionData[index],[ correctAns[index] ] );
@@ -161,12 +161,12 @@
             
             marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;  
              
-            console.log("correct ans");
-            console.log(correctAns[index]);
+            //console.log("correct ans");
+            //console.log(correctAns[index]);
 
         });
-        console.log("data");
-        console.log(logic.rawQuestionData);
+        //console.log("data");
+        //console.log(logic.rawQuestionData);
         console.log("Below is the marks, note first value indicates unqiue level ID");
         console.log( marks );
         loadAppQuestions();
