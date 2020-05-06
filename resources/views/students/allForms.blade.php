@@ -167,6 +167,7 @@
         });
         console.log("data");
         console.log(logic.rawQuestionData);
+        console.log("Below is the marks, note first value indicates unqiue level ID");
         console.log( marks );
         loadAppQuestions();
         
