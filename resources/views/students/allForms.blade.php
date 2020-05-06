@@ -155,9 +155,15 @@
             if ( correctAns[index] == null ) correctAns[index] = "null";
             //logic.rawQuestionData[index] =  $.merge( logic.rawQuestionData[index],[ correctAns[index] ] );
 
-            if( marks[ logic.rawQuestionData[index][1] ] == null) { marks [ logic.rawQuestionData[index][1] ] = 0;}else{
-                marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;  
-            } 
+            if( marks[ logic.rawQuestionData[index][1] ] == null){
+                marks [ logic.rawQuestionData[index][1] ] = 0;
+            }// no else part
+            
+            marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;  
+             
+            console.log("correct ans");
+            console.log(correctAns[index]);
+
         });
         console.log("data");
         console.log(logic.rawQuestionData);
