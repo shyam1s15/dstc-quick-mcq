@@ -28,12 +28,9 @@
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text">
                                                 <div class="md-form form-sm"> <i
-                                                        class="fas fa-question prefix green-text"></i>
-                                                    <input type="text" id="oriQuestion"
-                                                        class="form-control form-control-sm" disabled>
-                                                    <input type="file" style="display: none" id="questionImageFile">
-                                                    <label for="oriQuestion"
-                                                        class="required">{{ $question->question }}</label>
+                                                        class="fas fa-question prefix green-text fa-lg"></i>
+                                                    <h6 for="oriQuestion"
+                                                        class="required ml-5">{{ $question->question }}</h6>
                                                 </div>
                                             </form>
                                         </div>
