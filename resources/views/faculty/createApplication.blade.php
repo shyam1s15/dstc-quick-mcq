@@ -333,7 +333,7 @@
     var temp;
     var coin = 0;
     var detachedQuestionPage;
-    var fd,files;//used to upload image
+    var fd,files;//used to upload imageSave
     var questionImage;
 
     function validateSaveAndStore(id){

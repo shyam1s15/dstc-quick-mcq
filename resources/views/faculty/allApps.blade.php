@@ -46,7 +46,7 @@
                     <h3 class="mb-1 mt-1 text-center red-text">{{ $App->app_head }}</h3>
                     <h4 class="mb-1 mt-1 text-center blue-text">- {{ $App->title1 }}</h4>
                     <h4 class="mb-1 mt-1 text-center blue-text">- {{ $App->title2 }}</h4>
-                    <a href="#">
+                    <a href="">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -57,10 +57,10 @@
                     <!--Text-->
                     <p class="card-text">Here You can Edit Your Application, It will be directly reflected, it is always
                         recommended to Edit once</p>
-                    <button class="btn btn-warning">
+                    <a class="btn btn-warning" href="{{ env('APP_URL') }}/test/edit/app?app_id={{ $App->id }}">
                         Edit
                         <i class="far fa-edit ml-2 fa-lg"></i>
-                    </button>
+                    </a>
                 </div>
 
             </div>
