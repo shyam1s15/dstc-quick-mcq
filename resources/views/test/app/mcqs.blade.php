@@ -53,7 +53,7 @@
                                                         class="fas fa-thumbs-up prefix red-text" id="option1{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option1{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required">{{ $question->option1 }}
+                                                    <label for="form3" class="required" id="optClick1{{ $index+1 }}">{{ $question->option1 }}
                                                         </label>
                                                 </div>
                                             </form>
@@ -72,7 +72,7 @@
                                                         class="fas fa-thumbs-up prefix red-text" id="option2{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option2{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required">{{ $question->option2 }}
+                                                    <label for="form3" class="required" id="optClick2{{ $index+1 }}">{{ $question->option2 }}
                                                         </label>
                                                 </div>
                                             </form>
@@ -96,7 +96,7 @@
                                                         class="fas fa-thumbs-up prefix red-text" id="option3{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option3{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required">{{ $question->option3 }}
+                                                    <label for="form3" class="required" id="optClick3{{ $index+1 }}">{{ $question->option3 }}
                                                         </label>
 
                                                 </div>
@@ -115,7 +115,7 @@
                                                         class="fas fa-thumbs-up prefix red-text" id="option4{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option4{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required">{{ $question->option4 }}
+                                                    <label for="form3" class="required" id="optClick4{{ $index+1 }}">{{ $question->option4 }}
                                                         </label>
                                                 </div>
                                             </form>

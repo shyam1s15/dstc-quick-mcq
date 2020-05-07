@@ -74,6 +74,28 @@
 
 {{--  mcq thumbs  --}}
 <script>
+    var temp = "";
+    $("#cover").delegate("#optClick11, #optClick21, #optClick31, #optClick41","click",function(){
+        temp = $(this).attr("id").slice(8);
+        $("#option"+temp).click();
+    });
+    $("#cover").delegate("#optClick12, #optClick22, #optClick32, #optClick42","click",function(){
+        temp = $(this).attr("id").slice(8);
+        $("#option"+temp).click();
+    });
+    $("#cover").delegate("#optClick13, #optClick23, #optClick33, #optClick43","click",function(){
+        temp = $(this).attr("id").slice(8);
+        $("#option"+temp).click();
+    });
+    $("#cover").delegate("#optClick14, #optClick24, #optClick34, #optClick44","click",function(){
+        temp = $(this).attr("id").slice(8);
+        $("#option"+temp).click();
+    });
+    $("#cover").delegate("#optClick15, #optClick25, #optClick35, #optClick45","click",function(){
+        temp = $(this).attr("id").slice(8);
+        $("#option"+temp).click();
+    });
+
     $("#cover").delegate("#option11, #option21, #option31, #option41",  "click" ,function(){
         $("#option11, #option21, #option31, #option41").attr("class","fas fa-thumbs-up prefix red-text"); 
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
