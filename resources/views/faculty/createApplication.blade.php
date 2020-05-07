@@ -385,7 +385,7 @@
         $("input[name=option2").val('');
         $("input[name=option3").val('');
         $("input[name=option4").val('');
-        
+
     }
 
     function nextLevelPage(){
@@ -541,7 +541,7 @@
         app_level_info.passing_marks = $("#passingMarks").val();
         app_level_info.passing_message = $("#passingMsg").val();
         app_level_info.elite_marks = $("#EliteMarks").val();
-        app_level_info.elite_message = $("EliteMsg").val();
+        app_level_info.elite_message = $("#EliteMsg").val();
 
         $.post('{{ env("APP_URL") }}/faculty/make/app/nextLevel',{level_info:app_level_info},function(data){
             console.log(data.success_msg);
