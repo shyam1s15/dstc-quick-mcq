@@ -2,7 +2,7 @@
 
 @foreach ($levels as $index => $level)
 
-@if ( $marks[$index] >= $level->passing )
+@if ( $marks[$index] >= $level->passing && $marks[ $index ] < $level->Elite)
 
 {{--  passing section  --}}
 <div class="row justify-content-md-center">
