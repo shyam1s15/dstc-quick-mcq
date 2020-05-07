@@ -49,7 +49,7 @@
                 <div class="md-form form-sm">
                     {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                     {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text"></i>
+                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text mb-2"></i>
                         
                         <h6 for="passingMsg" class="required ml-5"> {{ $level->passing_msg }} </h6>
                     </div>
@@ -92,7 +92,7 @@
                         <i class="fab fa-angellist prefix"></i>
                         {{--  <input type="number" name="Elite-marks" id="EliteMarks" class="form-control form-control-sm" required>  --}}
                         <label for="EliteMarks" class="required" id="EliteMarksLabel">{{ $marks[ $index ] }} out of
-                            {{ $level->Elite }}</label>
+                            {{ count($level->questions) }}</label>
                     </div>
                 </div>
             </form>
