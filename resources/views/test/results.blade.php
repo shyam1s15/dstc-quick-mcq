@@ -49,7 +49,7 @@
                 <div class="md-form form-sm">
                     {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                     {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text fa-lg"></i>
+                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text fa-2x"></i>
                         
                         <h6 for="passingMsg" class="required ml-5"> {{ $level->passing_msg }} </h6>
                     </div>
@@ -109,7 +109,7 @@
                 <div class="md-form form-sm">
                     {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                     {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text fa-lg"></i>
+                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text fa-2x"></i>
                         
                         <h6 for="EliteMsg" class="required ml-5">{{ $level->Elite_msg }}</h6>
                     </div>
