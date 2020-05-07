@@ -5,7 +5,7 @@
 @section('main-content')
 <!-- Grid row -->
 <div id="cover">
-    <div class="row ustify-content-center">
+    <div class="row justify-content-center">
 
         @foreach ($Apps as $App)
 
