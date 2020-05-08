@@ -13,7 +13,7 @@
             <!-- Navbar brand -->
             <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
 
-            <span class="navbar-brand font-weight-bolder" href="#">DSTC</span>
+            <span class="navbar-brand font-weight-bold white-text">DSTC</span>
 
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
