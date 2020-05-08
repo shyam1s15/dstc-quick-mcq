@@ -17,7 +17,7 @@
 
                 <!--Card image-->
                 <div class="">
-                    <h4 class="mb-1 mt-1 font-weight-bold text-center green-text text-capitalize">{{ $App->app_head }}
+                    <h4 class="mt-1 font-weight-bold text-center green-text text-capitalize">{{ $App->app_head }}
                     </h4>
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
