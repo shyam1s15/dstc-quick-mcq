@@ -191,7 +191,7 @@
         application.title1 = $('#title1').val() != "" ? $('#title1').val() : "{{ $app->title1 }}";
         application.title2 = $("#title2").val()  != "" ? $('#title2').val() : "{{ $app->title2 }}";
        
-        default_date = new Date( $("#start_date").val() == "" ? "{{ $app->created_at }}" : $("#start_date").val() );
+        default_date = new Date( $("#start_date").val() == "" ?  $("#start_date").val() : "{{ $app->created_at }}" );
         date = default_date.getDate();
         month = default_date.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
         year = default_date.getFullYear();
