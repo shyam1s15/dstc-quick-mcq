@@ -188,7 +188,7 @@
         year = default_date.getFullYear();
         dateStr = year + "/" + month + "/" + date;
         
-        application.app_head = $('#app_head').val() != "" ? " {{ $app->app_head }} " : $('#app_head').val() ;
+        application.app_head = $('#app_head').val() != "" ?  $('#app_head').val() : " {{ $app->app_head }} "  ;
         application.title1 = $('#title1').val() != "" ? $('#title1').val() : "{{ $app->title1 }}";
         application.title2 = $("#title2").val()  != "" ? $('#title2').val() : "{{ $app->title2 }}";
        
