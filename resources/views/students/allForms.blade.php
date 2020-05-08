@@ -144,7 +144,7 @@
           
     
     function loadAppQuestions(){
-        correctAns.empty;
+        correctAns = [];
         logic.obtainedSeries = [];
         $.get("{{ env('APP_URL') }}/generate/app/questionSeries",
             {
@@ -195,11 +195,11 @@
             marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;  
              
             //console.log("correct ans");
-            //console.log(correctAns[index]);
+            console.log(correctAns[index]);
         });
 
         //console.log("data");
-        //console.log(logic.rawQuestionData);
+        console.log(logic.rawQuestionData);
         console.log("Below is the marks, note first value indicates unqiue level ID");
         console.log( marks );
         loadAppQuestions();
