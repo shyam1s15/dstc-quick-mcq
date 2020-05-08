@@ -80,6 +80,7 @@
     var temp = "";
     $("#cover").delegate("#optClick11, #optClick21, #optClick31, #optClick41","click",function(){
         temp = $(this).attr("id").slice(8);
+        
         $("#option"+temp).click();
     });
     $("#cover").delegate("#optClick12, #optClick22, #optClick32, #optClick42","click",function(){
@@ -103,19 +104,21 @@
         $("#option11, #option21, #option31, #option41").attr("class","fas fa-thumbs-up prefix red-text"); 
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[0] = $(this).attr("id").slice(0,7);
-        //console.log(correctAns[0]);
+        {{--  console.log(correctAns[0]);  --}}
     });
 
     $("#cover").delegate("#option12, #option22, #option32, #option42",  "click" ,function(){
         $("#option12, #option22, #option32, #option42").attr("class","fas fa-thumbs-up prefix red-text"); 
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[1] = $(this).attr("id").slice(0,7);
+        {{--  console.log(correctAns[1]);  --}}
     });
     
     $("#cover").delegate("#option13, #option23, #option33, #option43",  "click" ,function(){
         $("#option13, #option23, #option33, #option43").attr("class","fas fa-thumbs-up prefix red-text"); 
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[2] = $(this).attr("id").slice(0,7); 
+
     });
     
     $("#cover").delegate("#option14, #option24, #option34, #option44",  "click" ,function(){
@@ -141,6 +144,7 @@
           
     
     function loadAppQuestions(){
+        correctAns.empty;
         logic.obtainedSeries = [];
         $.get("{{ env('APP_URL') }}/generate/app/questionSeries",
             {
@@ -192,8 +196,8 @@
              
             //console.log("correct ans");
             //console.log(correctAns[index]);
-
         });
+
         //console.log("data");
         //console.log(logic.rawQuestionData);
         console.log("Below is the marks, note first value indicates unqiue level ID");
