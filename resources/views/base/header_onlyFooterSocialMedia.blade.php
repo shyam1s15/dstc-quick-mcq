@@ -106,7 +106,7 @@
                     </a>
                     <!--Instagram-->
                     <a class="ins-ic" href="instagram.com/dstc_junagadh">
-                        <i class="fab fa-instagram white-text mr-lg-4"> </i>
+                        <i class="fab fa-instagram white-text mr-4"> </i>
                     </a>
                     <!--Youtube -->
                     <a class="ins-ic" href="youtube.com/c/DrSubhashTechnicalCampus">
