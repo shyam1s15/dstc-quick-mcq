@@ -1,19 +1,23 @@
 @extends('base.base') 
 
-
+<style>
+    .navbar, .footer-color{
+        background-color: #000080 !important;
+    }
+</style>
 @section('content')
 
 <!--header-->
 <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark success-color fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
 
         <div class="container">
 
             <!-- Navbar brand -->
-            <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+            <img src="{{ url('/logos/dstc_logo.jpeg') }}" width="45" alt="" class="d-inline-block align-middle mr-2">
 
-            <span class="navbar-brand font-weight-bold white-text">DSTC</span>
+            <span class="navbar-brand font-weight-bold white-text ">DSTC</span>
 
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -80,7 +84,7 @@
 <footer class="page-footer font-small blue">
 
     <!-- Social buttons -->
-    <div class="success-color">
+    <div class="footer-color">
         <div class="container">
             <!--Grid row-->
             <div class="row py-4 d-flex align-items-center">
