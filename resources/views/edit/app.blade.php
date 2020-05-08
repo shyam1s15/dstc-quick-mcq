@@ -201,7 +201,7 @@
         console.log(dateStr);
 
 
-        default_date = new Date( $("#finish_date").val() == "" ? "{{ $app->finish_at }}" : $("#finish_date").val()==""  );
+        default_date = new Date( $("#finish_date").val() == "" ? "{{ $app->finish_at }}" : $("#finish_date").val() );
         date = default_date.getDate();
         month = default_date.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
         year = default_date.getFullYear();
