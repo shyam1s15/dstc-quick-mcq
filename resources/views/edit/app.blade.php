@@ -127,22 +127,23 @@
 
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6 align-content-center  previous">
-                <button type="submit" class="btn btn-danger float-right" id="saveAppFinish">
-                    Save Edit
-                    <i class="fas fa-check fa-lg"></i>
-
-                </button>
+            <div class="row">
+                <div class="col-6 align-content-center  previous">
+                    <button type="submit" class="btn btn-danger float-right" id="saveAppFinish">
+                        Save Edit
+                        <i class="fas fa-check fa-lg"></i>
+    
+                    </button>
+                </div>
+                <div class="col-6 align-content-center  next">
+                    <button type="submit" class="btn btn-warning float-left" id="SaveAndLoadMore">
+                        continue
+                        <i class="fas fa-arrow-right ml-2 fa-lg"></i>
+                    </button>
+                </div>
             </div>
-            <div class="col-6 align-content-center  next">
-                <button type="submit" class="btn btn-warning float-left" id="SaveAndLoadMore">
-                    continue
-                    <i class="fas fa-arrow-right ml-2 fa-lg"></i>
-                </button>
-            </div>
         </div>
+        
 </main>
 
 <script>
