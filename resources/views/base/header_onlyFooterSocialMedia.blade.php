@@ -4,6 +4,9 @@
     .navbar, .footer-color{
         background-color: #000080 !important;
     }
+    body{
+        overflow-x: hidden;
+    }
 </style>
 @section('content')
 
@@ -15,7 +18,7 @@
         <div class="container">
 
             <!-- Navbar brand -->
-            <img src="{{ url('/logos/dstc_logo-removebg-preview.png') }}" width="45" alt="" class="d-inline-block align-middle mr-2">
+            <img src="{{ url('/logos/dstc_logo-removebg-preview.png ') }}" width="45" alt="" class="d-inline-block align-middle mr-2">
 
             <span class="navbar-brand font-weight-bold white-text ">DSTC</span>
 
