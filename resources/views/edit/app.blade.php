@@ -231,6 +231,7 @@
         makeApp();
     });
     $("#SaveAndLoadMore").click(function(){
+        makeApp();
         console.log( application.app_id );
         $("#cover").load("{{ env('APP_URL') }}/edit/show/levels",{ app_id : application.app_id });
     });
