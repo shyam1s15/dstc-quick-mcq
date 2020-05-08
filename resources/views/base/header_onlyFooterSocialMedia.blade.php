@@ -48,6 +48,9 @@
                             <a class="dropdown-item font-weight-bolder" href="#">Results</a>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bolder" href="#">student Login</a>
+                    </li>
 
                 </ul>
                 <!-- Links -->
