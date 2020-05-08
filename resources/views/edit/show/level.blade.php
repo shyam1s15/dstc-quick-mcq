@@ -15,8 +15,8 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center" id="{{$level->id}}" name="levelLi">
                             {{ $level->branch_subject }}
                             {{--  {{ dd($level) }}  --}}
-                            <span class="badge badge-primary badge-pill">pass: {{ $level->passing }} </span>
-                            <span class="badge badge-danger badge-pill">Elite {{ $level->Elite }}  </span>
+                            <span class="badge badge-primary badge-pill" id="levelId{{ $level->id }}" name = "editLevel">Edit</span>
+                            <span class="badge badge-danger badge-pill" id="levelId{{ $level->id }}" name = "editLevelQuestions">questions</span>
                         </li>
                     @endforeach
                 </ul>
