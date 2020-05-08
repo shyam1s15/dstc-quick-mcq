@@ -11,7 +11,9 @@
         <div class="container">
 
             <!-- Navbar brand -->
-            <a class="navbar-brand font-weight-bolder" href="#">Dr. Subhas Technical Campus</a>
+            <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+
+            <span class="navbar-brand font-weight-bolder" href="#">DSTC</span>
 
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
