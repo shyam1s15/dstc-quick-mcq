@@ -11,7 +11,7 @@
         <div class="container">
 
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Dr. Subhas Technical Campus</a>
+            <a class="navbar-brand font-weight-bolder" href="#">Dr. Subhas Technical Campus</a>
 
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -39,22 +39,22 @@
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            aria-haspopup="true" aria-expanded="false">Navigation </a>
                         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">Faculty works</a>
+                            <a class="dropdown-item" href="#">Student Management</a>
+                            <a class="dropdown-item" href="#">Results</a>
                         </div>
                     </li>
 
                 </ul>
                 <!-- Links -->
 
-                <form class="form-inline">
+                {{--  <form class="form-inline">
                     <div class="md-form my-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                     </div>
-                </form>
+                </form>  --}}
             </div>
             <!-- Collapsible content -->
 
