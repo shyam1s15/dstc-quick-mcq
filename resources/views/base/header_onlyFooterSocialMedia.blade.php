@@ -89,7 +89,7 @@
                 <!--Grid column-->
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
                     <!--Facebook-->
-                    <a class="fb-ic ml-0" href="facebook.com/drsubhashtech">
+                    <a class="fb-ic ml-0" href="https://facebook.com/drsubhashtech">
                         <i class="fab fa-facebook-f white-text mr-4"> </i>
                     </a>
                     <!--Twitter-->
@@ -105,11 +105,11 @@
                         <i class="fab fa-linkedin-in white-text mr-4"> </i>
                     </a>
                     <!--Instagram-->
-                    <a class="ins-ic" href="instagram.com/dstc_junagadh">
+                    <a class="ins-ic" href="https://instagram.com/dstc_junagadh">
                         <i class="fab fa-instagram white-text mr-4"> </i>
                     </a>
                     <!--Youtube -->
-                    <a class="ins-ic" href="youtube.com/c/DrSubhashTechnicalCampus">
+                    <a class="ins-ic" href="https://youtube.com/c/DrSubhashTechnicalCampus">
                         <i class="fab fa-youtube white-text mr-lg-4"> </i>
                     </a>
                 </div>
