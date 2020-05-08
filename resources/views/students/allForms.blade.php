@@ -31,7 +31,7 @@
                         {{ $App->title1 }} </h4>
                     <!--Text-->
 
-                    <p class="card-text text-center">{{ $App->title2 }}</p>
+                    <p class="card-title text-center">{{ $App->title2 }}</p>
                     {{--  here in button using id is not recommended as it have only 1 specific value   --}}
                     <button class="btn btn-success" value="{{ $App->id }}" name="btnApp"
                         id="{{ $App->id }}">Complete</button>
