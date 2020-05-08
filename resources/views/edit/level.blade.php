@@ -123,15 +123,15 @@
 
 <div class="row">
     <div class="col-6 align-content-center  previous">
-        <button type="submit" class="btn btn-danger float-right" id="">
-            Save Edit
+        <button type="submit" class="btn btn-danger float-right" name="saveLevel" id="{{ $level->id }}">
+            Save Level
             <i class="fas fa-check fa-lg"></i>
 
         </button>
     </div>
     <div class="col-6 align-content-center  next">
-        <button type="submit" class="btn btn-warning float-left" id="">
-            continue
+        <button type="submit" class="btn btn-warning float-left" name="saveLevelAndLoadQuestions" id="{{ $level->id }}">
+            Questions
             <i class="fas fa-arrow-right ml-2 fa-lg"></i>
         </button>
     </div>

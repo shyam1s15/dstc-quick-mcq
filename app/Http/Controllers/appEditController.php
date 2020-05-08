@@ -38,6 +38,5 @@ class appEditController extends Controller
     public function compileLevelToEditPage(Request $request){
         $level = nextLevelModel::find( $request->input("level_id") ); 
         return \response( \view("edit.level",[ "level"=> $level ] ) );
-        
     }
 }

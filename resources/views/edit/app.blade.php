@@ -235,6 +235,12 @@
         console.log("yeah questions : " + id);
         $("#cover").load("{{ env('APP_URL') }}/edit/level",{ level_id : id });
     }
+    function saveEditLevel(id){
+        console.log(id);
+    }
+    function saveEditLevelAndLoadQuestions(id){
+        console.log(id);
+    }
 </script>
 {{--  ended level editing  --}}
 
@@ -250,6 +256,10 @@
     });
     $("#cover").delegate(" span[name=editLevel]","click", () => editLevel( $("span[name=editLevel]").attr("id").slice(7) ));
     $("#cover").delegate(" span[name=editLevelQuestions]","click", () => editLevelQuestions( $("span[name=editLevel]").attr("id").slice(7) ));
+    
+    $("#cover").delegate(" button[name=saveLevelAndLoadQuestions]","click", () => saveEditLevelAndLoadQuestions( $("button[name=saveLevelAndLoadQuestions]").attr("id") ));
+    $("#cover").delegate(" button[name=saveLevel]","click", () => saveEditLevel( $("button[name=saveLevel]").attr("id") ));
+
 </script>
 {{--  driver codes  --}}
 @endsection

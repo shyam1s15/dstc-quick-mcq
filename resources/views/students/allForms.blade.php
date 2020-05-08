@@ -17,7 +17,7 @@
 
                 <!--Card image-->
                 <div class="">
-                    <h4 class="mt-1 font-weight-bold text-center green-text text-capitalize">{{ $App->app_head }}
+                    <h4 class="font-weight-bold text-center green-text text-capitalize mt-4 mb-0">{{ $App->app_head }}
                     </h4>
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
@@ -32,11 +32,11 @@
                         {{ $App->title1 }} </h4>
                     <!--Text-->
 
-                    <p class="card-title text-center mt-4">{{ $App->title2 }}</p>
+                    <p class="card-title text-center">{{ $App->title2 }}</p>
                     {{--  here in button using id is not recommended as it have only 1 specific value   --}}
                     <div class="row justify-content-center">
                         <button class="btn btn-success text-center" value="{{ $App->id }}" name="btnApp"
-                            id="{{ $App->id }}">Start</button>
+                            id="{{ $App->id }}">complete</button>
                     </div>
                 </div>
 
