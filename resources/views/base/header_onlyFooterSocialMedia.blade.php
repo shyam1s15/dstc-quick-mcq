@@ -6,19 +6,19 @@
 <!--header-->
 <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark success-color fixed-top">
 
         <div class="container">
 
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Dr. Subhas Technical Campus</a>
 
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
                 aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+            
             <!-- Collapsible content -->
             <div class="collapse navbar-collapse" id="basicExampleNav">
 
@@ -75,7 +75,7 @@
 <footer class="page-footer font-small blue">
 
     <!-- Social buttons -->
-    <div class="primary-color">
+    <div class="success-color">
         <div class="container">
             <!--Grid row-->
             <div class="row py-4 d-flex align-items-center">
