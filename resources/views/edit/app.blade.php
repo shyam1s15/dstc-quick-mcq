@@ -228,7 +228,12 @@
 <script>
     function editLevel(id){
         console.log("yeah questions : " + id);
+        $("#cover").load("{{ env('APP_URL') }}/edit/level",{ level_id : id });
 
+    }
+    function editLevelQuestions(id){
+        console.log("yeah questions : " + id);
+        $("#cover").load("{{ env('APP_URL') }}/edit/level",{ level_id : id });
     }
 </script>
 {{--  ended level editing  --}}
@@ -243,8 +248,8 @@
         console.log( application.app_id );
         $("#cover").load("{{ env('APP_URL') }}/edit/show/levels",{ app_id : application.app_id });
     });
-
-    $("#cover").delegate(" span[name=editLevelQuestions]","click", () => editLevel(15));
+    $("#cover").delegate(" span[name=editLevel]","click", () => editLevel( $("span[name=editLevel]").attr("id").slice(7) ));
+    $("#cover").delegate(" span[name=editLevelQuestions]","click", () => editLevelQuestions( $("span[name=editLevel]").attr("id").slice(7) ));
 </script>
 {{--  driver codes  --}}
 @endsection

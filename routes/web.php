@@ -131,3 +131,5 @@ Route::get("test/app/result","resultsPageController@showTestResults");
 Route::get('test/edit/app',  'appEditController@testAppEdit');
 Route::post('edit/app', 'appEditController@makeAppEdit');
 Route::post('edit/show/levels','appEditController@showLevelsForEdit');
+
+Route::post('edit/level', 'appEditController@compileLevelToEditPage');

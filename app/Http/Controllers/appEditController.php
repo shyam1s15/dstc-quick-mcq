@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\appFormDataModel;
+use App\nextLevelModel;
 class appEditController extends Controller
 {
     //
@@ -32,6 +33,11 @@ class appEditController extends Controller
         $app = appFormDataModel::find( $request->input("app_id") ); 
         return \response( \view("edit.show.level",[ "levels"=> $app->levels ] ) );
         // return \response(  )->json([ "levels"=> $app ] );      
+    }
 
+    public function compileLevelToEditPage(Request $request){
+        $level = nextLevelModel::find( $request->input("level_id") ); 
+        return \response( \view("edit.level",[ "level"=> $level ] ) );
+        
     }
 }

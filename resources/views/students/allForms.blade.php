@@ -22,6 +22,7 @@
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
                     </a>
+                    
                 </div>
 
                 <!--Card content-->
