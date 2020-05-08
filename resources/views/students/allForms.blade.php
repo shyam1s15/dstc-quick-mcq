@@ -195,7 +195,7 @@
             marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;  
              
             //console.log("correct ans");
-            console.log(correctAns[index]);
+            console.log("correct ans = " + correctAns[index]);
         });
 
         //console.log("data");
