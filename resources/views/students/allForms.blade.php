@@ -33,8 +33,10 @@
 
                     <p class="card-title text-center">{{ $App->title2 }}</p>
                     {{--  here in button using id is not recommended as it have only 1 specific value   --}}
-                    <button class="btn btn-success" value="{{ $App->id }}" name="btnApp"
-                        id="{{ $App->id }}">Start</button>
+                    <div class="row justify-content-center">
+                        <button class="btn btn-success text-center" value="{{ $App->id }}" name="btnApp"
+                            id="{{ $App->id }}">Start</button>
+                    </div>
                 </div>
 
             </div>
