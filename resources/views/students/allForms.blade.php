@@ -32,7 +32,7 @@
                         {{ $App->title1 }} </h4>
                     <!--Text-->
 
-                    <p class="card-title text-center">{{ $App->title2 }}</p>
+                    <p class="card-title text-center mt-4">{{ $App->title2 }}</p>
                     {{--  here in button using id is not recommended as it have only 1 specific value   --}}
                     <div class="row justify-content-center">
                         <button class="btn btn-success text-center" value="{{ $App->id }}" name="btnApp"
