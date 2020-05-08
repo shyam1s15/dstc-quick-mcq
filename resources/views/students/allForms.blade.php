@@ -27,7 +27,7 @@
                 <!--Card content-->
                 <div class="card-body">
                     <!--Title-->
-                    <h4 class="card-title red-text text-capitalize">
+                    <h4 class="card-title red-text text-capitalize text-center">
                         {{ $App->title1 }} </h4>
                     <!--Text-->
 
