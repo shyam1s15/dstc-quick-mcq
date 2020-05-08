@@ -27,7 +27,7 @@
                 <!--Card content-->
                 <div class="card-body">
                     <!--Title-->
-                    <h4 class="card-title red-text text-capitalize"><i class="fas fa-arrow-right"></i>
+                    <h4 class="card-title red-text text-capitalize">
                         {{ $App->title1 }} </h4>
                     <!--Text-->
 
