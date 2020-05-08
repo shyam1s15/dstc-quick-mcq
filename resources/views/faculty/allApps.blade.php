@@ -43,9 +43,9 @@
             <div class="card z-depth-1" id="app_createForm1">
                 <div class="view overlay">
                     <!--Card body-->
-                    <h3 class="mb-1 mt-1 text-center red-text">{{ $App->app_head }}</h3>
-                    <h4 class="mb-1 mt-1 text-center blue-text">- {{ $App->title1 }}</h4>
-                    <h4 class="mb-1 mt-1 text-center blue-text">- {{ $App->title2 }}</h4>
+                    <h3 class="mb-1 mt-3 text-center red-text font-weight-bold">{{ $App->app_head }}</h3>
+                    <h4 class="mb-1 mt-2 text-center blue-text">- {{ $App->title1 }}</h4>
+                    <h4 class="mb-1 mt-2 text-center blue-text">- {{ $App->title2 }}</h4>
                     <a href="">
                         <div class="mask rgba-white-slight"></div>
                     </a>
