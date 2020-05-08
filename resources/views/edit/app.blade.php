@@ -174,9 +174,7 @@
       });
     application.app_id = "{{ $app->id }}";
     
-    $("#cover").delegate(" span[name=editLevelQuestions]","click",function(){
-        console.log("yeah questions");
-    });
+    $("#cover").delegate(" span[name=editLevelQuestions]","click",editLevel => 1);
 </script>
 
 {{--  making of app  --}}
@@ -227,7 +225,13 @@
 {{--  app maker ended  --}}
 
 {{--  level editing  --}}
+<script>
+    function editLevel(id){
+        console.log("yeah questions : " + id);
 
+    }
+</script>
+{{--  ended level editing  --}}
 
 {{--  driver codes  --}}
 <script>
