@@ -24,91 +24,93 @@
 
                                 <!--Grid column-->
                                 <div class="col-md-8">
-                                    <!--Grid column-->
-                                    <div class="col-md-12">
-                                        <!-- Form contact -->
-                                        <form class="grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-user prefix green-text"></i>
-                                                <input type="text" id="form3" class="form-control form-control-sm"
-                                                    required>
-                                                <label for="form3" class="required">Your Full name</label>
-                                            </div>
-                                            
-                                            <div class="md-form form-sm"> <i class="fas fa-phone prefix green-text"></i>
-                                                <input type="number" id="form3" class="form-control form-control-sm"
-                                                    required>
-                                                <label for="form3" class="required">Your Contact</label>
-                                            </div>
-                                            
-                                            <div class="md-form form-sm"> <i
-                                                    class="fas fa-pencil-alt prefix green-text"></i>
-                                                <textarea type="text" id="form8"
-                                                    class="md-textarea form-control form-control-sm"
-                                                    rows="4"></textarea>
-                                                <label for="form8">Any messages for us</label>
-                                            </div>
+                                    <div class="row p-2">
+                                        <!--Grid column-->
+                                        <div class="col-md-12">
+                                            <!-- Form contact -->
+                                            <form class="grey-text">
+                                                <div class="md-form form-sm"> <i
+                                                        class="fas fa-user prefix green-text"></i>
+                                                    <input type="text" id="form3" class="form-control form-control-sm"
+                                                        required>
+                                                    <label for="form3" class="required">Your Good name</label>
+                                                </div>
 
-                                            <div class="row justify-content-md-center">
-                                                <div class="col col-md-auto">
-                                                    {{--  dropdown for education selection  --}}
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-success dropdown-toggle" type="button"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
-                                                            <i class="fas fa-book-open mr-2"></i>
-                                                            Qualification</button>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-6 previous">
+                                                        {{--  dropdown for education selection  --}}
+                                                        <div class="btn-group" style="width:auto; display:block">
+                                                            <button class="btn btn-success dropdown-toggle"
+                                                                id="btnDropDown" type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false">
+                                                                {{--  <i class="fas fa-book-open mr-2"></i>  --}}
+                                                                Qualification</button>
 
-                                                        <div class="dropdown-menu">
+                                                            <div class="dropdown-menu">
 
-                                                            <div class="dropdown-submenu">
-                                                                <a class="dropdown-item dropdown-toggle" type="button"
-                                                                    data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false">12th</a>
+                                                                <a class="dropdown-item">10th</a>
+                                                                <a class="dropdown-item">12th Science group A</a>
+                                                                <a class="dropdown-item">12th Science group B</a>
+                                                                <a class="dropdown-item">commerce</a>
+                                                                <a class="dropdown-item">Arts</a>
+                                                                <a class="dropdown-item">Other</a>
 
-                                                                <div class="dropdown-menu">
-
-                                                                    <a class="dropdown-item">Science group A</a>
-                                                                    <a class="dropdown-item">Science group B</a>
-                                                                    <a class="dropdown-item">commerce</a>
-                                                                    <a class="dropdown-item">Arts</a>
-
-
-                                                                </div>
                                                             </div>
-                                                            <a class="dropdown-item">10th</a>
+                                                        </div>
+                                                        {{--  dropdown ended  --}}
 
-                                                            <a class="dropdown-item">I.T.I</a>
-                                                            <a class="dropdown-item">Other</a>
+                                                    </div>
+                                                    <div class="col-6 next">
 
+                                                        <div class="md-form form-sm"> <i
+                                                                class="fa fa-book green-text prefix"
+                                                                aria-hidden="true"></i>
 
+                                                            <input type="text" id="form3"
+                                                                class="form-control form-control-sm" required>
+                                                            <label for="form3" class="required">Seat number</label>
                                                         </div>
                                                     </div>
-                                                    {{--  dropdown ended  --}}
+                                                    <div class="col-6 previous">
+                                                        <div class="md-form form-sm"> <i
+                                                                class="fas fa-phone prefix green-text"></i>
+                                                            <input type="number" id="form3"
+                                                                class="form-control form-control-sm" required>
+                                                            <label for="form3" class="required">Your Contact</label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-6 next">
+                                                        <div class="md-form form-sm"><i
+                                                                class="fas fa-map-marker-alt prefix green-text"></i>
+
+                                                            <input type="text" id="form3"
+                                                                class="form-control form-control-sm" required>
+                                                            <label for="form3" class="required">Your city</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-lg-8">
+                                                        <div class="md-form form-sm"><i
+                                                                class="fa fa-envelope green-text prefix"></i>
+
+                                                            <input type="email" id="form3"
+                                                                class="form-control form-control-sm">
+                                                            <label for="form3" class="required">Your Email</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-lg-8">
+                                                        <button type="submit" class="btn purple-gradient">
+                                                            
+                                                            sign up
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="row justify-content-md-center">
-                                                <div class="col col-md-auto">
-
-                                            <div class="md-form form-sm"> <i class="fa fa-book green-text prefix" aria-hidden="true"></i>
-
-                                                <input type="text" id="form3" class="form-control form-control-sm"
-                                                    required>
-                                                <label for="form3" class="required">Seat number</label>
-                                            </div>
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                            <button type="submit" class="btn purple-gradient col-lg col-md">
-                                                <i class="fab fa-google-plus-g white-text fa-lg mr-2"></i>
-                                                sign up
-                                            </button>
-                                        </form>
-                                        <!-- Form contact -->
+                                            </form>
+                                            <!-- Form contact -->
+                                        </div>
+                                        <!--Grid column-->
                                     </div>
-                                    <!--Grid column-->
-
 
                                 </div>
                                 <!--Grid column-->
@@ -162,16 +164,14 @@
 
 {{--  drop down scripts  --}}
 <script>
-    {{--  $("#stdSelectDropDown").hover(function(){
-    $("#stdDropDownComponent").click();
-    $('.dropdown-toggle').dropdown();
+    $(function(){
 
-});
-$("#stdDropDownComponent").hover(function(){
-    $("#stdDropDownComponent").click();
-    $('.dropdown-toggle').dropdown();
-});  --}}
-
+        $(".dropdown-menu a").click(function(){
+    
+          $("#btnDropDown").text($(this).text());
+       });
+    
+    });
 </script>
 {{--  ended drop down scrits  --}}
 
