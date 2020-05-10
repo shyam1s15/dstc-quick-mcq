@@ -76,7 +76,8 @@
                                                     <div class="col-12 previous">
                                                         <div class="md-form form-sm"> <i
                                                                 class="fas fa-phone prefix cust-dstc-nav-color"></i>
-                                                            <input type="number" id="contact" name="contact"
+                                                            <input type="number" id="contact" name="contact" min="999999999" max="10000000000" 
+                                                                oninvalid="this.setCustomValidity(' please enter valid phone number ')"
                                                                 class="form-control form-control-sm" required>
                                                             <label for="contact" class="required" id="">Your Contact</label>
                                                         </div>
