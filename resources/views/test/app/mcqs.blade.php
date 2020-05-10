@@ -1,5 +1,3 @@
-
-
 <div id="cover">
     <div class="row justify-content-center" id="parentRow">
         <div class="col-md-12 col-lg-8">
@@ -7,7 +5,7 @@
             </h2>
 
             @foreach ($questions as $index => $question)
-            
+
             <div class="card mt-3" id="randomQuestionForm">
                 <div class="">
                     <!--Section: Contact-->
@@ -29,8 +27,8 @@
                                             <form class="p-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-question prefix cust-dstc-nav-color fa-lg"></i>
-                                                    <h6 for="oriQuestion"
-                                                        class="required ml-5">{{ $question->question }}</h6>
+                                                    <h6 for="oriQuestion" class="required ml-5">
+                                                        {{ $question->question }}</h6>
                                                 </div>
                                             </form>
                                         </div>
@@ -50,11 +48,13 @@
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text form-check">
                                                 <div class="md-form form-sm"> <i
-                                                        class="fas fa-thumbs-up prefix red-text" id="option1{{ $index+1 }}"></i>
+                                                        class="fas fa-thumbs-up prefix red-text"
+                                                        id="option1{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option1{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required" id="optClick1{{ $index+1 }}">{{ $question->option1 }}
-                                                        </label>
+                                                    <label for="form3" class="required"
+                                                        id="optClick1{{ $index+1 }}">{{ $question->option1 }}
+                                                    </label>
                                                 </div>
                                             </form>
                                         </div>
@@ -69,11 +69,13 @@
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text">
                                                 <div class="md-form form-sm"> <i
-                                                        class="fas fa-thumbs-up prefix red-text" id="option2{{ $index+1 }}"></i>
+                                                        class="fas fa-thumbs-up prefix red-text"
+                                                        id="option2{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option2{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required" id="optClick2{{ $index+1 }}">{{ $question->option2 }}
-                                                        </label>
+                                                    <label for="form3" class="required"
+                                                        id="optClick2{{ $index+1 }}">{{ $question->option2 }}
+                                                    </label>
                                                 </div>
                                             </form>
                                         </div>
@@ -93,11 +95,13 @@
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text">
                                                 <div class="md-form form-sm"> <i
-                                                        class="fas fa-thumbs-up prefix red-text" id="option3{{ $index+1 }}"></i>
+                                                        class="fas fa-thumbs-up prefix red-text"
+                                                        id="option3{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option3{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required" id="optClick3{{ $index+1 }}">{{ $question->option3 }}
-                                                        </label>
+                                                    <label for="form3" class="required"
+                                                        id="optClick3{{ $index+1 }}">{{ $question->option3 }}
+                                                    </label>
 
                                                 </div>
                                             </form>
@@ -112,11 +116,13 @@
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text">
                                                 <div class="md-form form-sm"> <i
-                                                        class="fas fa-thumbs-up prefix red-text" id="option4{{ $index+1 }}"></i>
+                                                        class="fas fa-thumbs-up prefix red-text"
+                                                        id="option4{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option4{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required" id="optClick4{{ $index+1 }}">{{ $question->option4 }}
-                                                        </label>
+                                                    <label for="form3" class="required"
+                                                        id="optClick4{{ $index+1 }}">{{ $question->option4 }}
+                                                    </label>
                                                 </div>
                                             </form>
                                         </div>
@@ -157,7 +163,8 @@
             </div>
 
             <div class="nextLevel align-content-center">
-            <button class="btn cust-dstc-nav-background white-text float-right mr-5"  id="loadNextQuestions" name="btnApp">
+                <button class="btn cust-dstc-nav-background white-text float-right mr-5" id="loadNextQuestions"
+                    name="btnApp">
                     <i class="fa-lg">Save & Proceed</i>
                     <i class="fas fa-angle-double-right orange-text fa-lg ml-3"></i>
                 </button>
@@ -166,6 +173,3 @@
         </div>
     </div>
 </div>
-
-
-
