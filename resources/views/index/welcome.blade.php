@@ -139,7 +139,7 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title cust-dstc-nav-color">A Warm welcome to the Dr. Subhash Technical Campus</h4>
+                        <h4 class="card-title cust-dstc-nav-color">A Warm welcome from DSTC</h4>
                         <!--Text-->
                         <p class="card-text">Here in the DSTC, we respect the knowledge, Our goals are straight for
                             sharing and caring of knowledge</p>
