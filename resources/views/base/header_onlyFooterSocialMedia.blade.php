@@ -2,7 +2,7 @@
 
 <style>
     .navbar, .footer-color{
-        background-color: #112980 !important;
+        background-color: #071752 !important;
     }
     body{
         overflow-x: hidden;
