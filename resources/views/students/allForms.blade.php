@@ -36,7 +36,7 @@
                     {{--  here in button using id is not recommended as it have only 1 specific value   --}}
                     <div class="row justify-content-center">
                         <button class="btn cust-dstc-nav-background white-text text-center" value="{{ $App->id }}" name="btnApp"
-                            id="{{ $App->id }}">complete</button>
+                            id="{{ $App->id }}">start</button>
                     </div>
                 </div>
 
