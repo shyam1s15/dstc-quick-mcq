@@ -176,9 +176,9 @@
        });
     
     });
-    $("#submitWelcomeBtn").click(function(){
+    {{--  $("#submitWelcomeBtn").click(function(){  
         $("#welcomeForm").submit();
-    });
+    });  --}}
 
     $('label').click(function() {
         labelID = $(this).attr('for');
