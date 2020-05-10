@@ -4,19 +4,51 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\nextLevelModel;
+use App\new_student;
 class resultsPageController extends Controller
 {
-    //
+    //the below is the documentation of showResults, 
+    // here the $request->input('Marks') contains,
+    // the first value contains the id of level,
+    // the next value it contains is the original marks obtained in that level
+    
+    // the below is guide that how we display it in blade files,
+    // the marks are stored in an array and level to in another 
+    // when we loop over one it will both have a index
+    // thus we can display it very easily
+
+    // for temporary purpose, we will add higgest marks and level name to new_student.
+    
     public function showResults(Request $req){
+        $higgest_marks = 0;
+        $higgest_level = null;
         $combo = $req->input("Marks");
         $sendMarks = array();
         $sendLevels = array();
+
         foreach( $combo as $index => $marks ){
             if( $marks != null){
                 $sendMarks[] = $combo[ $index ];
                 $sendLevels[] = $index;
+                
+                if( $marks > $higgest_marks ){ 
+                    $higgest_level = $index;
+                    $higgest_marks = $marks;
+                }
+
             }
         }
+
+        // we will add the marks in new_student if system has cookie
+        if( $req->cookie('s_id') ){
+            $temp_student = new_student::find( $req->cookie('s_id') );
+            $subject = nextLevelModel::find( $higgest_level )->branch_subject;
+            $temp_student->best_subject = $subject;
+            $temp_student->marks = $higgest_marks;
+
+            $temp_student->save();
+        }
+
         $levels = collect();
         foreach( $sendLevels as $level_id){
             $levels->add(  nextLevelModel::find( $level_id ) );

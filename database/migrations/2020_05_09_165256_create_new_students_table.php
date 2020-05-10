@@ -21,6 +21,8 @@ class CreateNewStudentsTable extends Migration
             $table->text('contact_number')->nullable();
             $table->text('city')->nullable();
             $table->text('email')->nullable();
+            $table->text('best_subject')->nullable();
+            $table->integer('marks')->nullable();
             $table->timestamps();
         });
     }
