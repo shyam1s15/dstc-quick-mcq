@@ -9,11 +9,11 @@ class checkUserController extends Controller
 {
     //
     public function makeUser(Request $request){
-        $full_name = $request->input('full_name') == null ? '': $request->input('full_name');
+        $full_name = $request->input('full_name') == null ? '': strtolower( $request->input('full_name') );
         $seat_number = $request->input('seat_number') == null ? '' : $request->input('seat_number');
         $contact = $request->input('contact') == null ? '' : $request->input('contact');
         $city = $request->input('city') == null ? '': $request->input('city');
-        $email = $request->input('email') == null ? '' : $request->input('email');
+        $email = $request->input('email') == null ? '' : strtolower( $request->input('email') );
         $qualification = $request->input("qualification") == null ? '' : $request->input('qualification');   
         
 
