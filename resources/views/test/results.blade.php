@@ -1,4 +1,4 @@
-<h2 class="mb-1 mt-1 font-weight-bold text-center green-text">The Results are now out congratulations </h2>
+<h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">The Results are now out congratulations </h2>
 
 @foreach ($levels as $index => $level)
 
@@ -49,7 +49,7 @@
                 <div class="md-form form-sm">
                     {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                     {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                    <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text fa-2x"></i>
+                    <div class="md-form form-sm"><i class="fas fa-envelope prefix cust-dstc-nav-color fa-2x"></i>
                         
                         <h6 for="passingMsg" class="required ml-5"> {{ $level->passing_msg }} </h6>
                     </div>
@@ -109,7 +109,7 @@
                 <div class="md-form form-sm">
                     {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                     {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                    <div class="md-form form-sm"><i class="fas fa-envelope prefix fa-2x green-text"></i>
+                    <div class="md-form form-sm"><i class="fas fa-envelope prefix fa-2x cust-dstc-nav-color"></i>
                         
                         <h6 for="EliteMsg" class="required ml-5">{{ $level->Elite_msg }}</h6>
                     </div>

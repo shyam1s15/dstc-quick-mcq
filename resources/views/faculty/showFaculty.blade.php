@@ -21,7 +21,7 @@
                         <div class="symmentric-padding-2 mr-2 ml-2">
                             {{--  changed from form to span  --}}
                             <form class="p-1 grey-text">
-                                <div class="md-form form-sm"> <i class="fas fa-user prefix green-text"></i>
+                                <div class="md-form form-sm"> <i class="fas fa-user prefix cust-dstc-nav-color"></i>
                                     <input type="text" class="form-control form-control-sm" required id="prof_name">
                                     <label for="prof_name" class="required">ProfessorName</label>
                                 </div>
@@ -30,7 +30,7 @@
                         <div class="symmentric-padding-2 mr-2 ml-2">
                             {{--  changed from form to span  --}}
                             <form class="p-1 grey-text">
-                                <div class="md-form form-sm"> <i class="fas fa-envelope prefix green-text"></i>
+                                <div class="md-form form-sm"> <i class="fas fa-envelope prefix cust-dstc-nav-color"></i>
                                     <input type="text" class="form-control form-control-sm" required id="prof_email">
                                     <label for="prof_email" class="required">Professor Email</label>
                                 </div>

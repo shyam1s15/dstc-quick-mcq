@@ -16,7 +16,7 @@
                         <section id="contact">
                             <!-- Heading -->
 
-                            <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Create Application Form</h2>
+                            <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Create Application Form</h2>
 
                             {{--  <form action="#" method="get" name="createAppForm">  --}}
                             <!--Grid row-->
@@ -26,7 +26,7 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         {{--  changed from form to span  --}}
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-user prefix green-text"></i>
+                                            <div class="md-form form-sm"> <i class="fas fa-user prefix cust-dstc-nav-color"></i>
                                                 <input type="text" class="form-control form-control-sm" required
                                                     id="app_head">
                                                 <label for="app_head" class="required">Specify Application
@@ -45,7 +45,7 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"><i class="fas fa-pen prefix green-text"></i>
+                                            <div class="md-form form-sm"><i class="fas fa-pen prefix cust-dstc-nav-color"></i>
                                                 <input type="text" class="form-control form-control-sm" required
                                                     id="title1">
                                                 <label for="title1" class="required">Application title 1</label>
@@ -59,7 +59,7 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-pen prefix green-text"></i>
+                                            <div class="md-form form-sm"> <i class="fas fa-pen prefix cust-dstc-nav-color"></i>
                                                 <input type="text" class="form-control form-control-sm" required
                                                     id="title2">
                                                 <label for="title2" class="required">Application title 2</label>
@@ -76,7 +76,7 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-clock prefix green-text"></i>
+                                            <div class="md-form form-sm"> <i class="fas fa-clock prefix cust-dstc-nav-color"></i>
                                                 <input type="date" name="start_date" id="start_date"
                                                     class="form-control form-control-sm">
                                                 <label for="start_date" class="required">When your form must
@@ -92,7 +92,7 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-clock prefix green-text"></i>
+                                            <div class="md-form form-sm"> <i class="fas fa-clock prefix cust-dstc-nav-color"></i>
                                                 <input type="date" name="" id="finish_date"
                                                     class="form-control form-control-sm">
                                                 <label for="finish_date" class="required">When your form must
@@ -121,7 +121,7 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title  green-text">Application created by professor: </h4>
+                        <h4 class="card-title  cust-dstc-nav-color">Application created by professor: </h4>
                         <!--Text-->
                         <p class="card-text">Here in the DSTC, we respect the knowledge, Our goals are straight for
                             sharing and caring of knowledge</p>
@@ -151,7 +151,7 @@
                             <div id="futureAppendQuestionPage">
                                 <!--Questioning Page-->
                                 <div id="questionPage">
-                                    <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Make Your Questions
+                                    <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Make Your Questions
                                     </h2>
                                     <!--Grid row-->
                                     <div class="row justify-content-md-center">
@@ -265,7 +265,7 @@
                                     <!--Card content-->
                                     <div class="card-body">
                                         <!--Title-->
-                                        <h4 class="card-title  green-text">
+                                        <h4 class="card-title  cust-dstc-nav-color">
                                             <span id="levelIndicator">Your Application is in Level 1</span>
                                             <i class="fas fa-lightbulb yellow-text ml-2"></i>
                                         </h4>

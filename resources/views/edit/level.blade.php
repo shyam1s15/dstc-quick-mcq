@@ -1,5 +1,5 @@
 
-<h2 class="mb-1 mt-1 font-weight-bold text-center green-text">Please Define This Level</h2>
+<h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Please Define This Level</h2>
 
 <div class="row justify-content-md-center">
 
@@ -59,7 +59,7 @@
         <div class="md-form form-sm">
           {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
           {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-          <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text"></i>
+          <div class="md-form form-sm"><i class="fas fa-envelope prefix cust-dstc-nav-color"></i>
             <input type="text" name="passing-marks" id="passingMsg" class="form-control form-control-sm" required>
             <label for="passingMsg" class="required">{{ $level->passing_msg }}</label>
           </div>
@@ -111,7 +111,7 @@
         <div class="md-form form-sm">
           {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
           {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-          <div class="md-form form-sm"><i class="fas fa-envelope prefix green-text"></i>
+          <div class="md-form form-sm"><i class="fas fa-envelope prefix cust-dstc-nav-color"></i>
             <input type="text" name="Elite-marks" id="EliteMsg" class="form-control form-control-sm" required>
             <label for="EliteMsg" class="required">{{ $level->Elite_msg }}</label>
           </div>

@@ -119,7 +119,7 @@
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title  green-text">Application created by professor: </h4>
+                            <h4 class="card-title  cust-dstc-nav-color">Application created by professor: </h4>
                             <!--Text-->
                             <p class="card-text">Refresh the page if you want to cancel editing</p>
                         </div>

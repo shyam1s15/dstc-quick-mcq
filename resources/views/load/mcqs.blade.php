@@ -1,7 +1,7 @@
 <div id="cover">
     <div class="row justify-content-center" id="parentRow">
         <div class="col-md-12 col-lg-8">
-            <h2 class="mb-1 mt-1 font-weight-bold text-center green-text">All the best
+            <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">All the best
             </h2>
 
             @foreach ($questions as $question)
@@ -26,7 +26,7 @@
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text">
                                                 <div class="md-form form-sm"> <i
-                                                        class="fas fa-question prefix green-text"></i>
+                                                        class="fas fa-question prefix cust-dstc-nav-color"></i>
                                                     <input type="text" id="oriQuestion"
                                                         class="form-control form-control-sm" disabled>
                                                     <input type="file" style="display: none" id="questionImageFile">
@@ -144,7 +144,7 @@
             <!--Card content-->
             <div class="card-body">
                 <!--Title-->
-                <h4 class="card-title  green-text">
+                <h4 class="card-title  cust-dstc-nav-color">
                     <span id="levelIndicator"> Giving Up is never an option, Good luck </span>
                     <i class="fas fa-lightbulb yellow-text ml-2"></i>
                 </h4>

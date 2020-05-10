@@ -23,7 +23,7 @@
                 <!--Card content-->
                 <div class="card-body">
                     <!--Title-->
-                    <h4 class="card-title  green-text">Lets Create An Application </h4>
+                    <h4 class="card-title  cust-dstc-nav-color">Lets Create An Application </h4>
                     <!--Text-->
                     <div class="card-text">Here You can create Application, Make it more attractive by uploading images
                         using image icon next to Question</div>
@@ -53,7 +53,7 @@
                 <!--Card content-->
                 <div class="card-body">
                     <!--Title-->
-                    <h4 class="card-title  green-text">Application created by professor: </h4>
+                    <h4 class="card-title  cust-dstc-nav-color">Application created by professor: </h4>
                     <!--Text-->
                     <p class="card-text">Here You can Edit Your Application, It will be directly reflected, it is always
                         recommended to Edit once</p>

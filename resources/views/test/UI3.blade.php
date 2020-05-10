@@ -158,7 +158,7 @@
 
                         <!--Grid column-->
                         <div class="col-md-4 mb-1">
-                            <i class="fas fa-camera-retro fa-4x green-text"></i>
+                            <i class="fas fa-camera-retro fa-4x cust-dstc-nav-color"></i>
                             <h4 class="my-4">Experience</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
                                 aperiam minima
