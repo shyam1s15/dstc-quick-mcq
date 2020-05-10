@@ -12,6 +12,9 @@
     .cust-dstc-nav-background{
         background-color: #071752 !important
     }
+    .cust-dstc-nav-dropDown-hover:hover{
+        background-color: #183cc4 !important
+    }
 </style>
 @section('content')
 
@@ -65,10 +68,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle font-weight-bolder" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Navigation </a>
-                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item font-weight-bolder" href="#">Faculty works</a>
-                            <a class="dropdown-item font-weight-bolder" href="#">Student Management</a>
-                            <a class="dropdown-item font-weight-bolder" href="#">Results</a>
+                        <div class="dropdown-menu dropdown-primary cust-dstc-nav-background" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Faculty works</a>
+                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Student Management</a>
+                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Results</a>
                         </div>
                     </li>
                     <li class="nav-item">

@@ -48,14 +48,14 @@
                                                                 {{--  <i class="fas fa-book-open mr-2"></i>  --}}
                                                                 Qualification</button>
 
-                                                            <div class="dropdown-menu">
+                                                            <div class="dropdown-menu cust-dstc-nav-background white-text">
 
-                                                                <a class="dropdown-item">10th</a>
-                                                                <a class="dropdown-item">12th Science group A</a>
-                                                                <a class="dropdown-item">12th Science group B</a>
-                                                                <a class="dropdown-item">commerce</a>
-                                                                <a class="dropdown-item">Arts</a>
-                                                                <a class="dropdown-item">Other</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">10th</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th Science group A</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th Science group B</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">commerce</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">Arts</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">Other</a>
 
                                                             </div>
                                                         </div>
