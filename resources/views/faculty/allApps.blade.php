@@ -28,7 +28,7 @@
                     <div class="card-text">Here You can create Application, Make it more attractive by uploading images
                         using image icon next to Question</div>
                     <a href="{{ env('APP_URL') }}/faculty/create/app">
-                        <button class="btn btn-success" id="btnCreate">
+                        <button class="btn cust-dstc-nav-background white-text" id="btnCreate">
                             create
                             <i class="fas fa-plus-square fa-lg ml-2"></i>
                         </button>

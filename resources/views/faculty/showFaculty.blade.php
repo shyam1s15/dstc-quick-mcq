@@ -37,7 +37,7 @@
                             </form>
                         </div>
                     </li>
-                    <button class="btn btn-success" id="addProf">Add</button>
+                    <button class="btn cust-dstc-nav-background white-text" id="addProf">Add</button>
 
                     <div class="cover" id="cover">
                         

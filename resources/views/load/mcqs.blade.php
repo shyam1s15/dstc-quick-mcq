@@ -158,7 +158,7 @@
             </div>
 
             <div class="nextLevel align-content-center">
-                <button class="btn btn-success float-right mr-5" name="btnApp">
+                <button class="btn cust-dstc-nav-background white-text float-right mr-5" name="btnApp">
                     <i class="fa-lg">Save & Proceed</i>
                     <i class="fas fa-angle-double-right orange-text fa-lg ml-3"></i>
                 </button>

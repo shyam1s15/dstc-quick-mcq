@@ -429,7 +429,7 @@
     });
     
     $( "#saveQuesBtn" ).click(function() {
-        $( this ).attr( "class","btn btn-success float-left ml-5" );
+        $( this ).attr( "class","btn cust-dstc-nav-background white-text float-left ml-5" );
         $( this ).effect( "shake","slow",function(){
             $(this).attr("class","btn btn-primary float-left ml-5");
         } );

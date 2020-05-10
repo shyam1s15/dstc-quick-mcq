@@ -21,7 +21,7 @@
                     @endforeach
                 </ul>
                 <p class="text-small text-muted mb-0 pt-3">* ThankYou for creating Application, click the button and see live</p>
-                <a href="{{ env('APP_URL') }}/faculty/showApps"><button class="btn btn-success" id="completeAppBtn">Complete</button></a>
+                <a href="{{ env('APP_URL') }}/faculty/showApps"><button class="btn cust-dstc-nav-background white-text" id="completeAppBtn">Complete</button></a>
             </div>
         </div>
         <!--/.Panel-->
