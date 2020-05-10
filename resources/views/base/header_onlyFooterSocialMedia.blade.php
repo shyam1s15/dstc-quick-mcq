@@ -33,7 +33,18 @@
 
                 <!-- Links -->
                 <ul class="navbar-nav mr-auto">
+
+                    @if (Cookie::get('s_name') ))
+                        
                     <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            welcome {{ Cookie::get('s_name') }}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    @endif
+
+                    <li class="nav-item">
                         <a class="nav-link font-weight-bolder" href="#">Announcements
                             <span class="sr-only">(current)</span>
                         </a>
@@ -58,6 +69,15 @@
                     <li class="nav-item">
                         <a class="nav-link font-weight-bolder" href="#">student Login</a>
                     </li>
+                    @if (Cookie::get('s_name') ))
+                        
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ env('APP_URL') }}/signout">
+                            sign out
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    @endif
 
                 </ul>
                 <!-- Links -->

@@ -28,16 +28,18 @@
                                         <!--Grid column-->
                                         <div class="col-md-12">
                                             <!-- Form contact -->
-                                            <form class="grey-text">
+                                            <form action="{{ env('APP_URL') }}/welcome/newUser" method="POST" id="welcomeForm">
+                                                @csrf
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-user prefix green-text"></i>
-                                                    <input type="text" id="form3" class="form-control form-control-sm"
+                                                    <input type="text" id="full_name" class="form-control form-control-sm" name="full_name"
                                                         required>
-                                                    <label for="form3" class="required">Your Good name</label>
+                                                    <label for="full_name" class="required" id="">Your Good name</label>
                                                 </div>
 
                                                 <div class="row justify-content-center">
-                                                    <div class="col-6 previous">
+                                                    <div class="col-12 previous">
+                                                        <input type="hidden" name="qualification">
                                                         {{--  dropdown for education selection  --}}
                                                         <div class="btn-group" style="width:auto; display:block">
                                                             <button class="btn btn-success dropdown-toggle"
@@ -60,48 +62,48 @@
                                                         {{--  dropdown ended  --}}
 
                                                     </div>
-                                                    <div class="col-6 next">
+                                                    <div class="col-12 next">
 
                                                         <div class="md-form form-sm"> <i
                                                                 class="fa fa-book green-text prefix"
                                                                 aria-hidden="true"></i>
 
-                                                            <input type="text" id="form3"
-                                                                class="form-control form-control-sm" required>
-                                                            <label for="form3" class="required">Seat number</label>
+                                                            <input type="text" id="seat_number" name="seat_number"
+                                                                class="form-control form-control-sm">
+                                                            <label for="seat_number" class="required" id="">Seat number</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-6 previous">
+                                                    <div class="col-12 previous">
                                                         <div class="md-form form-sm"> <i
                                                                 class="fas fa-phone prefix green-text"></i>
-                                                            <input type="number" id="form3"
+                                                            <input type="number" id="contact" name="contact"
                                                                 class="form-control form-control-sm" required>
-                                                            <label for="form3" class="required">Your Contact</label>
+                                                            <label for="contact" class="required" id="">Your Contact</label>
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-6 next">
+                                                    <div class="col-12 next">
                                                         <div class="md-form form-sm"><i
                                                                 class="fas fa-map-marker-alt prefix green-text"></i>
 
-                                                            <input type="text" id="form3"
+                                                            <input type="text" id="city" name="city"
                                                                 class="form-control form-control-sm" required>
-                                                            <label for="form3" class="required">Your city</label>
+                                                            <label for="city" class="required" id="">Your city</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 col-lg-8">
+                                                    <div class="col-md-12 col-lg-12">
                                                         <div class="md-form form-sm"><i
                                                                 class="fa fa-envelope green-text prefix"></i>
 
-                                                            <input type="email" id="form3"
+                                                            <input type="email" id="email" name="email"
                                                                 class="form-control form-control-sm">
-                                                            <label for="form3" class="required">Your Email</label>
+                                                            <label for="email" class="required" id="">Your Email</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 col-lg-8">
-                                                        <button type="submit" class="btn purple-gradient">
+                                                    <div class="col-md-12 col-lg-5">
+                                                        <button type="submit" class="btn purple-gradient" id="submitWelcomeBtn">
                                                             
-                                                            sign up
+                                                            Go Go Go
                                                         </button>
                                                     </div>
                                                 </div>
@@ -164,14 +166,25 @@
 
 {{--  drop down scripts  --}}
 <script>
+    var labelId;
     $(function(){
 
         $(".dropdown-menu a").click(function(){
     
           $("#btnDropDown").text($(this).text());
+          $("input[name=qualification]").val($(this).text());
        });
     
     });
+    $("#submitWelcomeBtn").click(function(){
+        $("#welcomeForm").submit();
+    });
+
+    $('label').click(function() {
+        labelID = $(this).attr('for');
+        $('#'+labelID).trigger('click');
+ });
+ 
 </script>
 {{--  ended drop down scrits  --}}
 

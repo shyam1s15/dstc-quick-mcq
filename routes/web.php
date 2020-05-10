@@ -47,13 +47,19 @@ Route::get('/test/ui4', function() {
     return view('test.UI4');
 });
 
-
+// login works here
 Route::get('welcome', function() {
     //
     return view('index.welcome');
 });
 
+Route::post('welcome/newUser', 'login\checkUserController@makeUser');
 
+Route::get('signout','signoutController@signOut');
+
+
+
+// login works  ended
 Route::get('faculty/create/app', function() {
     return view('faculty.createApplication');
 });
