@@ -102,8 +102,7 @@
                                                     </div>
                                                     <div class="col-md-12 col-lg-5">
                                                         <button type="submit" class="btn purple-gradient" id="submitWelcomeBtn">
-                                                            
-                                                            Go Go Go
+                                                            Next
                                                         </button>
                                                     </div>
                                                 </div>
