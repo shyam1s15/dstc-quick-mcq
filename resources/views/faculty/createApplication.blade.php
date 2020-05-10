@@ -105,7 +105,7 @@
                             <!--Grid row-->
                             <div class="row">
                                 <div class="col-md-10">
-                                    <button type="submit" class="btn btn-primary float-right mr-5" id="form1Btn">
+                                    <button type="submit" class="btn cust-dstc-nav-background white-text float-right mr-5" id="form1Btn">
                                         Make
                                         <i class="fas fa-arrow-right ml-2 fa-lg"></i>
                                     </button>
@@ -133,7 +133,7 @@
                         <!--Section: Contact-->
                         <section id="question-page">
                             <!-- Heading -->
-                            <div class="row justify-content-md-center">
+                            <div class="row justify-content-md-center mt-2">
                                 <div class="col-6 align-content-center  previous">
                                     <button type="submit" class="btn btn-danger float-left ml-5 " id="finishAppBtn">
                                         <i class="fas fa-hand-paper fa-md mr-2"></i>
@@ -141,7 +141,7 @@
                                     </button>
                                 </div>
                                 <div class="col-6  align-content-center next">
-                                    <button type="submit" class="btn btn-primary float-right mr-5 " id="nextLevelBtn">
+                                    <button type="submit" class="btn btn-primary white-text float-right mr-5 " id="nextLevelBtn">
                                         Next Level
                                         <i class="fas fa-arrow-right ml-2 fa-md"></i>
                                     </button>
@@ -250,7 +250,7 @@
                                     <!--Grid row-->
                                     <div class="row">
                                         <div class="col-md-10">
-                                            <button type="submit" class="btn btn-primary float-left ml-5"
+                                            <button type="submit" class="btn cust-dstc-nav-background white-text float-left ml-5"
                                                 id="saveQuesBtn">
                                                 <i class="fas fa-smile ml-2 fa-lg mr-2"></i>
                                                 Save
@@ -429,9 +429,9 @@
     });
     
     $( "#saveQuesBtn" ).click(function() {
-        $( this ).attr( "class","btn cust-dstc-nav-background white-text float-left ml-5" );
+        $( this ).attr( "class","btn btn-success white-text float-left ml-5" );
         $( this ).effect( "shake","slow",function(){
-            $(this).attr("class","btn btn-primary float-left ml-5");
+            $(this).attr("class","btn cust-dstc-nav-background white-text float-left ml-5");
         } );
         validateSaveAndStore($(this).attr("id"));
       });

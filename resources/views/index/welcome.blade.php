@@ -100,9 +100,10 @@
                                                             <label for="email" class="required" id="">Your Email</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 col-lg-5">
-                                                        <button type="submit" class="btn purple-gradient" id="submitWelcomeBtn">
-                                                            Next
+                                                    <div class="col-md-12 col-lg-5 text-center">
+                                                        
+                                                        <button type="submit" class="btn cust-dstc-nav-background white-text" id="submitWelcomeBtn">
+                                                            <span>Next</span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -139,7 +140,7 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title cust-dstc-nav-color">A Warm welcome from DSTC</h4>
+                        <h4 class="card-title cust-dstc-nav-color">DSTC</h4>
                         <!--Text-->
                         <p class="card-text">Here in the DSTC, we respect the knowledge, Our goals are straight for
                             sharing and caring of knowledge</p>
