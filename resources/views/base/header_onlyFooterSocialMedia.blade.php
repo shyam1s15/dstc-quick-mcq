@@ -4,8 +4,13 @@
     .navbar, .footer-color{
         background-color: #071752 !important;
     }
-    body{
-        overflow-x: hidden;
+
+    .cust-dstc-nav-color{
+        color: #071752 !important
+    }
+
+    .cust-dstc-nav-background{
+        background-color: #071752 !important
     }
 </style>
 @section('content')
