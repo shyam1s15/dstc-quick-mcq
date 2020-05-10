@@ -34,6 +34,7 @@ class checkUserController extends Controller
         return redirect( '/student/showChoices' )->withCookies( [
             cookie('s_name',$full_name,60),
             cookie('s_email',$email,60),
+            cookie('s_id',$student->id),
         ] );
     }
 }

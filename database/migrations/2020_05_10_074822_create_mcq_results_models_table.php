@@ -15,6 +15,10 @@ class CreateMcqResultsModelsTable extends Migration
     {
         Schema::create('mcq_results_models', function (Blueprint $table) {
             $table->id();
+
+            $table->foreign('app_id')->references('id')->on('appFormData')->onDelete('cascade');
+            $table->foreign('s_id')->references('id')->on('new_students')->onDelete('cascade')->nullable();
+            
             $table->timestamps();
         });
     }
