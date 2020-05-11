@@ -15,6 +15,9 @@
     .cust-dstc-nav-dropDown-hover:hover{
         background-color: #183cc4 !important
     }
+    .small-font{
+        font-size: 20px !important;
+    }
 </style>
 @section('content')
 
@@ -28,7 +31,7 @@
             <!-- Navbar brand -->
             <img src="{{ url('/logos/dstc-navy-blue-logo-removebg-preview.png ') }}" width="45" alt="" class="d-inline-block align-middle mr-2">
 
-            <span class="navbar-brand font-weight-bold white-text ">Dr. Subhash Technical Campus</span>
+            <span class="navbar-brand font-weight-bold white-text">DSTC</span>
 
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
