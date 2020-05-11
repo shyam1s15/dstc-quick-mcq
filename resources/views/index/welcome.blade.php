@@ -53,8 +53,8 @@
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">10th</a>
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th Science group A</a>
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th Science group B</a>
-                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">commerce</a>
-                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">Arts</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th commerce</a>
+                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th Arts</a>
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">Other</a>
 
                                                             </div>
