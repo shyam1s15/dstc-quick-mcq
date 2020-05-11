@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\nextLevelModel;
 use App\new_student;
+
 class resultsPageController extends Controller
 {
     //the below is the documentation of showResults, 
@@ -31,21 +32,21 @@ class resultsPageController extends Controller
                 $sendMarks[] = $combo[ $index ];
                 $sendLevels[] = $index;
                 
-                if( $marks > $higgest_marks ){ 
+                if( $marks >= $higgest_marks ){ 
                     $higgest_level = $index;
                     $higgest_marks = $marks;
                 }
 
             }
         }
-
+        // return response()->json(["temp_stu"=>$req->cookie('s_id')]);
         // we will add the marks in new_student if system has cookie
         if( $req->cookie('s_id') ){
             $temp_student = new_student::find( $req->cookie('s_id') );
-            $subject = nextLevelModel::find( $higgest_level )->branch_subject;
-            $temp_student->best_subject = $subject;
+            $subject = nextLevelModel::find( $higgest_level );
+            // return response()->json(["temp_stu"=>$subject]);
+            $temp_student->best_subject = $subject->branch_subject;
             $temp_student->marks = $higgest_marks;
-
             $temp_student->save();
         }
 
