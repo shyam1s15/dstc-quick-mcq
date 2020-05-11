@@ -15,6 +15,8 @@ class CreateResultLevelsTable extends Migration
     {
         Schema::create('result_levels', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('result_id')->unsigned()->nullable();
+
             $table->foreign('result_id')->references('id')->on('mcq_results_models')->onDelete('cascade');
 
             $table->text('branch_subject')->nullable();
