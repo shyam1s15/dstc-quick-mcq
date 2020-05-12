@@ -52,8 +52,12 @@ Route::get('welcome', function() {
     //
     return view('index.welcome');
 });
+Route::get('wc', function () {
+    return redirect('welcome');
+});
 
 Route::post('welcome/newUser', 'login\checkUserController@makeUser');
+
 
 Route::get('signout','signoutController@signOut');
 
