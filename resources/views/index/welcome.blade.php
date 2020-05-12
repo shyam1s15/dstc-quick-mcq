@@ -76,8 +76,8 @@
                                                     <div class="col-12 previous">
                                                         <div class="md-form form-sm"> <i
                                                                 class="fas fa-phone prefix cust-dstc-nav-color"></i>
-                                                            <input type="number" id="contact" name="contact" minlength="10" maxlength="11" 
-                                                                oninvalid="this.setCustomValidity(' please enter valid phone number ')"
+                                                            <input type="text" id="contact" name="contact" pattern="[1-9]{1}[0-9]{9}"  
+                                                                title="please Enter valid mobile number"
                                                                 class="form-control form-control-sm" required>
                                                             <label for="contact" class="required" id="">Your Contact</label>
                                                         </div>
@@ -189,5 +189,15 @@
 </script>
 {{--  ended drop down scrits  --}}
 
+{{--  validation scripts  --}}
+<script>
+    {{--  function validateSave(){
+        var contact = $("#contact").val();
 
+        if(length(contact) != 9){
+            return false;
+        }
+        return true;
+    }  --}}
+</script>
 @endsection
