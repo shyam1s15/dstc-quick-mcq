@@ -39,4 +39,19 @@ class appEditController extends Controller
         $level = nextLevelModel::find( $request->input("level_id") ); 
         return \response( \view("edit.level",[ "level"=> $level ] ) );
     }
+
+    public function editAndStoreLevel(Request $req){
+        $Level = nextLevelModel::find( $req->input("level.level_id") );
+
+        $Level->branch_subject = $req->input('level_info.branch_name') === "null" ? $Level->branch_subject : $req->input('level.branch_name');
+        $Level->passing = $req->input('level.passing_marks') == "null" ? $Level->passing : $req->input('level.passing_marks');
+        $Level->passing_msg = $req->input('level.passing_message') == "null" ? $Level->passing_msg : $req->input('level.passing_message');
+        $Level->Elite = $req->input('level.elite_marks') == "null" ? $Level->Elite : $req->input('level.elite_marks');
+        $Level->Elite_msg = $req->input('level.elite_message') == "null" ? $Level->Elite_msg : $req->input('level.elite_message');
+        
+        $Level->save();
+        return response()->json(["success_msg"=>$Level->branch_subject]);
+        // return response()->json(["success_msg"=>$req->input('level.branch_name')]);
+        
+    }
 }

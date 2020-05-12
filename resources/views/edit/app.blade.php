@@ -168,7 +168,7 @@
         app_id : '',//it will be added later
     }
     var app_level_info = {
-        app_id : '',//it will assosiated later when server responds
+        level_id : '',//it is different than of create App, as we want to edit level
         branch_name : '',
         passing_marks : '',
         passing_message : '',
@@ -246,12 +246,19 @@
         $("#cover").load("{{ env('APP_URL') }}/edit/level",{ level_id : id });
     }
     function saveEditLevel(id){
-        app_level_info.branch_name = $("#branchName").val() != "" ? $("#branchName").val() : "null";
-        app_level_info.passing_marks = $("#").val() != "" ? $("#").val() : "null";
-        app_level_info.passing_message = $("#").val() != "" ? $("#").val() : "null";
-        app_level_info.elite_marks = $("#").val() != "" ? $("#").val() : "null";
-        app_level_info.elite_message = $("#").va() != "" ? $("#").val() : "null";
-        console.log(id);
+        app_level_info.level_id = id;
+        app_level_info.branch_name = $('#branchName').val() != "" ?  $('#branchName').val() : "null5"  ;
+        app_level_info.passing_marks = $("#passingMarks").val() != "" ? $("#passingMarks").val() : "null";
+        app_level_info.passing_message = $("#passingMsg").val() != "" ? $("#passingMsg").val() : "null";
+        app_level_info.elite_marks = $("#EliteMarks").val() != "" ? $("#EliteMarks").val() : "null";
+        app_level_info.elite_message = $("#EliteMsg").val() != "" ? $("#EliteMsg").val() : "null";
+
+        $.post('{{ env("APP_URL") }}/edit/app/save/level',{level:app_level_info},function(data){
+            console.log(data.success_msg);
+            {{--  app_level_info.app_id = data.success_msg;  --}}
+            {{--  Question.app_id = data.success_msg;  --}}
+        });
+        //console.log(id);
     }
     function saveEditLevelAndLoadQuestions(id){
 

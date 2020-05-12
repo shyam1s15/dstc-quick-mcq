@@ -143,3 +143,6 @@ Route::post('edit/app', 'appEditController@makeAppEdit');
 Route::post('edit/show/levels','appEditController@showLevelsForEdit');
 
 Route::post('edit/level', 'appEditController@compileLevelToEditPage');
+
+Route::post('edit/app/save/level', 'appEditController@editAndStoreLevel');
+
