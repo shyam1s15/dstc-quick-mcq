@@ -13,11 +13,11 @@ class nextLevelController extends Controller
     }
     public function makeLevel(Request $req){
         $Level = new nextLevelModel();
-        $Level->branch_subject = $req->input('level_info.branch_name');
-        $Level->passing = $req->input('level_info.passing_marks');
-        $Level->passing_msg = $req->input('level_info.passing_message');
-        $Level->Elite = $req->input('level_info.elite_marks');
-        $Level->Elite_msg = $req->input('level_info.elite_message');
+        $Level->branch_subject = $req->input('level_info.branch_name') == "" ? "not specified" : $req->input('level_info.branch_name');
+        $Level->passing = $req->input('level_info.passing_marks') == "" ? 0 : $req->input('level_info.passing_marks');
+        $Level->passing_msg = $req->input('level_info.passing_message') == "" ? "not specified" : $req->input('level_info.passing_message');
+        $Level->Elite = $req->input('level_info.elite_marks') == "" ? 0 : $req->input('level_info.elite_marks');
+        $Level->Elite_msg = $req->input('level_info.elite_message') == "" ? "not specified" : $req->input('level_info.elite_message');
         
         $seriesArr = array();
         $seriesArr = $req->input("level_info.question_series");

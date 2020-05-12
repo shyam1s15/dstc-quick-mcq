@@ -16,7 +16,8 @@
                         <section id="contact">
                             <!-- Heading -->
 
-                            <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Create Application Form</h2>
+                            <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Create Application
+                                Form</h2>
 
                             {{--  <form action="#" method="get" name="createAppForm">  --}}
                             <!--Grid row-->
@@ -26,7 +27,8 @@
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         {{--  changed from form to span  --}}
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-user prefix cust-dstc-nav-color"></i>
+                                            <div class="md-form form-sm"> <i
+                                                    class="fas fa-user prefix cust-dstc-nav-color"></i>
                                                 <input type="text" class="form-control form-control-sm" required
                                                     id="app_head">
                                                 <label for="app_head" class="required">Specify Application
@@ -45,7 +47,8 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"><i class="fas fa-pen prefix cust-dstc-nav-color"></i>
+                                            <div class="md-form form-sm"><i
+                                                    class="fas fa-pen prefix cust-dstc-nav-color"></i>
                                                 <input type="text" class="form-control form-control-sm" required
                                                     id="title1">
                                                 <label for="title1" class="required">Application title 1</label>
@@ -59,7 +62,8 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-pen prefix cust-dstc-nav-color"></i>
+                                            <div class="md-form form-sm"> <i
+                                                    class="fas fa-pen prefix cust-dstc-nav-color"></i>
                                                 <input type="text" class="form-control form-control-sm" required
                                                     id="title2">
                                                 <label for="title2" class="required">Application title 2</label>
@@ -76,7 +80,8 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-clock prefix cust-dstc-nav-color"></i>
+                                            <div class="md-form form-sm"> <i
+                                                    class="fas fa-clock prefix cust-dstc-nav-color"></i>
                                                 <input type="date" name="start_date" id="start_date"
                                                     class="form-control form-control-sm">
                                                 <label for="start_date" class="required">When your form must
@@ -92,7 +97,8 @@
                                 <div class="col-md-4 col-lg-5">
                                     <div class="symmentric-padding-2 mr-2 ml-2">
                                         <form class="p-1 grey-text">
-                                            <div class="md-form form-sm"> <i class="fas fa-clock prefix cust-dstc-nav-color"></i>
+                                            <div class="md-form form-sm"> <i
+                                                    class="fas fa-clock prefix cust-dstc-nav-color"></i>
                                                 <input type="date" name="" id="finish_date"
                                                     class="form-control form-control-sm">
                                                 <label for="finish_date" class="required">When your form must
@@ -105,7 +111,8 @@
                             <!--Grid row-->
                             <div class="row">
                                 <div class="col-md-10">
-                                    <button type="submit" class="btn cust-dstc-nav-background white-text float-right mr-5" id="form1Btn">
+                                    <button type="submit"
+                                        class="btn cust-dstc-nav-background white-text float-right mr-5" id="form1Btn">
                                         Make
                                         <i class="fas fa-arrow-right ml-2 fa-lg"></i>
                                     </button>
@@ -141,7 +148,8 @@
                                     </button>
                                 </div>
                                 <div class="col-6  align-content-center next">
-                                    <button type="submit" class="btn btn-primary white-text float-right mr-5 " id="nextLevelBtn">
+                                    <button type="submit" class="btn btn-primary white-text float-right mr-5 "
+                                        id="nextLevelBtn">
                                         Next Level
                                         <i class="fas fa-arrow-right ml-2 fa-md"></i>
                                     </button>
@@ -151,7 +159,8 @@
                             <div id="futureAppendQuestionPage">
                                 <!--Questioning Page-->
                                 <div id="questionPage">
-                                    <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Make Your Questions
+                                    <h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">Make Your
+                                        Questions
                                     </h2>
                                     <!--Grid row-->
                                     <div class="row justify-content-md-center">
@@ -250,7 +259,8 @@
                                     <!--Grid row-->
                                     <div class="row">
                                         <div class="col-md-10">
-                                            <button type="submit" class="btn cust-dstc-nav-background white-text float-left ml-5"
+                                            <button type="submit"
+                                                class="btn cust-dstc-nav-background white-text float-left ml-5"
                                                 id="saveQuesBtn">
                                                 <i class="fas fa-smile ml-2 fa-lg mr-2"></i>
                                                 Save
@@ -324,6 +334,11 @@
 
      question_series: [],
    }
+   $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
 
 </script>
 {{--  class script over  --}}
@@ -535,27 +550,29 @@
             app_level_info.branch_name = "Logical";
 
         }else{
-            app_level_info.branch_name = $("#branchName").val();
+            app_level_info.branch_name = $("#branchName").val() != "" ? $("#branchName").val() : "";
         }
 
-        app_level_info.passing_marks = $("#passingMarks").val();
-        app_level_info.passing_message = $("#passingMsg").val();
-        app_level_info.elite_marks = $("#EliteMarks").val();
-        app_level_info.elite_message = $("#EliteMsg").val();
+        app_level_info.passing_marks = $("#passingMarks").val() != "" ? $("#passingMarks").val() : "";
+        app_level_info.passing_message = $("#passingMsg").val() != "" ? $("#passingMsg").val() : "";
+        app_level_info.elite_marks = $("#EliteMarks").val() != "" ? $("#EliteMarks").val() : "";
+        app_level_info.elite_message = $("#EliteMsg").val() != "" ? $("#EliteMsg").val() : "";
 
         $.post('{{ env("APP_URL") }}/faculty/make/app/nextLevel',{level_info:app_level_info},function(data){
             console.log(data.success_msg);
             app_level_info.question_series = [];
         });
-        
+           
     }
 </script>
 
 <script>
     $("#finishAppBtn").click(function(){
-        $("#formCreateContent").empty();
+        //$("#formCreateContent").empty();
+        nextLevelDataUpload();
         $("#formCreateContent").load("{{ env('APP_URL') }}/faculty/finishApp",{app_id:app_level_info.app_id},function(){
         });
+        
         
     });
 </script>
