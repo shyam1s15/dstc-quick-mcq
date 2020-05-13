@@ -34,7 +34,7 @@
                                                         class="fas fa-user prefix cust-dstc-nav-color"></i>
                                                     <input type="text" id="full_name" class="form-control form-control-sm" name="full_name"
                                                         required>
-                                                    <label for="full_name" class="required" id="">Your Good name</label>
+                                                    <label for="full_name" class="required" id="">Your Full name</label>
                                                 </div>
 
                                                 <div class="row justify-content-center">

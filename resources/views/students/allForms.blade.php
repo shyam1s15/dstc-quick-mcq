@@ -177,9 +177,9 @@
                     },
                     function(data){
 
+                        window.scrollTo(0, 0);
                     });
                 }
-                {{--  window.scrollTo(0, 0);  --}}
         );
     }
     function saveAndProceed(){
@@ -212,7 +212,7 @@
                         Marks    :   marks , 
                     },
                     function(data){
-
+                        window.scrollTo(0, 0);
                     });
     }
 

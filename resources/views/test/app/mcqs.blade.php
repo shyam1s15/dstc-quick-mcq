@@ -148,6 +148,20 @@
 
             <!--Card content-->
             <div class="card-body">
+
+                <div class="row">
+
+                    <div class="col-12 justify-content-center pb-4">
+                        <div class="nextLevel align-content-center">
+                            <button class="btn cust-dstc-nav-background white-text float-lg-right mr-5"
+                                id="loadNextQuestions" name="btnApp">
+                                <i class="fa-lg">Save & Proceed</i>
+                                <i class="fas fa-angle-double-right orange-text fa-lg ml-3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!--Title-->
                 <h4 class="card-title  cust-dstc-nav-color">
                     <span id="levelIndicator"> Giving Up is never an option, Good luck </span>
@@ -162,15 +176,6 @@
 
             </div>
 
-            <div class="col-12">
-                <div class="nextLevel align-content-center">
-                    <button class="btn cust-dstc-nav-background white-text float-right mr-5" id="loadNextQuestions"
-                        name="btnApp">
-                        <i class="fa-lg">Save & Proceed</i>
-                        <i class="fas fa-angle-double-right orange-text fa-lg ml-3"></i>
-                    </button>
-                </div>
-            </div>
 
         </div>
     </div>
