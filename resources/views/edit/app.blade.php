@@ -132,7 +132,7 @@
                     <button type="submit" class="btn btn-danger float-right" id="saveAppFinish">
                         Save Edit
                         <i class="fas fa-check fa-lg"></i>
-    
+
                     </button>
                 </div>
                 <div class="col-6 align-content-center  next">
@@ -148,6 +148,9 @@
 </main>
 
 <script>
+    var correctAns = "unknown";//this variable have id of correct ans
+    var temp;
+
     var application = {
         app_id : '',
         app_head : '',
@@ -185,13 +188,17 @@
       });
     application.app_id = "{{ $app->id }}";
     
+    $("#cover").delegate("#option1, #option2, #option3, #option4","click",function(){
+        $("#option1, #option2, #option3, #option4").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $(this).attr("class","fas fa-thumbs-up prefix green-text");
+        correctAns = $(this).attr("id");
+    });
     
 </script>
 
 {{--  making of app  --}}
 <script>
     var default_date,date,month,year,dateStr;
-    
     
     function makeApp(){
         default_date = new Date();
@@ -301,6 +308,37 @@
         });
         
     }
+    function addNewQuestions(){
+        console.log( "level_id = " + app_level_info.level_id );
+        correctAns = '';
+        //only one by one questions allowed
+        $("#cover").load("/edit/make/newQuestion");
+    }
+    function saveNewQuestionOfLevel( lev_id ){
+            
+
+        Question.question = $("#oriQuestion").val() != "" ? $("#oriQuestion").val() : "undefined";
+        Question.option1 =  $("input[name=option1").val();
+        Question.option2 =  $("input[name=option2").val();
+        Question.option3 =  $("input[name=option3").val();
+        Question.option4 =  $("input[name=option4").val();
+        Question.correctAns = correctAns;
+        
+        console.log(Question);
+        
+        $.post("{{ env('APP_URL') }}/edit/store/newQuestion",{ que: Question, level_id : lev_id, app_id : "{{ $app->id }}" }, 
+        function(data){
+            console.log(data.success_msg);
+        });
+
+        
+        $("#oriQuestion").val('');
+        $("input[name=option1]").val('');
+        $("input[name=option2]").val('');
+        $("input[name=option3]").val('');
+        $("input[name=option4]").val('');
+
+    }
 </script>
 {{--  ended level editing  --}}
 
@@ -332,7 +370,20 @@
         console.log("hii");
     });
     $("#addtionalComponents").delegate("button[name=makeQuestions]","click",function(){
-        
+        if(! app_level_info.level_id ){
+            console.log( " here " );
+            saveNewLevel( {{ $app->id }} );
+        }
+        $("#addtionalComponents").empty();
+        addNewQuestions();
+    });
+    $("#cover").delegate("#saveQuesBtn","click",function(){
+        $( this ).attr( "class","btn btn-success white-text float-left ml-5" );
+        $( this ).effect( "shake","slow",function(){
+            $(this).attr("class","btn cust-dstc-nav-background white-text float-left ml-5");
+        } );
+        console.log ( app_level_info.level_id );
+        saveNewQuestionOfLevel( app_level_info.level_id );
     });
 
 </script>

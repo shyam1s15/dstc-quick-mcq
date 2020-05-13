@@ -167,7 +167,7 @@
     <div class="row justify-content-center">
         <div class="col-4 col-lg-3 text-center">
             <div class="symmentric-padding">
-                <form class="p-1 grey-text">
+                <form class="grey-text">
                     <div class="md-form form-sm">
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}

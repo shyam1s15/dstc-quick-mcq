@@ -138,6 +138,11 @@ Route::post('edit/app/level/questions', 'appEditController@compileAndShowQuestio
 
 
 
+// adding new questions to level
+
+Route::any('edit/make/newQuestion','appEditController@compileNewQuestionPage');
+Route::any('edit/store/newQuestion', 'appEditController@storeNewQuestionByLevel');
+
 Route::post('compile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 Route::get('compiile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 

@@ -114,4 +114,37 @@ class appEditController extends Controller
         // return  response(  )->json( ["questions" => $questions ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
 
     }
+
+    public function compileNewQuestionPage(){
+        return response()->view("edit.make.newQuestion");
+    }
+
+    public function storeNewQuestionByLevel(Request $req){
+        $Question = new questionModel();
+        $level = nextLevelModel::find( $req->input("level_id") );
+        // return response($level);
+        $Question->question = $req->input('que.question');
+        $Question->option1 = $req->input('que.option1');
+        $Question->option2 = $req->input('que.option2');
+        $Question->option3 = $req->input('que.option3');
+        $Question->option4 = $req->input('que.option4');
+        $Question->ans = $req->input('que.correctAns');
+        
+        // $Form = appFormDataModel::find($req->input('que.app_id'));
+        // $Form->questions()->save($Question);
+        
+        $Question->app_id = $req->input("app_id");
+        $Question->save();
+        
+        $level->questions()->save($Question);  
+        return response(  )->json(["success_msg"=>$Question]);
+
+
+        
+        // $req->inpu->store('images');
+
+        // return response()->json(['success_msg'=>$req->input('que.app_id')]);
+        return response()->json(["success_msg"=> $Question->id ]);
+
+    }
 }
