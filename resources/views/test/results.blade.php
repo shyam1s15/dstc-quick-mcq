@@ -1,4 +1,5 @@
-<h2 class="mb-1 mt-1 font-weight-bold text-center cust-dstc-nav-color">The Results are now Out.</h2>
+<h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">The Results are now Out.</h2>
+
 
 @foreach ($levels as $index => $level)
 
@@ -12,10 +13,9 @@
                     <div class="md-form form-sm">
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                        <h5 class="required">{{ $level->branch_subject }}
+                        <h5 class="grey-text font-weight-bold">{{ $level->branch_subject }}
 
                         </h5>
-
                     </div>
                 </form>
             </div>
@@ -31,7 +31,7 @@
                         <div class="md-form form-sm">
                             <i class="fab fa-angellist prefix"></i>
                             {{--  <input type="number" name="passing-marks" id="passingMarks" class="form-control form-control-sm" required>  --}}
-                            <label for="passing" class="required" id="passingLabel">{{ $marks[ $index ] }} out of
+                            <label for="passing" class="grey-text font-weight-bold" id="passingLabel">{{ $marks[ $index ] }} out of
                                 {{ count($level->questions) }}</label>
                         </div>
                     </div>
@@ -51,8 +51,8 @@
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
                         <div class="md-form form-sm">
                             <i class="far fa-comments prefix fa-2x"></i>
-                            <h6 for="passingMsg" class="required ml-5"> {{ $level->passing_msg }} </h6>
-                            
+                            <h6 for="passingMsg" class="ml-5 grey-text font-weight-bold"> {{ $level->passing_msg }} </h6>
+
                         </div>
                     </div>
                 </form>
@@ -73,7 +73,7 @@
                     <div class="md-form form-sm">
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                        <h5 class="required">{{ $level->branch_subject }}
+                        <h5 class="grey-text font-weight-bold">{{ $level->branch_subject }}
 
                         </h5>
 
@@ -92,7 +92,7 @@
                         <div class="md-form form-sm">
                             <i class="fab fa-angellist prefix"></i>
                             {{--  <input type="number" name="Elite-marks" id="EliteMarks" class="form-control form-control-sm" required>  --}}
-                            <label for="EliteMarks" class="required" id="EliteMarksLabel">{{ $marks[ $index ] }} out of
+                            <label for="EliteMarks" class="grey-text font-weight-bold" id="EliteMarksLabel">{{ $marks[ $index ] }} out of
                                 {{ count($level->questions) }}</label>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
                         <div class="md-form form-sm">
                             <i class="far fa-comments prefix fa-2x"></i>
-                            <h6 for="EliteMsg" class="required ml-5">{{ $level->Elite_msg }}</h6>
-                            
+                            <h6 for="EliteMsg" class="ml-5 grey-text font-weight-bold">{{ $level->Elite_msg }}</h6>
+
                         </div>
                     </div>
                 </form>
@@ -152,7 +152,7 @@
                         <div class="md-form form-sm">
                             <i class="fab fa-angellist prefix"></i>
                             {{--  <input type="number" name="Elite-marks" id="EliteMarks" class="form-control form-control-sm" required>  --}}
-                            <label for="EliteMarks" class="required" id="EliteMarksLabel">{{ $marks[ $index ] }} out of
+                            <label for="EliteMarks" class="grey-text font-weight-bold" id="EliteMarksLabel">{{ $marks[ $index ] }} out of
                                 {{ count($level->questions) }}</label>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                         <div class="md-form form-sm text-center">
                             <button class="btn cust-dstc-nav-background white-text text-center">
                                 <a href="{{ env('APP_URL') }}/student/showChoices" class="white-text">
-                                    
+
                                     <i class="fas fa-allergies fa-lg"></i>
                                     Finish
                                 </a>
