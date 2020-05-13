@@ -234,7 +234,7 @@
         if(logic.app_id !== null){
             logic.app_id = $(this).val();
         }
-        loadAppQuestions();
+        loadAppQuestions(); 
     });
 
 

@@ -133,7 +133,7 @@
                     <div class="md-form form-sm">
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                        <h5 class="required">{{ $level->branch_subject }}
+                        <h5 class="grey-text font-weight-bold">{{ $level->branch_subject }}
 
                         </h5>
 
