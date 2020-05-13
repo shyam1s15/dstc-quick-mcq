@@ -7,6 +7,7 @@
 
 <main id="">
     <div class="container" id="formCreateContent">
+        <div id="addtionalComponentsTop"></div>
         <div class="cover pt-4" id="cover">
             <div class="row justify-content-center" id="">
                 <div class="col-md-12 col-lg-8">
@@ -257,11 +258,14 @@
             $.each(data.questionSeries,function(index,value){
                 question_series.push( value );
             });
-            $("#cover").load("/edit/app/level/questions",{ questionSeries : question_series },{
-                {{--  //document.body.appendChild(document.createElement("script").type="text/javascript").src = '';  --}}
-            });
 
+            $("#cover").load("/edit/app/level/questions",{ questionSeries : question_series });
         });
+        $("#addtionalComponents").load("{{ env('APP_URL') }}/additionalComponents/singleLinedBtns2",
+        {
+            leftBtnName : 'exit', rightBtnName : 'makeQuestions'
+        });
+
         
     }
     function saveEditLevel(id){
@@ -356,7 +360,8 @@
         editLevel( $(this).attr("id").slice(7) ) ;
     });
     $("#cover").delegate(" span[name=editLevelQuestions]","click", function(){
-        editLevelQuestions( $(this).attr("id").slice(7) );
+        app_level_info.level_id = $( this ).attr("id").slice(7);
+        editLevelQuestions( app_level_info.level_id );
     }); 
     
     $("#cover").delegate(" button[name=saveLevelAndLoadQuestions]","click", () => saveEditLevelAndLoadQuestions( $("button[name=saveLevelAndLoadQuestions]").attr("id") ));
@@ -365,10 +370,12 @@
     $("#cover").delegate("#addNewLevelBtn","click", function(){
         makeNewLevel();
     } );
+    
     $("#addtionalComponents").delegate("button[name=saveLevel]","click",function(){
         saveNewLevel({{ $app->id }});
         console.log("hii");
     });
+
     $("#addtionalComponents").delegate("button[name=makeQuestions]","click",function(){
         if(! app_level_info.level_id ){
             console.log( " here " );

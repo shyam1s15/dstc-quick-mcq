@@ -165,3 +165,4 @@ Route::post('edit/app/save/level', 'appEditController@editAndStoreLevel');
 
 Route::any('addtionalComponents/singleLinedBtns', 'addtionalComponentsController@singleLinedButtons');
 Route::post('additionalComponents/pageRefreshMessage', 'addtionalComponentsController@endLineMessage');
+Route::post('additionalComponents/singleLinedBtns2', 'addtionalComponentsController@singleLinedButtons2');
