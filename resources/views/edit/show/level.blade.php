@@ -19,6 +19,9 @@
                             <span class="badge badge-danger badge-pill" id="levelId{{ $level->id }}" name = "editLevelQuestions">questions</span>
                         </li>
                     @endforeach
+                    <li class="list-group-item d-flex justify-content-between align-items-center" id="newLevel" name="newLevelLi">
+                        <button class="btn btn-primary" id="addNewLevelBtn">Add new level</button>
+                    </li>
                 </ul>
                 <p class="text-small text-muted mb-0 pt-3">* ThankYou for creating Application, click the button and see live</p>
                 <a href="{{ env('APP_URL') }}/faculty/showApps"><button class="btn cust-dstc-nav-background white-text" id="completeAppBtn">Complete</button></a>

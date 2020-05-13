@@ -131,6 +131,13 @@ Route::post('/test/app/questions', 'randomQuestionController@testRandomQuestions
 Route::post('load/app/questions', 'randomQuestionController@sendRandomQuestions');
 Route::get('generate/app/questionSeries', 'randomQuestionController@sendRandomSeries');
 
+// linear series
+Route::post('edit/load/linearQuestionSeries', 'appEditController@generateLinearQuestionSeries');
+
+Route::post('edit/app/level/questions', 'appEditController@compileAndShowQuestions');
+
+
+
 Route::post('compile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 Route::get('compiile/app/questions', 'randomQuestionController@compileAndShowQuestions');
 
@@ -146,3 +153,10 @@ Route::post('edit/level', 'appEditController@compileLevelToEditPage');
 
 Route::post('edit/app/save/level', 'appEditController@editAndStoreLevel');
 
+
+
+
+// addtional components here
+
+Route::any('addtionalComponents/singleLinedBtns', 'addtionalComponentsController@singleLinedButtons');
+Route::post('additionalComponents/pageRefreshMessage', 'addtionalComponentsController@endLineMessage');

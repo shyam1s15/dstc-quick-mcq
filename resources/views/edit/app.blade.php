@@ -7,7 +7,7 @@
 
 <main id="">
     <div class="container" id="formCreateContent">
-        <div class="cover" id="cover">
+        <div class="cover pt-4" id="cover">
             <div class="row justify-content-center" id="">
                 <div class="col-md-12 col-lg-8">
                     <div class="card" id="app_createForm1">
@@ -143,7 +143,8 @@
                 </div>
             </div>
         </div>
-        
+        <div id="addtionalComponents"></div>
+        <div id="endPageMessage"></div>
 </main>
 
 <script>
@@ -174,9 +175,9 @@
         passing_message : '',
         elite_marks :'',
         elite_message : '',
-
-     question_series: [],
    }
+   var question_series = [];
+
     $.ajaxSetup({
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -241,9 +242,20 @@
         $("#cover").load("{{ env('APP_URL') }}/edit/level",{ level_id : id });
 
     }
-    function editLevelQuestions(id){
-        console.log("yeah questions : " + id);
-        $("#cover").load("{{ env('APP_URL') }}/edit/level",{ level_id : id });
+    function editLevelQuestions(lev_id){
+        console.log("yeah questions : " + lev_id);
+        {{--  //the below script will load the series and as soon the series --}}
+            {{--  // onbtains  the next request will load the  view  --}}
+        $.post("{{ env('APP_URL') }}/edit/load/linearQuestionSeries",{ level_id : lev_id, series : question_series },function(data){
+            $.each(data.questionSeries,function(index,value){
+                question_series.push( value );
+            });
+            $("#cover").load("/edit/app/level/questions",{ questionSeries : question_series },{
+                {{--  //document.body.appendChild(document.createElement("script").type="text/javascript").src = '';  --}}
+            });
+
+        });
+        
     }
     function saveEditLevel(id){
         app_level_info.level_id = id;
@@ -263,6 +275,31 @@
     function saveEditLevelAndLoadQuestions(id){
 
         console.log(id);
+    }
+    function makeNewLevel(){
+        $("#cover").load("{{ env('APP_URL') }}/faculty/create/app/nextLevel",function(){
+        });
+        $("#addtionalComponents").load("{{ env('APP_URL') }}/addtionalComponents/singleLinedBtns",{
+            leftBtnName : 'saveLevel', rightBtnName : 'makeQuestions'
+        });
+        $("#endPageMessage").load("{{ env('APP_URL') }}/additionalComponents/pageRefreshMessage",
+        { message: "Hit Save and refresh the page to see it live" });
+    }
+
+    function saveNewLevel(application_id){
+        app_level_info.branch_name = $('#branchName').val() != "" ?  $('#branchName').val() : "null5"  ;
+        app_level_info.passing_marks = $("#passingMarks").val() != "" ? $("#passingMarks").val() : "null";
+        app_level_info.passing_message = $("#passingMsg").val() != "" ? $("#passingMsg").val() : "null";
+        app_level_info.elite_marks = $("#EliteMarks").val() != "" ? $("#EliteMarks").val() : "null";
+        app_level_info.elite_message = $("#EliteMsg").val() != "" ? $("#EliteMsg").val() : "null";
+
+        $.post('{{ env("APP_URL") }}/edit/app/save/level',{level:app_level_info, app_id : application_id},function(data){
+            console.log(data.success_msg);
+            app_level_info.level_id = data.success_msg;
+            {{--  app_level_info.app_id = data.success_msg;  --}}
+            {{--  Question.app_id = data.success_msg;  --}}
+        });
+        
     }
 </script>
 {{--  ended level editing  --}}
@@ -286,6 +323,17 @@
     
     $("#cover").delegate(" button[name=saveLevelAndLoadQuestions]","click", () => saveEditLevelAndLoadQuestions( $("button[name=saveLevelAndLoadQuestions]").attr("id") ));
     $("#cover").delegate(" button[name=saveLevel]","click", () => saveEditLevel( $("button[name=saveLevel]").attr("id") ));
+
+    $("#cover").delegate("#addNewLevelBtn","click", function(){
+        makeNewLevel();
+    } );
+    $("#addtionalComponents").delegate("button[name=saveLevel]","click",function(){
+        saveNewLevel({{ $app->id }});
+        console.log("hii");
+    });
+    $("#addtionalComponents").delegate("button[name=makeQuestions]","click",function(){
+        
+    });
 
 </script>
 {{--  driver codes  --}}

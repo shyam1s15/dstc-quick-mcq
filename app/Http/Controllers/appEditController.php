@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\appFormDataModel;
 use App\nextLevelModel;
+use App\questionModel;
 class appEditController extends Controller
 {
     //
@@ -41,8 +42,13 @@ class appEditController extends Controller
     }
 
     public function editAndStoreLevel(Request $req){
-        $Level = nextLevelModel::find( $req->input("level.level_id") );
-
+        if( $req->input('app_id')!= null ){
+            $app = appFormDataModel::find( $req->input('app_id') );
+            $Level = new nextLevelModel();
+            $app->levels()->save($Level);
+        }else{
+            $Level = nextLevelModel::find( $req->input("level.level_id") );
+        }
         $Level->branch_subject = $req->input('level_info.branch_name') === "null" ? $Level->branch_subject : $req->input('level.branch_name');
         $Level->passing = $req->input('level.passing_marks') == "null" ? $Level->passing : $req->input('level.passing_marks');
         $Level->passing_msg = $req->input('level.passing_message') == "null" ? $Level->passing_msg : $req->input('level.passing_message');
@@ -50,8 +56,62 @@ class appEditController extends Controller
         $Level->Elite_msg = $req->input('level.elite_message') == "null" ? $Level->Elite_msg : $req->input('level.elite_message');
         
         $Level->save();
-        return response()->json(["success_msg"=>$Level->branch_subject]);
+        return response()->json(["success_msg"=>$Level->id]);
         // return response()->json(["success_msg"=>$req->input('level.branch_name')]);
         
+    }
+
+
+    public function generateLinearQuestionSeries(Request $req){
+        $level_id = $req->input("level_id");
+        $hadQuestions = $req->input("questionSeries") == null ? array() : $req->input("questionSeries");
+        $randomIndex = 0;
+
+        $level = nextLevelModel::find($level_id);
+        $send = array();
+        $gotQuestions = array();
+        
+
+        foreach ($level->questions as $question) {
+            array_push($gotQuestions, $question->id);
+        }
+
+        $difference = array_diff($gotQuestions, $hadQuestions);
+
+        if (count($difference) > 0) {
+            for ($i = 0; $i < 5 && $i < count($difference); $i++) {
+                $randomIndex = $i;
+
+                array_push($send,  $difference[$randomIndex]);
+                // unset( $difference[$randomIndex] );
+            }
+        }
+
+        // return  response(  )->json([ "questionSeries" => $sendWithDetails]);
+        // return  response(  )->json([ "questionSeries" => $hadQuestions,$app_id]);
+        // return  response()->json(["questionSeries" => $level->questions]);
+        return  response()->json(["questionSeries" => $send]);
+
+    
+    }
+    public function compileAndShowQuestions(Request $req)
+    {
+
+        $questions = $req->input("questionSeries");
+       
+        $questionCollection = collect();
+        // $questionCollection->add($app->questions);
+
+        if ($questions == null) {
+            $questions = array();
+        }
+        foreach ($questions as $question) {
+            $mcq = questionModel::find($question);
+            $questionCollection->add($mcq);
+        }
+
+        return  response(view("edit.questions", ["questions" => $questionCollection]) ); //->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+        // return  response(  )->json( ["questions" => $questions ]);//->json(["questionSeries" => array_merge($send,$hadQuestions) ]);
+
     }
 }
