@@ -55,30 +55,19 @@
                     </li>
                     @endif
 
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bolder" href="#">Announcements
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bolder" href="#">UpComing Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bolder" href="#">Elon Musk</a>
-                    </li>
-
+                    
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle font-weight-bolder" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Navigation </a>
                         <div class="dropdown-menu dropdown-primary cust-dstc-nav-background" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Faculty works</a>
-                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Student Management</a>
+                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="{{ env('APP_URL') }}/faculty">Faculty works</a>
+                            <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="{{ env('APP_URL') }}/student/showChoices">Student Management</a>
                             <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Results</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bolder" href="#">student Login</a>
+                        <a class="nav-link font-weight-bolder" href="{{ env('APP_URL') }}/welcome">student Login</a>
                     </li>
                     @if (Cookie::get('s_name') ))
                         
