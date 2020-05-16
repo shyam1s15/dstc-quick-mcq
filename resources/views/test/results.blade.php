@@ -9,7 +9,7 @@
 
     {{--  passing section  --}}
     <div class="row justify-content-md-center">
-        <div class="col-4 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="grey-text">
                     <div class="md-form form-sm">
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="col-4 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="grey-text">
                     <div class="md-form form-sm">
@@ -70,7 +70,7 @@
 
     {{--  Elite section  --}}
     <div class="row justify-content-md-center">
-        <div class="col-4 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="grey-text">
                     <div class="md-form form-sm">
@@ -85,7 +85,7 @@
             </div>
         </div>
 
-        <div class="col-4 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="grey-text">
                     <div class="md-form form-sm">
@@ -131,7 +131,7 @@
     <div class="card mt-3" id="randomQuestionForm">
 
     <div class="row justify-content-md-center">
-        <div class="col-4 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="p-1 grey-text">
                     <div class="md-form form-sm">
@@ -146,7 +146,7 @@
             </div>
         </div>
 
-        <div class="col-4 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="p-1 grey-text">
                     <div class="md-form form-sm">
@@ -170,7 +170,7 @@
     @endif
     @endforeach
     <div class="row justify-content-center">
-        <div class="col-4 col-lg-3 text-center">
+        <div class="col-6 col-lg-3 text-center">
             <div class="symmentric-padding">
                 <form class="grey-text">
                     <div class="md-form form-sm">
