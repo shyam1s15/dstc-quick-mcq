@@ -72,6 +72,14 @@ class resultsPageController extends Controller
         }
         $higgest_level = $higgest_marks == 0 ? null : $higgest_level;
         $higgest_level = $higgest_level != null ? nextLevelModel::find($higgest_level) : null;
+
+        $higgest_levels = $max_subjects;
+        $max_subjects = collect();
+
+        foreach( $higgest_levels as $max_sub ){
+            $max_subjects->add( nextLevelModel::find( $max_sub ) );
+        }
+
         return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subjects"=> $max_subjects,"higgest_marks"=>$higgest_marks ]);
         // return response()->json(["marks"=>$sendMarks]);
     }
