@@ -8,18 +8,18 @@ use App\new_student;
 
 class resultsPageController extends Controller
 {
-    //the below is the documentation of showResults, 
+    //the below is the documentation of showResults,
     // here the $request->input('Marks') contains,
     // the first value contains the id of level,
     // the next value it contains is the original marks obtained in that level
-    
+
     // the below is guide that how we display it in blade files,
-    // the marks are stored in an array and level to in another 
+    // the marks are stored in an array and level to in another
     // when we loop over one it will both have a index
     // thus we can display it very easily
 
     // for temporary purpose, we will add higgest marks and level name to new_student.
-    
+
     public function showResults(Request $req){
         $higgest_marks = 0;
         $higgest_level = null;
@@ -31,8 +31,8 @@ class resultsPageController extends Controller
             if( $marks != null){
                 $sendMarks[] = $combo[ $index ];
                 $sendLevels[] = $index;
-                
-                if( $marks >= $higgest_marks ){ 
+
+                if( $marks >= $higgest_marks ){
                     $higgest_level = $index;
                     $higgest_marks = $marks;
                 }
@@ -54,7 +54,7 @@ class resultsPageController extends Controller
         foreach( $sendLevels as $level_id){
             $levels->add(  nextLevelModel::find( $level_id ) );
         }
-        return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks]);
+        return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subject"=> nextLevelModel::find($higgest_level),"higgest_marks"=>$higgest_marks ]);
         // return response()->json(["marks"=>$sendMarks]);
     }
     public function showTestResults(Request $req){

@@ -1,4 +1,7 @@
 <h2 class="mb-1 mt-1 font-weight-bolderer cust-dstc-nav-color text-center">The Results are now Out.</h2>
+@if ( $higgest_subject )
+<h6 class="mb-1 mt-1 font-weight-bolderer cust-dstc-nav-color text-center">Most Suitable branch for you : {{ $higgest_subject }}</h6>
+@endif
 
 
 
@@ -55,9 +58,9 @@
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
                         <div class="md-form form-sm">
-                            
 
-                            <h6 for="passingMsg" class="ml-5 grey-text font-weight-bolderer"> {{ $level->passing_msg }} </h6>
+
+                            <h6 for="passingMsg" class="ml-5 cust-dstc-nav-color font-weight-bolderer"> {{ $level->passing_msg }} </h6>
 
                         </div>
                     </div>
@@ -123,7 +126,7 @@
 
 
 
-                            <h6 for="EliteMsg" class="ml-5 grey-text font-weight-bolderer">{{ $level->Elite_msg }}</h6>
+                            <h6 for="EliteMsg" class="ml-5 cust-dstc-nav-color font-weight-bolderer">{{ $level->Elite_msg }}</h6>
 
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-@extends('base.base') 
+@extends('base.base')
 
 <style>
     .navbar, .footer-color{
@@ -38,7 +38,7 @@
                 aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Collapsible content -->
             <div class="collapse navbar-collapse" id="basicExampleNav">
 
@@ -46,7 +46,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     @if (Cookie::get('s_name') ))
-                        
+
                     <li class="nav-item active">
                         <a class="nav-link" href="#">
                             welcome {{ Cookie::get('s_name') }}
@@ -55,9 +55,9 @@
                     </li>
                     @endif
 
-                    
+
                     <!-- Dropdown -->
-                    <li class="nav-item dropdown">
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle font-weight-bolder" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Navigation </a>
                         <div class="dropdown-menu dropdown-primary cust-dstc-nav-background" aria-labelledby="navbarDropdownMenuLink">
@@ -65,12 +65,12 @@
                             <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="{{ env('APP_URL') }}/student/showChoices">Student Management</a>
                             <a class="dropdown-item font-weight-bolder white-text cust-dstc-nav-dropDown-hover" href="#">Results</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
+                    </li> --}}
+                    {{-- <li class="nav-item">
                         <a class="nav-link font-weight-bolder" href="{{ env('APP_URL') }}/welcome">student Login</a>
-                    </li>
+                    </li> --}}
                     @if (Cookie::get('s_name') ))
-                        
+
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ env('APP_URL') }}/signout">
                             sign out
