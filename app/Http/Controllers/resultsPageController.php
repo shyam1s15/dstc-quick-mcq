@@ -39,13 +39,29 @@ class resultsPageController extends Controller
 
             }
         }
+        $max_subjects = array();
+
+        foreach( $combo as $index => $marks ){
+            if( $marks == $higgest_marks ){
+                $max_subjects[] = $index;
+            }
+        }
+
         // return response()->json(["temp_stu"=>$req->cookie('s_id')]);
         // we will add the marks in new_student if system has cookie
         if( $req->cookie('s_id') ){
             $temp_student = new_student::find( $req->cookie('s_id') );
-            $subject = nextLevelModel::find( $higgest_level );
+            if( $max_subjects != null ){
+                $temp_student->best_subject = "";
+                foreach( $max_subjects as $subID ){
+                    $subject = nextLevelModel::find( $subID );
+                    $temp_student->best_subject .= $subject->branch_subject;
+                    $temp_student->best_subject .= " : ";
+                }
+            }
+            // $subject = nextLevelModel::find( $higgest_level );
             // return response()->json(["temp_stu"=>$subject]);
-            $temp_student->best_subject = $subject->branch_subject;
+            // $temp_student->best_subject = $subject->branch_subject;
             $temp_student->marks = $higgest_marks;
             $temp_student->save();
         }
@@ -56,7 +72,7 @@ class resultsPageController extends Controller
         }
         $higgest_level = $higgest_marks == 0 ? null : $higgest_level;
         $higgest_level = $higgest_level != null ? nextLevelModel::find($higgest_level) : null;
-        return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subject"=> $higgest_level,"higgest_marks"=>$higgest_marks ]);
+        return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subjects"=> $max_subjects,"higgest_marks"=>$higgest_marks ]);
         // return response()->json(["marks"=>$sendMarks]);
     }
     public function showTestResults(Request $req){
