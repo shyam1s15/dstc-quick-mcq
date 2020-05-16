@@ -7,7 +7,7 @@
 @if ( $marks[$index] >= $level->passing && $marks[ $index ] < $level->Elite)
 
     {{--  passing section  --}}
-    <div class="card mt-3" id="randomQuestionForm">
+<div class="card mt-3" id="randomQuestionForm">
 
     <div class="row justify-content-md-center">
 
@@ -55,7 +55,7 @@
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
                         <div class="md-form form-sm">
-                            <i class="fa fa-android" aria-hidden="true"></i>
+                            <i class="fa fa-android prefix" aria-hidden="true"></i>
 
                             <h6 for="passingMsg" class="ml-5 grey-text font-weight-bolderer"> {{ $level->passing_msg }} </h6>
 
@@ -70,7 +70,7 @@
 </div>
     @elseif ( $marks[ $index ] >= $level->Elite)
 
-    <div class="card mt-3" id="randomQuestionForm">
+<div class="card mt-3" id="randomQuestionForm">
 
     {{--  Elite section  --}}
     <div class="row justify-content-md-center">
@@ -120,7 +120,7 @@
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
                         <div class="md-form form-sm">
-                            <i class="fa fa-android" aria-hidden="true"></i>
+                            <i class="fa fa-android prefix" aria-hidden="true"></i>
 
 
                             <h6 for="EliteMsg" class="ml-5 grey-text font-weight-bolderer">{{ $level->Elite_msg }}</h6>
