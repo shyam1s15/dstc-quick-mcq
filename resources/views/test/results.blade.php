@@ -1,9 +1,11 @@
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">The Results are now Out.</h2>
 
 
+
 @foreach ($levels as $index => $level)
 
 @if ( $marks[$index] >= $level->passing && $marks[ $index ] < $level->Elite)
+<div class="card mt-3" id="randomQuestionForm">
 
     {{--  passing section  --}}
     <div class="row justify-content-md-center">
@@ -61,8 +63,9 @@
     </div>
 
     {{--  over passing section  --}}
-
+</div>
     @elseif ( $marks[ $index ] >= $level->Elite)
+    <div class="card mt-3" id="randomQuestionForm">
 
 
     {{--  Elite section  --}}
@@ -120,11 +123,12 @@
             </div>
         </div>
     </div>
-
+    </div>
     {{--  over Elite section  --}}
 
     @else
     {{--  Fail section  --}}
+    <div class="card mt-3" id="randomQuestionForm">
 
     <div class="row justify-content-md-center">
         <div class="col-4 col-lg-3">
@@ -161,6 +165,7 @@
         </div>
     </div>
 
+    </div>
     {{--  over fail section  --}}
     @endif
     @endforeach
