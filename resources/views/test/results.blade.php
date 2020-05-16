@@ -8,8 +8,9 @@
 
     {{--  passing section  --}}
     <div class="row justify-content-md-center">
+        <div class="card mt-3" id="randomQuestionForm">
+
         <div class="col-6 col-lg-3">
-            <div class="card mt-3" id="randomQuestionForm">
 
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="grey-text">
@@ -70,8 +71,9 @@
 
     {{--  Elite section  --}}
     <div class="row justify-content-md-center">
+        <div class="card mt-3" id="randomQuestionForm">
+
         <div class="col-6 col-lg-3">
-            <div class="card mt-3" id="randomQuestionForm">
 
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="grey-text">
@@ -133,8 +135,9 @@
     {{--  Fail section  --}}
 
     <div class="row justify-content-md-center">
+        <div class="card mt-3" id="randomQuestionForm">
+
         <div class="col-6 col-lg-3">
-            <div class="card mt-3" id="randomQuestionForm">
 
             <div class="symmentric-padding-2 mr-2 ml-2">
                 <form class="p-1 grey-text">
