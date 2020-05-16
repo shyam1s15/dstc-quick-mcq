@@ -7,8 +7,9 @@
 @if ( $marks[$index] >= $level->passing && $marks[ $index ] < $level->Elite)
 
     {{--  passing section  --}}
+    <div class="card mt-3" id="randomQuestionForm">
+
     <div class="row justify-content-md-center">
-        <div class="card mt-3" id="randomQuestionForm">
 
         <div class="col-6 col-lg-3">
 
@@ -68,10 +69,10 @@
 </div>
     @elseif ( $marks[ $index ] >= $level->Elite)
 
+    <div class="card mt-3" id="randomQuestionForm">
 
     {{--  Elite section  --}}
     <div class="row justify-content-md-center">
-        <div class="card mt-3" id="randomQuestionForm">
 
         <div class="col-6 col-lg-3">
 
@@ -133,9 +134,9 @@
 
     @else
     {{--  Fail section  --}}
+    <div class="card mt-3" id="randomQuestionForm">
 
     <div class="row justify-content-md-center">
-        <div class="card mt-3" id="randomQuestionForm">
 
         <div class="col-6 col-lg-3">
 
