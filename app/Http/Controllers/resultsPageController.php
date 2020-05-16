@@ -54,6 +54,7 @@ class resultsPageController extends Controller
         foreach( $sendLevels as $level_id){
             $levels->add(  nextLevelModel::find( $level_id ) );
         }
+        $higgest_level = $higgest_marks == 0 ? null : $higgest_level;
         $higgest_level = $higgest_level != null ? nextLevelModel::find($higgest_level) : null;
         return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subject"=> $higgest_level,"higgest_marks"=>$higgest_marks ]);
         // return response()->json(["marks"=>$sendMarks]);
