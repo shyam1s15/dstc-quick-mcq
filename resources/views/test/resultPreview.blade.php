@@ -88,8 +88,8 @@
         {{--  over passing section  --}}
     </div>
 
-{{-- @else --}}
-
+    @endforeach
+@else
 
     {{-- in this section we will give failed students that they got 0 marks --}}
     @foreach ($levels as $index => $level)
