@@ -22,7 +22,7 @@
 
     @foreach ($levels as $index => $level)
 
-    @if ($marks[ $index ] >= $level->Elite)
+    @if ($marks[ $index ] >= $higgest_marks)
     <div class="card mt-3" id="randomQuestionForm">
 
         <div class="row justify-content-md-center">
