@@ -18,6 +18,9 @@
     .small-font{
         font-size: 20px !important;
     }
+    .first-letter-capital{
+        text-transform: capitalize;
+    }
 </style>
 @section('content')
 
@@ -48,7 +51,7 @@
                     @if (Cookie::get('s_name') ))
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link first-letter-capital" href="#">
                             welcome {{ Cookie::get('s_name') }}
                             <span class="sr-only">(current)</span>
                         </a>
