@@ -137,7 +137,11 @@
                     </a>
                 </div>
                 <!--Grid column-->
-                <div class="col-md-4 col-lg-8 col-xl-3 text-center">
+
+            </div>
+            <!--Grid row-->
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-lg-8 col-xl-3 text-center mt-2">
                     <h6 class="text-uppercase font-weight-bold">
                         <strong>DSTC Helpline</strong>
                     </h6>
@@ -148,7 +152,6 @@
                     </p>
                 </div>
             </div>
-            <!--Grid row-->
         </div>
     </div>
 
