@@ -77,7 +77,7 @@ Route::get('test/uiBtns', function() {
 Route::get('test/opData', 'testAjaxController@unique');
 
 Route::get('test/nextLevel', function() {
-    return view("faculty.nextLevel");   
+    return view("faculty.nextLevel");
 });
 Route::get('/test/finish',function(){
     return view("faculty.finishPage");
@@ -166,3 +166,5 @@ Route::post('edit/app/save/level', 'appEditController@editAndStoreLevel');
 Route::any('addtionalComponents/singleLinedBtns', 'addtionalComponentsController@singleLinedButtons');
 Route::post('additionalComponents/pageRefreshMessage', 'addtionalComponentsController@endLineMessage');
 Route::post('additionalComponents/singleLinedBtns2', 'addtionalComponentsController@singleLinedButtons2');
+
+Route::any('test/resultPreview', 'resultsPageController@fakeResults');

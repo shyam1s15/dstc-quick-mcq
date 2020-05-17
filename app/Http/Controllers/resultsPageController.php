@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\appFormDataModel;
 use Illuminate\Http\Request;
 use App\nextLevelModel;
 use App\new_student;
@@ -90,5 +91,10 @@ class resultsPageController extends Controller
     public function showTestResults(Request $req){
 
         return view("test.results");
+    }
+    public function fakeResults( Request $req){
+        $app = appFormDataModel::find(8);
+        $max_subjects = $app->levels;
+        return response()->view('test.resultPreview',["higgest_subjects"=> $max_subjects]);
     }
 }
