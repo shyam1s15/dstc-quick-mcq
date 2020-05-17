@@ -75,9 +75,9 @@
                                                         id="option2{{ $index+1 }}"></i>
                                                     <button class="btn btn-outline-primary ml-5" type="button">
 
-                                                        <label for="form3" class="required card-text text-center"
+                                                        <h6 for="form3" class="required card-text text-center"
                                                             id="optClick2{{ $index+1 }}">{{ $question->option2 }}
-                                                        </label>
+                                                        </h6>
                                                     </button>
                                                 </div>
                                             </form>
@@ -102,9 +102,9 @@
                                                         id="option3{{ $index+1 }}"></i>
                                                     <button class="btn btn-outline-primary ml-5" type="button">
 
-                                                        <label for="form3" class="required card-text text-center"
+                                                        <h6 for="form3" class="required card-text text-center"
                                                             id="optClick3{{ $index+1 }}">{{ $question->option3 }}
-                                                        </label>
+                                                        </h6>
                                                     </button>
                                                 </div>
                                             </form>
@@ -123,9 +123,9 @@
                                                         id="option4{{ $index+1 }}"></i>
                                                     <button class="btn btn-outline-primary ml-5" type="button">
 
-                                                        <label for="form3" class="required card-text text-center"
+                                                        <h6 for="form3" class="required card-text text-center"
                                                             id="optClick4{{ $index+1 }}">{{ $question->option4 }}
-                                                        </label>
+                                                        </h6>
                                                     </button>
                                                 </div>
                                             </form>
