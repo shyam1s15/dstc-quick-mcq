@@ -88,7 +88,7 @@
         {{--  over passing section  --}}
     </div>
 
-@else
+{{-- @else --}}
 
 
     {{-- in this section we will give failed students that they got 0 marks --}}
