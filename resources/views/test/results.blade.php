@@ -1,6 +1,3 @@
-@extends('base.header_onlyFooterSocialMedia')
-
-@section('main-content')
 
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
 
@@ -165,5 +162,3 @@
 
 
 @endif
-
-@endsection
