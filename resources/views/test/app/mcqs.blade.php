@@ -46,7 +46,7 @@
                                     <!--Grid column-->
                                     <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
-                                            <form class="p-1 grey-text form-check">
+                                            <form class="pr-1 pl-1 grey-text form-check">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option1{{ $index+1 }}"></i>
@@ -68,7 +68,7 @@
 
                                     <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
-                                            <form class="p-1 grey-text">
+                                            <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option2{{ $index+1 }}"></i>
