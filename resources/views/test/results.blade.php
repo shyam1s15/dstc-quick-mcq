@@ -22,6 +22,7 @@
 
     @foreach ($levels as $index => $level)
 
+    @if ($marks[ $index ] >= $level->Elite)
     <div class="card mt-3" id="randomQuestionForm">
 
         <div class="row justify-content-md-center">
@@ -83,6 +84,8 @@
 
         {{--  over passing section  --}}
     </div>
+
+    @endif
 
     @endforeach
 
