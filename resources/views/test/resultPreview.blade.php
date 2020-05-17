@@ -4,19 +4,21 @@
 
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
 
-@if ( $higgest_subjects )
+
+@if ($higgest_subjects)
+
 
     <div class="row justify-content-center">
         <div class="col-12 col-lg-6">
-    <h4 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Most Suitable branch for you
-        @foreach ($higgest_subjects as $subject)
-        <div class="card mt-2 font-weight-bolder green-text p-2">
+            <h4 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Most Suitable branch for you
+                @foreach ($higgest_subjects as $subject)
+                <div class="card mt-2 font-weight-bolder green-text p-2">
 
-        {{ $subject->branch_subject }} <br>
-        </div>
-        @endforeach
+                {{ $subject->branch_subject }} <br>
+                </div>
+                @endforeach
 
-    </h4>
+            </h4>
         </div>
     </div>
 
@@ -85,8 +87,6 @@
 
         {{--  over passing section  --}}
     </div>
-
-{{-- end --}}
 
 @else
 
