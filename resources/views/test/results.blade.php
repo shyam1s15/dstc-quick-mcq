@@ -166,7 +166,7 @@
                     <div class="md-form form-sm">
                         {{--  <input type="text" id="form3" class="form-control form-control-sm" required>  --}}
                         {{--  <input type="file" style="display: none" id="questionImageFile">  --}}
-                        <h5 class="grey-text font-weight-bolderer">{{ $level->branch_subject }}
+                        <h5 class="grey-text font-weight-bolder">{{ $level->branch_subject }}
 
                         </h5>
 
