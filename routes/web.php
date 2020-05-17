@@ -168,3 +168,5 @@ Route::post('additionalComponents/pageRefreshMessage', 'addtionalComponentsContr
 Route::post('additionalComponents/singleLinedBtns2', 'addtionalComponentsController@singleLinedButtons2');
 
 Route::any('test/resultPreview', 'resultsPageController@fakeResults');
+
+Route::any('quiz/completed', 'quizFinishedController@showDelayedWebPageForCompletingQuiz');

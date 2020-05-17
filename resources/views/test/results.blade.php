@@ -5,7 +5,7 @@
 
 <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-<h4 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Most Suitable branch for you 
+<h4 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Most Suitable branch for you
     @foreach ($higgest_subjects as $subject)
     <div class="card mt-2 font-weight-bolder green-text p-2">
 
@@ -208,7 +208,7 @@
 
                         <div class="md-form form-sm text-center">
                             <button class="btn cust-dstc-nav-background white-text text-center">
-                                <a href="{{ env('APP_URL') }}/student/showChoices" class="white-text">
+                                <a href="{{ env('APP_URL') }}/quiz/completed" class="white-text">
 
                                     <i class="fas fa-allergies fa-lg"></i>
                                     Finish
