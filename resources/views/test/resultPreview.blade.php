@@ -56,7 +56,7 @@
                                 <i class="fab fa-angellist prefix"></i>
                                 {{--  <input type="number" name="passing-marks" id="passingMarks" class="form-control form-control-sm" required>  --}}
                                 <label for="passing" class="grey-text font-weight-bolder" id="passingLabel">{{ $higgest_marks }} out of
-                                    {{ count($level->questions) }}</label>
+                                    {{ count($subject->questions) }}</label>
                             </div>
                         </div>
                     </form>
