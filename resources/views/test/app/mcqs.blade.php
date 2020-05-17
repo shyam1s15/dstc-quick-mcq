@@ -27,7 +27,7 @@
                                             <form class="mt-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-question prefix cust-dstc-nav-color fa-lg"></i>
-                                                    <h6 for="oriQuestion" class="required ml-5">
+                                                    <h6 for="oriQuestion" class="required ml-5 font-weight-bolder">
                                                         {{ $question->question }}</h6>
                                                 </div>
                                             </form>
