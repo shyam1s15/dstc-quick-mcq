@@ -52,7 +52,7 @@
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
                                                         id="option1{{ $index+1 }}"></i>
                                                     <button class="btn btn-outline-primary ml-5" type="button">
-                                                        <h6  class="required card-text text-center"
+                                                        <h6 class="required card-text text-center"
                                                             id="optClick1{{ $index+1 }}">{{ $question->option1 }}
                                                         </h6>
                                                     </button>
@@ -73,11 +73,12 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option2{{ $index+1 }}"></i>
-                                                    <input type="text" id="form3" class="form-control form-control-sm"
-                                                        name="option2{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text text-center"
-                                                        id="optClick2{{ $index+1 }}">{{ $question->option2 }}
-                                                    </label>
+                                                    <button class="btn btn-outline-primary ml-5" type="button">
+
+                                                        <label for="form3" class="required card-text text-center"
+                                                            id="optClick2{{ $index+1 }}">{{ $question->option2 }}
+                                                        </label>
+                                                    </button>
                                                 </div>
                                             </form>
                                         </div>
@@ -99,12 +100,12 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option3{{ $index+1 }}"></i>
-                                                    <input type="text" id="form3" class="form-control form-control-sm"
-                                                        name="option3{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text text-center"
-                                                        id="optClick3{{ $index+1 }}">{{ $question->option3 }}
-                                                    </label>
+                                                    <button class="btn btn-outline-primary ml-5" type="button">
 
+                                                        <label for="form3" class="required card-text text-center"
+                                                            id="optClick3{{ $index+1 }}">{{ $question->option3 }}
+                                                        </label>
+                                                    </button>
                                                 </div>
                                             </form>
                                         </div>
@@ -120,11 +121,12 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option4{{ $index+1 }}"></i>
-                                                    <input type="text" id="form3" class="form-control form-control-sm"
-                                                        name="option4{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text text-center"
-                                                        id="optClick4{{ $index+1 }}">{{ $question->option4 }}
-                                                    </label>
+                                                    <button class="btn btn-outline-primary ml-5" type="button">
+
+                                                        <label for="form3" class="required card-text text-center"
+                                                            id="optClick4{{ $index+1 }}">{{ $question->option4 }}
+                                                        </label>
+                                                    </button>
                                                 </div>
                                             </form>
                                         </div>
