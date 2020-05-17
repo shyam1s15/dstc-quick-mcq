@@ -65,6 +65,7 @@
                                     @if (!empty($question->option2) > 0)
 
                                     <!--Grid column-->
+
                                     <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="p-1 grey-text">
@@ -93,7 +94,7 @@
                                     <!--Grid column-->
                                     <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
-                                            <form class="p-1 grey-text">
+                                            <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option3{{ $index+1 }}"></i>
@@ -114,7 +115,7 @@
                                     <!--Grid column-->
                                     <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
-                                            <form class="p-1 grey-text">
+                                            <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option4{{ $index+1 }}"></i>
