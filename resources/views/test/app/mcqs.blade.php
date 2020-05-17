@@ -52,7 +52,7 @@
                                                         id="option1{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option1{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text"
+                                                    <label for="form3" class="required card-text text-center"
                                                         id="optClick1{{ $index+1 }}">{{ $question->option1 }}
                                                     </label>
                                                 </div>
@@ -74,7 +74,7 @@
                                                         id="option2{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option2{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text"
+                                                    <label for="form3" class="required card-text text-center"
                                                         id="optClick2{{ $index+1 }}">{{ $question->option2 }}
                                                     </label>
                                                 </div>
@@ -100,7 +100,7 @@
                                                         id="option3{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option3{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text"
+                                                    <label for="form3" class="required card-text text-center"
                                                         id="optClick3{{ $index+1 }}">{{ $question->option3 }}
                                                     </label>
 
@@ -121,7 +121,7 @@
                                                         id="option4{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option4{{ $index+1 }}" disabled>
-                                                    <label for="form3" class="required card-text"
+                                                    <label for="form3" class="required card-text text-center"
                                                         id="optClick4{{ $index+1 }}">{{ $question->option4 }}
                                                     </label>
                                                 </div>
