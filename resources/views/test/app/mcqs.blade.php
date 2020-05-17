@@ -100,10 +100,10 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option3{{ $index+1 }}"></i>
-                                                    <button class="btn btn-outline-primary ml-5" type="button">
+                                                    <button class="btn btn-outline-primary ml-5" type="button" id="optClick3{{ $index+1 }}">
 
                                                         <h6 for="form3" class="required card-text text-center"
-                                                            id="optClick3{{ $index+1 }}">{{ $question->option3 }}
+                                                            >{{ $question->option3 }}
                                                         </h6>
                                                     </button>
                                                 </div>
@@ -121,10 +121,10 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option4{{ $index+1 }}"></i>
-                                                    <button class="btn btn-outline-primary ml-5" type="button">
+                                                    <button class="btn btn-outline-primary ml-5" type="button" id="optClick4{{ $index+1 }}">
 
                                                         <h6 for="form3" class="required card-text text-center"
-                                                            id="optClick4{{ $index+1 }}">{{ $question->option4 }}
+                                                            >{{ $question->option4 }}
                                                         </h6>
                                                     </button>
                                                 </div>
