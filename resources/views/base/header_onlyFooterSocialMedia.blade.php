@@ -137,7 +137,7 @@
                     </a>
                 </div>
                 <!--Grid column-->
-                <div class="col-md-4 col-lg-3 col-xl-3">
+                <div class="col-md-4 col-lg-3 col-xl-3 text-center">
                     <h6 class="text-uppercase font-weight-bold">
                         <strong>Contact</strong>
                     </h6>
