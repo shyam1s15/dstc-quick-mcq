@@ -5,7 +5,7 @@
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
 
 
-@if ( $higgest_subjects )
+@if ( $higgest_subjects != null)
 
 
     <div class="row justify-content-center">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-{{-- only display higgest marks info and its marks --}}
+    {{-- only display higgest marks info and its marks --}}
 
     @foreach ($higgest_subjects as $subject)
 
@@ -91,7 +91,7 @@
 @else
 
 
-{{-- in this else section we will give failed students that they got 0 marks --}}
+    {{-- in this section we will give failed students that they got 0 marks --}}
     @foreach ($levels as $index => $level)
         {{--  Fail section  --}}
         <div class="card mt-3" id="randomQuestionForm">
