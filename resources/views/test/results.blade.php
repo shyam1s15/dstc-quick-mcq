@@ -1,5 +1,5 @@
 
-<h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Result are here.</h2>
+<h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
 
 @if ( $higgest_subjects )
 
