@@ -27,7 +27,8 @@
                                             <form class="mt-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-question prefix cust-dstc-nav-color fa-lg"></i>
-                                                    <h6 for="oriQuestion" class="required ml-5 card-title cust-dstc-nav-color">
+                                                    <h6 for="oriQuestion"
+                                                        class="required ml-5 card-title cust-dstc-nav-color">
                                                         {{ $question->question }}</h6>
                                                 </div>
                                             </form>
@@ -50,10 +51,11 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
                                                         id="option1{{ $index+1 }}"></i>
-                                                    <button class="btn btn-outline-primary ml-5" type="button"></button>
+                                                    <button class="btn btn-outline-primary ml-5" type="button">
                                                         <label for="form3" class="required card-text text-center"
-                                                        id="optClick1{{ $index+1 }}">{{ $question->option1 }}
-                                                    </label>
+                                                            id="optClick1{{ $index+1 }}">{{ $question->option1 }}
+                                                        </label>
+                                                    </button>
                                                 </div>
                                             </form>
                                         </div>
