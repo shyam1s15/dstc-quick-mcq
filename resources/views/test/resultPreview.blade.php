@@ -1,4 +1,4 @@
-@extends('base.header_onlyFooterSocialMedia')
+@extends('base.header_footer')
 
 @section('main-content')
 
