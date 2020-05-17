@@ -24,7 +24,7 @@
                                     <!--Grid column-->
                                     <div class="col-md-8 col-lg-10">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
-                                            <form class="p-1 grey-text">
+                                            <form class="mt-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-question prefix cust-dstc-nav-color fa-lg"></i>
                                                     <h6 for="oriQuestion" class="required ml-5">
