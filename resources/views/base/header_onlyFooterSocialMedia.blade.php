@@ -21,6 +21,16 @@
     .first-letter-capital{
         text-transform: capitalize;
     }
+
+    .cust-outline-btn {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border-color: #071752 !important
+    }
 </style>
 @section('content')
 
