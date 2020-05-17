@@ -8,9 +8,9 @@
 
 <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-<h4 class="mb-1 mt-1 font-weight-bolder cust-dstc-nav-color text-center">Most Suitable branch for you :
+<h4 class="mb-1 mt-1 font-weight-bolder green-text text-center">Most Suitable branch for you :
     @foreach ($higgest_subjects as $subject)
-    <div class="card mt-2 font-weight-bolder">
+    <div class="card mt-2 font-weight-bolder green-text">
 
     {{ $subject->branch_subject }} <br>
     </div>
