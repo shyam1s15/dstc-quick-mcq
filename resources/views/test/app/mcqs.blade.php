@@ -50,7 +50,7 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option1{{ $index+1 }}"></i>
-                                                    <button class="btn cust-outline-btn"></button>
+                                                    <button class="btn btn-outline-primary"></button>
                                                         <label for="form3" class="required card-text text-center"
                                                         id="optClick1{{ $index+1 }}">{{ $question->option1 }}
                                                     </label>
