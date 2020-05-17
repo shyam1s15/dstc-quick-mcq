@@ -52,9 +52,9 @@
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
                                                         id="option1{{ $index+1 }}"></i>
                                                     <button class="btn btn-outline-primary ml-5" type="button">
-                                                        <label for="form3" class="required card-text text-center"
+                                                        <h6  class="required card-text text-center"
                                                             id="optClick1{{ $index+1 }}">{{ $question->option1 }}
-                                                        </label>
+                                                        </h6>
                                                     </button>
                                                 </div>
                                             </form>
