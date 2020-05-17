@@ -8,6 +8,6 @@ class quizFinishedController extends Controller
 {
     //
     public function showDelayedWebPageForCompletingQuiz(){
-        
+        return view('quiz.completed');
     }
 }
