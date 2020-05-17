@@ -76,8 +76,12 @@ class resultsPageController extends Controller
         $higgest_levels = $max_subjects;
         $max_subjects = collect();
 
-        foreach( $higgest_levels as $max_sub ){
-            $max_subjects->add( nextLevelModel::find( $max_sub ) );
+        if( $higgest_marks != 0 ){
+            foreach( $higgest_levels as $max_sub ){
+                $max_subjects->add( nextLevelModel::find( $max_sub ) );
+            }
+        }else{
+            $max_subjects = null;
         }
 
         return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subjects"=> $max_subjects,"higgest_marks"=>$higgest_marks ]);
