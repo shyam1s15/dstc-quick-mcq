@@ -101,7 +101,8 @@ class resultsPageController extends Controller
         foreach( $max_subjects as $subject ){
             $marks[] = $subject->Elite;
         }
+        $higgest_marks = 10;
 
-        return response()->view('test.resultPreview',["levels"=>$levels,"marks"=>$marks,"higgest_subjects"=> $max_subjects]);
+        return response()->view('test.resultPreview',["levels"=>$levels,"marks"=>$marks,"higgest_subjects"=> $max_subjects,"higgest_marks"=>$higgest_marks]);
     }
 }
