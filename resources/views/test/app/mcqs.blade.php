@@ -47,13 +47,13 @@
                                     <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text form-check">
-                                                <div class="md-form form-sm"> <i
+                                                <div class="md-form form-sm" id="optClick1{{ $index+1 }}"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option1{{ $index+1 }}"></i>
                                                     <input type="text" id="form3" class="form-control form-control-sm"
                                                         name="option1{{ $index+1 }}" disabled>
                                                     <label for="form3" class="required card-text text-center"
-                                                        id="optClick1{{ $index+1 }}">{{ $question->option1 }}
+                                                        id="">{{ $question->option1 }}
                                                     </label>
                                                 </div>
                                             </form>
