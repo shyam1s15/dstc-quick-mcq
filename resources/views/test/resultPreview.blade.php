@@ -76,7 +76,7 @@
                             <div class="md-form form-sm">
 
 
-                                <h6 for="passingMsg" class="ml-5 cust-dstc-nav-color font-weight-bold"> {{ $level->passing_msg }} </h6>
+                                <h6 for="passingMsg" class="ml-5 cust-dstc-nav-color font-weight-bold"> {{ $subject->Elite_msg }} </h6>
 
                             </div>
                         </div>
