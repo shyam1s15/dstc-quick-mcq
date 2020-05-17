@@ -89,6 +89,7 @@
     </div>
 
     @endforeach
+
 @else
 
     {{-- in this section we will give failed students that they got 0 marks --}}
@@ -162,7 +163,6 @@
 
 
 
-    @endforeach
 
 
 @endif
