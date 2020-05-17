@@ -5,7 +5,7 @@
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
 
 
-@if ($higgest_subjects)
+@if ( $higgest_subjects )
 
 
     <div class="row justify-content-center">
@@ -89,6 +89,7 @@
     </div>
 
 @else
+
 
 {{-- in this else section we will give failed students that they got 0 marks --}}
     @foreach ($levels as $index => $level)
