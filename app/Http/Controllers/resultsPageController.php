@@ -95,6 +95,13 @@ class resultsPageController extends Controller
     public function fakeResults( Request $req){
         $app = appFormDataModel::find(8);
         $max_subjects = $app->levels;
-        return response()->view('test.resultPreview',["higgest_subjects"=> $max_subjects]);
+
+        $levels = $max_subjects;
+        $marks = array();
+        foreach( $max_subjects as $subject ){
+            $marks[] = $subject->Elite;
+        }
+
+        return response()->view('test.resultPreview',["levels"=>$levels,"marks"=>$marks,"higgest_subjects"=> $max_subjects]);
     }
 }
