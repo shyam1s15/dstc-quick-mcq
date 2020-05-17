@@ -142,7 +142,7 @@
             <!--Grid row-->
             <div class="row justify-content-center">
                 <div class="col-md-4 col-lg-8 col-xl-3 text-center mt-2">
-                    <h6 class="text-uppercase font-weight-bold">
+                    <h6 class="font-weight-bold mb-0 white-text">
                         <strong>Helpline Number</strong>
                     </h6>
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
