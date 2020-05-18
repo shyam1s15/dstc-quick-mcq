@@ -76,7 +76,7 @@
                                                     <div class="col-12 previous">
                                                         <div class="md-form form-sm"> <i
                                                                 class="fas fa-phone prefix cust-dstc-nav-color"></i>
-                                                            <input type="text" id="contact" name="contact" pattern="[1-9]{1}[0-9]{9}"  
+                                                            <input type="text" id="contact" name="contact" pattern="[1-9]{1}[0-9]{9}"
                                                                 title="please Enter valid mobile number"
                                                                 class="form-control form-control-sm" required>
                                                             <label for="contact" class="required" id="">Your Contact</label>
@@ -102,7 +102,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 col-lg-5 text-center">
-                                                        
+
                                                         <button type="submit" class="btn cust-dstc-nav-background white-text" id="submitWelcomeBtn">
                                                             <span>Next</span>
                                                         </button>
@@ -171,21 +171,25 @@
     $(function(){
 
         $(".dropdown-menu a").click(function(){
-    
+
           $("#btnDropDown").text($(this).text());
           $("input[name=qualification]").val($(this).text());
        });
-    
+
     });
-    {{--  $("#submitWelcomeBtn").click(function(){  
+    
+    $("#submitWelcomeBtn").click(function(){
+    //    validation 1 qualification is must:
+
+
         $("#welcomeForm").submit();
-    });  --}}
+    });
 
     $('label').click(function() {
         labelID = $(this).attr('for');
         $('#'+labelID).trigger('click');
  });
- 
+
 </script>
 {{--  ended drop down scrits  --}}
 

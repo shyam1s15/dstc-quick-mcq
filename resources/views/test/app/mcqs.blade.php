@@ -55,7 +55,7 @@
                                                     <div class="row justify-content-center">
                                                         <button class="btn  btn-block btn-outline-primary" type="button"
                                                             id="optClick1{{ $index+1 }}"
-                                                            style="text-transform: unset !important; border-color: grey !important; margin: 0px 10px 0px 10px !important; color: #071752 !important;">
+                                                            style="text-transform: unset !important; border:1px solid grey !important; margin: 0px 10px 0px 10px !important; color: #071752 !important;">
                                                             <h6 class="required card-text text-center">
                                                                 {{ $question->option1 }}
                                                             </h6>
@@ -81,7 +81,7 @@
                                                     <div class="row justify-content-center">
                                                         <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1" type="button"
                                                             id="optClick2{{ $index+1 }}"
-                                                            style="text-transform: unset !important; border-color: grey !important;  margin: 0px 10px 0px 10px !important; color: #071752 !important;">
+                                                            style="text-transform: unset !important; border:1px solid grey !important;  margin: 0px 10px 0px 10px !important; color: #071752 !important;">
 
                                                             <h6 for="form3" class="required card-text text-center">
                                                                 {{ $question->option2 }}
