@@ -115,7 +115,7 @@
                                                     </div>
                                                     <div class="col-md-12 col-lg-5 text-center">
 
-                                                        <button type="button"
+                                                        <button type="submit"
                                                             class="btn cust-dstc-nav-background white-text"
                                                             id="submitWelcomeBtn">
                                                             <span>Next</span>
