@@ -47,7 +47,7 @@
 
                                     <!--Grid column-->
                                     <div class="col-md-4 col-lg-5 nopadding border" style="padding: 0px 0px 0px 0px !important; margin: 0 0 0 0 !important;">
-                                        <div class="mr-2 ml-2" style="padding: 0px !important; margin: 0px !important;">
+                                        <div class="mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text form-check">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
@@ -100,10 +100,10 @@
                                 @if (!empty($question->option3) > 0)
 
                                 <!--Grid row-->
-                                <div class="row justify-content-md-center no-gutters">
+                                <div class="row justify-content-md-center no-gutters border">
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5 nopadding nomargin">
+                                    <div class="col-md-4 col-lg-5 nopadding nomargin border">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
@@ -129,7 +129,7 @@
                                     @if (!empty($question->option4) > 0)
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5 nopadding nomargin">
+                                    <div class="col-md-4 col-lg-5 nopadding nomargin border">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
