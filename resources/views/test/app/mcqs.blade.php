@@ -51,7 +51,7 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
                                                         id="option1{{ $index+1 }}"></i>
-                                                    <button class="btn btn-outline-primary ml-5" type="button" id="optClick1{{ $index+1 }}" style="text-transform: unset !important;">
+                                                    <button class="btn btn-outline-primary ml-5" type="button" id="optClick1{{ $index+1 }}" style="text-transform: unset !important; width: 100%;">
                                                         <h6 class="required card-text text-center"
                                                             >{{ $question->option1 }}
                                                         </h6>
@@ -121,7 +121,7 @@
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option4{{ $index+1 }}"></i>
-                                                    <button class="btn btn-outline-primary ml-5" type="button" id="optClick4{{ $index+1 }}" style="text-transform: unset !important;">
+                                                    <button class="btn btn-outline-primary ml-5" type="button" id="optClick4{{ $index+1 }}" style="text-transform: unset !important; width: 100%;">
 
                                                         <h6 for="form3" class="required card-text text-center"
                                                             >{{ $question->option4 }}
