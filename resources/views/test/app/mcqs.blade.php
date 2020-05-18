@@ -54,7 +54,7 @@
                                                     <div class="row justify-content-center">
                                                         <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1" type="button"
                                                             id="optClick1{{ $index+1 }}"
-                                                            style="text-transform: unset !important; border-color: grey !important; ">
+                                                            style="text-transform: unset !important; border-color: grey !important; margin-right: 10px !important;">
                                                             <h6 class="required card-text text-center">
                                                                 {{ $question->option1 }}
                                                             </h6>
