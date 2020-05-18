@@ -1,9 +1,4 @@
-<style>
-    .no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
-}
-</style>
+
 <div id="cover">
     <div class="row justify-content-center" id="parentRow">
         <div class="col-md-12 col-lg-8">
@@ -51,7 +46,7 @@
                                     @if (!empty($question->option1) > 0)
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5 nopadding nomargin">
+                                    <div class="col-md-4 col-lg-5 nopadding" style="padding: 0 !important;">
                                         <div class="symmentric-padding-0 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text form-check">
                                                 <div class="md-form form-sm"> <i
@@ -77,7 +72,7 @@
 
                                     <!--Grid column-->
 
-                                    <div class="col-md-4 col-lg-5 nopadding nomargin">
+                                    <div class="col-md-4 col-lg-5 nopadding" style="padding: 0 !important;">
                                         <div class="symmentric-padding-0 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
