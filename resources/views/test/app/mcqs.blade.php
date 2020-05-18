@@ -72,7 +72,7 @@
 
                                     <!--Grid column-->
 
-                                    <div class="col-md-4 col-lg-5 nopadding" style="padding: 0 !important; margin: 0 !important;">
+                                    <div class="col-md-4 col-lg-5 nopadding" style="padding: 0 0 0 0 !important; margin: 0 0 0 0 !important;">
                                         <div class="symmentric-padding-0 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
