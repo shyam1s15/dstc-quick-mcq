@@ -1,3 +1,9 @@
+<style>
+    .no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+</style>
 <div id="cover">
     <div class="row justify-content-center" id="parentRow">
         <div class="col-md-12 col-lg-8">
