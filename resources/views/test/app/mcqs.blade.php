@@ -40,7 +40,7 @@
                                 <!--Grid row-->
 
                                 <!--Grid row-->
-                                <div class="row justify-content-md-center">
+                                <div class="row justify-content-md-center no-gutters">
 
                                     @if (!empty($question->option1) > 0)
 
@@ -99,7 +99,7 @@
                                 @if (!empty($question->option3) > 0)
 
                                 <!--Grid row-->
-                                <div class="row justify-content-md-center">
+                                <div class="row justify-content-md-center no-gutters">
 
                                     <!--Grid column-->
                                     <div class="col-md-4 col-lg-5">
