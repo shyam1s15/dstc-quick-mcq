@@ -45,7 +45,7 @@
                                     @if (!empty($question->option1) > 0)
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5  ml-1 mr-1 p-0">
+                                    <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text form-check">
                                                 <div class="md-form form-sm"> <i
@@ -54,7 +54,7 @@
                                                     <div class="row justify-content-center">
                                                         <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1" type="button"
                                                             id="optClick1{{ $index+1 }}"
-                                                            style="text-transform: unset !important; border-color: grey !important;">
+                                                            style="text-transform: unset !important; border-color: grey !important; ">
                                                             <h6 class="required card-text text-center">
                                                                 {{ $question->option1 }}
                                                             </h6>
@@ -71,7 +71,7 @@
 
                                     <!--Grid column-->
 
-                                    <div class="col-md-4 col-lg-5  ml-1 mr-1 p-0">
+                                    <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
@@ -102,7 +102,7 @@
                                 <div class="row justify-content-md-center">
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5  ml-1 mr-1 p-0">
+                                    <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
@@ -128,7 +128,7 @@
                                     @if (!empty($question->option4) > 0)
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5  ml-1 mr-1 p-0">
+                                    <div class="col-md-4 col-lg-5">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
