@@ -53,7 +53,7 @@
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
                                                         id="option1{{ $index+1 }}"></i>
                                                     <div class="row justify-content-center">
-                                                        <button class="btn btn-outline-primary btn-block cust-dstc-nav-color" type="button"
+                                                        <button class="btn  btn-block cust-dstc-nav-color btn-outline-primary" type="button"
                                                             id="optClick1{{ $index+1 }}"
                                                             style="text-transform: unset !important; border-color: grey !important; margin: 0px 10px 0px 10px !important;">
                                                             <h6 class="required card-text text-center">
