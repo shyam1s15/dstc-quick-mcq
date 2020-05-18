@@ -46,7 +46,7 @@
 
                                     <!--Grid column-->
                                     <div class="col-md-4 col-lg-5 pt-0 pb-0 mt-0 mb-0">
-                                        <div class="symmentric-padding-2 mr-2 ml-2">
+                                        <div class="symmentric-padding-0 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text form-check">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
@@ -72,7 +72,7 @@
                                     <!--Grid column-->
 
                                     <div class="col-md-4 col-lg-5 pt-0 pb-0 mt-0 mb-0">
-                                        <div class="symmentric-padding-2 mr-2 ml-2">
+                                        <div class="symmentric-padding-0 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
                                                         class="fas fa-thumbs-up prefix red-text"
