@@ -78,7 +78,7 @@
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option2{{ $index+1 }}"></i>
                                                     <div class="row justify-content-center">
-                                                        <button class="btn btn-outline-primary ml-5 w-80" type="button"
+                                                        <button class="btn btn-outline-primary btn-block" type="button"
                                                             id="optClick2{{ $index+1 }}"
                                                             style="text-transform: unset !important;">
 
@@ -110,7 +110,7 @@
                                                         id="option3{{ $index+1 }}"></i>
 
                                                     <div class="row justify-content-center">
-                                                        <button class="btn btn-outline-primary btn-block ml-5"
+                                                        <button class="btn btn-outline-primary btn-block"
                                                             type="button" id="optClick3{{ $index+1 }}"
                                                             style="text-transform: unset !important;">
 
@@ -137,7 +137,7 @@
 
                                                     <div class="row justify-content-center">
 
-                                                        <button class="btn btn-outline-primary ml-5 btn-block"
+                                                        <button class="btn btn-outline-primary btn-block"
                                                             type="button" id="optClick4{{ $index+1 }}"
                                                             style="text-transform: unset !important;">
 
