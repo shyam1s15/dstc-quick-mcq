@@ -56,9 +56,7 @@
                                                                 <a
                                                                     class="dropdown-item cust-dstc-nav-dropDown-hover">10th</a>
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th
-                                                                    Science (A group) </a>
-                                                                <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th
-                                                                    Science (B group) </a>
+                                                                    Science </a>
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th
                                                                     commerce</a>
                                                                 <a class="dropdown-item cust-dstc-nav-dropDown-hover">12th
