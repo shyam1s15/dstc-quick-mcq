@@ -260,6 +260,8 @@
      $("#submitWelcomeBtn").click(function(){
             if( ( validateQualification() == 1 ) && (validateSeatNumber() == 1 ) && (validateContact() == 1) && (validateCity() == 1) ) {
                 $("#welcomeForm").submit();
+            }else{
+                window.scrollTo(0,0);
             }
 
 
