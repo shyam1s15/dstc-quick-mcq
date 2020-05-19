@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="">
                         <!--Section: Contact-->
-                        <section id="contact">
+                        <section id="contactSection">
                             <!-- Heading -->
 
                             <h2 class="font-weight-bold text-center cust-dstc-nav-color pt-3">Welcome to DSTC</h2>
@@ -79,7 +79,8 @@
 
                                                             <input type="text" id="seat_number" name="seat_number"
                                                                 class="form-control form-control-sm">
-                                                            <label for="seat_number" class="required" id="seat_numberLabel">Seat
+                                                            <label for="seat_number" class="required"
+                                                                id="seat_numberLabel">Seat
                                                                 number</label>
                                                         </div>
                                                     </div>
@@ -175,7 +176,11 @@
         qualification_condition : false,
         seat_number_condition : false,
     };
-    var seat_number_text = null;
+    var seat_number_text = '';
+    var upperCase= new RegExp('[A-Z]');
+    var contact_number = '';
+    var numbers = new RegExp('[0-9]');
+
 </script>
 {{--  variables ended  --}}
 
@@ -198,29 +203,34 @@
             return 1;
         }
         console.log("please choose qualification");
-        $( "#btnDropDown" ).fadeToggle(1000);
-            $( "#btnDropDown" ).fadeToggle(1000);
+        ringQualificationBtn();
         return 0;
 
     }
 
     function validateSeatNumber(){
-        seat_number_text = $("#seat_number").text().trim();
-        if( seat_number_text.charAt(0).match(/[A-Z]/i)   ){
+        seat_number_text = $("#seat_number").val().trim();
+        if( seat_number_text.charAt(0).match(upperCase)  && seat_number_text.length >= 5  ){
             console.log("correct");
             return 1;
         }
-        console.log( seat_number_text );
+        console.log( "seat number is invalid" + $("#seat_number").val() + " : " + seat_number_text.length);
 
         $( "#seat_number, #seat_numberLabel" ).fadeToggle(1000);
 
             $( "#seat_number, #seat_numberLabel" ).fadeToggle(1000);
-
     }
     function validateContact(){
-            $( "#contactLabel" ).fadeToggle(1000);
-            $( "#contactLabel" ).fadeToggle(1000);
-
+        contact_number = $("#contact").val();
+        
+        if( contact_number.match(numbers) && contact_number.length == 10 &&  !( /^(.)\1+$/.test(contact_number) ) ){
+            return 1;
+        }
+        $( "#contact, #contactLabel" ).fadeToggle(1000);
+        $( "#contact, #contactLabel" ).fadeToggle(1000);
+    }
+    function  validateCity(){
+        return $("#city").val() ? 1 : 0;
     }
 
     function tester(){
@@ -247,25 +257,15 @@
         console.log("ok");
     });
 
-    // $("#submitWelcomeBtn").click(function(){
-    // //    validation 1 qualification is must:
-    //     // submit_conditions.contact_condition = validateContact == 1 ? true : false;
-    //     // if( submit_conditions.contact_condition == false ){
-    //         // $('#contact').blur(function(event) {
-    //         //         event.target.checkValidity();
-    //         //     }).bind('invalid', function(event) {
-    //         //     setTimeout(function() { $(event.target).focus(); }, 50);
-    //         // });
+     $("#submitWelcomeBtn").click(function(){
+            if( ( validateQualification() == 1 ) && (validateSeatNumber() == 1 ) && (validateContact() == 1) && (validateCity() == 1) ) {
+                $("#welcomeForm").submit();
+            }
 
-    //     // }
-    //             // tester();
-    //             // validateQualification();
-    //             validateSeatNumber();
-    // //     submit_conditions.qualification_condition = validateQualification == 1 ? true : false;
-    // //     submit_conditions.seat_number_condition = validateSeatNumber == 1 ? true : false;
-    // //   ringQualificationBtn();
-    //     // $("#welcomeForm").submit();
-    // });
+
+          
+        
+     });
 
     $('label').click(function() {
         labelID = $(this).attr('for');
