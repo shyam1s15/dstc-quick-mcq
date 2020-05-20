@@ -129,7 +129,7 @@
                         <i class="fab fa-facebook-f white-text mr-4"> </i>
                     </a>
                     <!--Instagram-->
-                    <a class="ins-ic" href="https://instagram.com/Dr.SubhashTech">
+                    <a class="ins-ic" href="instagram://user?username=Dr.SubhashTech">
                         <i class="fab fa-instagram white-text mr-4"> </i>
                     </a>
                     <!--Youtube -->
