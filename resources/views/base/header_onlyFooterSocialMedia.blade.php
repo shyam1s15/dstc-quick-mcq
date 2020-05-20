@@ -125,7 +125,7 @@
                 <!--Grid column-->
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
                     <!--Facebook-->
-                    <a class="fb-ic ml-0" href="https://graph.facebook.com/Dr.SubhashTech">
+                    <a class="fb-ic ml-0" href="https://facebook.com/Dr.SubhashTech">
                         <i class="fab fa-facebook-f white-text mr-4"> </i>
                     </a>
                     <!--Instagram-->
