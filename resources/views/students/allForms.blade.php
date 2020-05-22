@@ -206,6 +206,7 @@
         
     }
     function endMcq(){
+        console.log("App_id = " + logic.app_id);
         $("#cover").load(
                     "{{ env('APP_URL') }}/compile/app/result",
                     {   
