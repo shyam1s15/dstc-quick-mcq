@@ -27,6 +27,8 @@ class resultsPageController extends Controller
         $combo = $req->input("Marks");
         $sendMarks = array();
         $sendLevels = array();
+        // the below id we used to allocate the students to the correct id
+        $app_id = $req->input('app_id');
 
         foreach( $combo as $index => $marks ){
             if( $marks != null){
@@ -52,7 +54,7 @@ class resultsPageController extends Controller
         // we will add the marks in new_student if system has cookie
         if( $req->cookie('s_id') ){
             $temp_student = new_student::find( $req->cookie('s_id') );
-            // $temp_student->app_id = 
+            $temp_student->app_id = $app_id;
             if( $max_subjects != null ){
                 $temp_student->best_subject = "";
                 foreach( $max_subjects as $subID ){
