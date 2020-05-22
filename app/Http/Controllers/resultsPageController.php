@@ -52,6 +52,7 @@ class resultsPageController extends Controller
         // we will add the marks in new_student if system has cookie
         if( $req->cookie('s_id') ){
             $temp_student = new_student::find( $req->cookie('s_id') );
+            // $temp_student->app_id = 
             if( $max_subjects != null ){
                 $temp_student->best_subject = "";
                 foreach( $max_subjects as $subID ){

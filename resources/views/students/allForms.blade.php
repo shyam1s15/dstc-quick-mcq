@@ -210,6 +210,7 @@
                     "{{ env('APP_URL') }}/compile/app/result",
                     {   
                         Marks    :   marks , 
+                        app_id : logic.app_id,
                     },
                     function(data){
                         window.scrollTo(0, 0);
