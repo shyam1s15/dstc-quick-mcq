@@ -14,6 +14,6 @@ class easyResultsExports implements FromCollection
     }
     public function collection()
     {
-        return appFormDataModel::find($this->app_id);
+        return appFormDataModel::find($this->app_id)->tempStudentResults;
     }
 }
