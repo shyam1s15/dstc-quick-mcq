@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\questionModel;
 use App\nextLevelModel;
 use App\mcqResultsModel;
+use App\new_student;
 class appFormDataModel extends Model
 {
     //
@@ -32,6 +33,10 @@ class appFormDataModel extends Model
     public function results()
     {
         return $this->hasMany('App\mcqResultsModel', 'app_id', 'id');
+    }
+
+    public function tempStudentResults(){
+        return $this->hasMany('App\new_student', 'app_id', 'id');
     }
     
 }

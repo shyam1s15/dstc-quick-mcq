@@ -23,6 +23,10 @@ class CreateNewStudentsTable extends Migration
             $table->text('email')->nullable();
             $table->text('best_subject')->nullable();
             $table->integer('marks')->nullable();
+
+            
+            $table->bigInteger('app_id')->unsigned()->nullable();
+            $table->foreign('app_id')->references('id')->on('appFormData');
             $table->timestamps();
         });
     }
