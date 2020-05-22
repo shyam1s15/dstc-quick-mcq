@@ -18,6 +18,6 @@ class makeExcelResultsController extends Controller
         // return $app->tempStudentResults;
         // // return Excel::create();
         // // $excel = new Excel();
-        return Excel::download(new easyResultsExports($app_id), $app->app_head . 'jugad.xlsx');
+        return Excel::download(new easyResultsExports($app_id), $app->app_head . '_jugad.xlsx');
     }
 }
