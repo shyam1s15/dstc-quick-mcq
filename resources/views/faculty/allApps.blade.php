@@ -61,6 +61,11 @@
                         Edit
                         <i class="far fa-edit ml-2 fa-lg"></i>
                     </a>
+                    <a class="btn btn-info float-right" href="{{ env('APP_URL') }}/make/results/app?app_id={{ $App->id }}">
+                        results
+                        <i class="far fa-edit ml-2 fa-lg"></i>
+                    </a>
+                    
                 </div>
 
             </div>

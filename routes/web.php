@@ -151,6 +151,9 @@ Route::get("test/app/result","resultsPageController@showTestResults");
 
 
 Route::get('test/edit/app',  'appEditController@testAppEdit');
+Route::any('make/results/app', 'makeExcelResultsController@create_results');
+
+
 Route::post('edit/app', 'appEditController@makeAppEdit');
 Route::post('edit/show/levels','appEditController@showLevelsForEdit');
 
