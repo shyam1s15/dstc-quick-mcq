@@ -14,6 +14,7 @@
                 <div class="card">
                     <div class="">
                         <!--Section: Contact-->
+
                         <section id="contactSection">
                             <!-- Heading -->
 
@@ -114,7 +115,7 @@
                                                     </div>
                                                     <div class="col-md-12 col-lg-5 text-center">
 
-                                                        <button type="submit"
+                                                        <button type="button"
                                                             class="btn cust-dstc-nav-background white-text"
                                                             id="submitWelcomeBtn">
                                                             <span>Next</span>
@@ -216,11 +217,11 @@
 
         $( "#seat_number, #seat_numberLabel" ).fadeToggle(1000);
 
-            $( "#seat_number, #seat_numberLabel" ).fadeToggle(1000);
+        $( "#seat_number, #seat_numberLabel" ).fadeToggle(1000);
     }
     function validateContact(){
         contact_number = $("#contact").val();
-        
+
         if( contact_number.match(numbers) && contact_number.length == 10 &&  !( /^(.)\1+$/.test(contact_number) ) ){
             return 1;
         }
@@ -261,10 +262,6 @@
             }else{
                 window.scrollTo(0,0);
             }
-
-
-          
-        
      });
 
     $('label').click(function() {
