@@ -44,7 +44,7 @@
         </div>
     </div>
 </div>
-
+{{ dd() }}
 @endif
 
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
