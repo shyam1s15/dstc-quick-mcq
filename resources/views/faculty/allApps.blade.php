@@ -6,6 +6,14 @@
 
 @section('main-content')
 
+@if (session('no_results'))
+<div class="row justify-content-center">
+    <div class="col-md-8 title mt-3 text-center font-weight-bold red-text border blue-gradient">
+        {{ session('no_results') }}
+    </div>
+</div>
+
+@endif
 
 <!--Apps section-->
 <div id="AppSection">
@@ -15,7 +23,7 @@
             <div class="card" id="app_createForm1">
                 <div class="">
                     <!--Card body-->
-                    
+
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -38,7 +46,7 @@
         </div>
 
         @foreach ($Apps as $App)
-            
+
         <div class="col-md-12 col-lg-4 mb-3 mt-3  align-items-stretch mb-3">
             <div class="card z-depth-1" id="app_createForm1">
                 <div class="view overlay">
@@ -61,16 +69,17 @@
                         Edit
                         <i class="far fa-edit ml-2 fa-lg"></i>
                     </a>
-                    <a class="btn btn-info float-right" href="{{ env('APP_URL') }}/make/results/app?app_id={{ $App->id }}">
+                    <a class="btn btn-info float-right"
+                        href="{{ env('APP_URL') }}/make/results/app?app_id={{ $App->id }}">
                         results
                         <i class="far fa-edit ml-2 fa-lg"></i>
                     </a>
-                    
+
                 </div>
 
             </div>
         </div>
-   
+
         @endforeach
     </div>
 </div>

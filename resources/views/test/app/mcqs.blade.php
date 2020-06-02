@@ -53,10 +53,10 @@
                                                         class="fas fa-thumbs-up prefix red-text mr-5"
                                                         id="option1{{ $index+1 }}"></i>
                                                     <div class="row justify-content-center">
-                                                        <button class="btn  btn-block btn-outline-primary" type="button"
+                                                        <button class="btn  btn-block btn-outline-primary text-left" type="button"
                                                             id="optClick1{{ $index+1 }}"
                                                             style="text-transform: unset !important; border:1px solid grey !important; margin: 0px 10px 0px 10px !important; color: #071752 !important;">
-                                                            <h6 class="required card-text text-center">
+                                                            <h6 class="required card-text">
                                                                 {{ $question->option1 }}
                                                             </h6>
                                                         </button>
@@ -79,11 +79,11 @@
                                                         class="fas fa-thumbs-up prefix red-text"
                                                         id="option2{{ $index+1 }}"></i>
                                                     <div class="row justify-content-center">
-                                                        <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1" type="button"
+                                                        <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1 text-left" type="button"
                                                             id="optClick2{{ $index+1 }}"
                                                             style="text-transform: unset !important; border:1px solid grey !important;  margin: 0px 10px 0px 10px !important; color: #071752 !important;">
 
-                                                            <h6 for="form3" class="required card-text text-center">
+                                                            <h6 for="form3" class="required card-text">
                                                                 {{ $question->option2 }}
                                                             </h6>
                                                         </button>
@@ -111,11 +111,11 @@
                                                         id="option3{{ $index+1 }}"></i>
 
                                                     <div class="row justify-content-center">
-                                                        <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1"
+                                                        <button class="btn btn-outline-primary btn-block text-left cust-dstc-nav-color ml-1 mr-1"
                                                             type="button" id="optClick3{{ $index+1 }}"
                                                             style="text-transform: unset !important; border: 1px solid grey !important;  margin: 0px 10px 0px 10px !important; color: #071752 !important;">
 
-                                                            <h6 for="form3" class="required card-text text-center">
+                                                            <h6 for="form3" class="required card-text">
                                                                 {{ $question->option3 }}
                                                             </h6>
                                                         </button>
@@ -129,7 +129,7 @@
                                     @if (!empty($question->option4) > 0)
 
                                     <!--Grid column-->
-                                    <div class="col-md-4 col-lg-5 nopadding nomargin border">
+                                    <div class="col-md-4 col-lg-5 nopadding nomargin border" style="margin: 0!important; padding: 0!important; ">
                                         <div class="symmentric-padding-2 mr-2 ml-2">
                                             <form class="pr-1 pl-1 grey-text">
                                                 <div class="md-form form-sm"> <i
@@ -138,11 +138,11 @@
 
                                                     <div class="row justify-content-center">
 
-                                                        <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1"
+                                                        <button class="btn btn-outline-primary btn-block cust-dstc-nav-color ml-1 mr-1 text-left"
                                                             type="button" id="optClick4{{ $index+1 }}"
                                                             style="text-transform: unset !important; border:1px solid grey !important;  margin: 0px 10px 0px 10px !important; color: #071752 !important;">
 
-                                                            <h6 for="form3" class="required card-text text-center">
+                                                            <h6 for="form3" class="required card-text">
                                                                 {{ $question->option4 }}
                                                             </h6>
                                                         </button>

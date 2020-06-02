@@ -23,7 +23,7 @@ Route::get('testExample', function () {
 
 
 Route::get('/', function() {
-    return view('base.base');
+    return redirect('/welcome');
 });
 
 
