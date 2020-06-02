@@ -26,7 +26,7 @@
 @endif
 
 
-@if ( $higgest_subjects != null && $higgest_subjects[0]->branch_subject == "Logic Ability" )
+@if ( $higgest_subjects != null && $higgest_subjects[0]->branch_subject == "Logic Ability" && ( $higgest_subjects->count() == 1) )
 <div class="d-flex align-items-center justify-content-center" style="height: 350px">
     <div class="row justify-content-center">
         <div class="col-8 col-lg-8 text-center">
