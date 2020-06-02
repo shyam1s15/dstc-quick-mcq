@@ -176,7 +176,7 @@
         seat_number_condition : false,
     };
     var seat_number_text = '';
-    var upperCase= new RegExp('[A-Z]');
+    var upperCase= new RegExp('[A-Za-z]');
     var contact_number = '';
     var numbers = new RegExp('[0-9]');
 
