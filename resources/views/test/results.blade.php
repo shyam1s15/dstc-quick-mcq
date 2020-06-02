@@ -1,8 +1,5 @@
 @if ($higgest_marks == 0)
 
-@if ( $higgest_subjects != null)
-{{ $higgest_subjects[0]->branch_subject }}
-@endif
 
 <div class="d-flex align-items-center justify-content-center" style="height: 350px">
     <div class="row justify-content-center">
@@ -25,6 +22,28 @@
 
 
 {{ dd() }}
+
+@endif
+
+
+@if ( $higgest_subjects != null && $higgest_subjects[0]->branch_subject == "Logic Ability" )
+<div class="d-flex align-items-center justify-content-center" style="height: 350px">
+    <div class="row justify-content-center">
+        <div class="col-8 col-lg-8 text-center">
+
+            <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">sorry no results.</h2>
+            <div class="md-form form-sm text-center">
+                <a href="{{ env('APP_URL') }}/quiz/completed" class="white-text">
+                    <button class="btn cust-dstc-nav-background white-text text-center">
+
+                        <i class="fas fa-allergies fa-lg"></i>
+                        Finish
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endif
 
