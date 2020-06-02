@@ -101,7 +101,7 @@
 
                                                             <input type="text" id="city" name="city"
                                                                 class="form-control form-control-sm" required>
-                                                            <label for="city" class="required" id="">Your city</label>
+                                                            <label for="city" class="required" id="cityLabel">Your city</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 col-lg-12">
@@ -229,7 +229,13 @@
         $( "#contact, #contactLabel" ).fadeToggle(1000);
     }
     function  validateCity(){
-        return $("#city").val() ? 1 : 0;
+        if($("#city").val()){
+            return 1;
+        }
+        $( "#city, #cityLabel" ).fadeToggle(1000);
+        $( "#city, #cityLabel" ).fadeToggle(1000);
+
+        return 0;
     }
 
     function tester(){
