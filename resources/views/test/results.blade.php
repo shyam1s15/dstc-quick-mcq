@@ -1,7 +1,27 @@
-{{-- @if ($higgest_marks == 0)
-<h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">sorry no results.</h2>
-{{ return  }}
-@endif --}}
+@if ($higgest_marks == 0 || ($subject->branch_subject == "Logic Ability"))
+<div class="d-flex align-items-center justify-content-center" style="height: 350px">
+    <div class="row justify-content-center">
+        <div class="col-8 col-lg-8 text-center">
+
+            <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">sorry no results.</h2>
+            <div class="md-form form-sm text-center">
+                <button class="btn cust-dstc-nav-background white-text text-center">
+                    <a href="{{ env('APP_URL') }}/quiz/completed" class="white-text">
+
+                        <i class="fas fa-allergies fa-lg"></i>
+                        Finish
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{ dd() }}
+
+@endif
 
 <h2 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Results are here.</h2>
 
@@ -210,6 +230,10 @@
 {{--  over fail section  --}}
 
 @endforeach
+
+
+
+@endif
 <div class="row justify-content-center">
     <div class="col-6 col-lg-3 text-center">
         <div class="symmentric-padding">
@@ -234,7 +258,3 @@
 </div>
 
 
-
-
-
-@endif
