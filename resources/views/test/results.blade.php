@@ -58,7 +58,7 @@
             @foreach ($higgest_subjects as $subject)
             <div class="card mt-2 font-weight-bolder green-text p-2">
 
-                {{ $qualification_recommendation . " " . $subject->branch_subject }} <br>
+                {{ $qualification_recommendation . " in " . $subject->branch_subject }} <br>
             </div>
             @endforeach
 
