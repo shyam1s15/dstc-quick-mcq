@@ -55,6 +55,7 @@
 <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
         <h4 class="mb-1 mt-1 font-weight-bold cust-dstc-nav-color text-center">Most Suitable branch for you
+            {{ cookie("s_qualification") }}
             @foreach ($higgest_subjects as $subject)
             <div class="card mt-2 font-weight-bolder green-text p-2">
 
