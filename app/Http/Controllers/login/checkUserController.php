@@ -14,8 +14,8 @@ class checkUserController extends Controller
         $contact = $request->input('contact') == null ? '' : $request->input('contact');
         $city = $request->input('city') == null ? '': $request->input('city');
         $email = $request->input('email') == null ? '' : strtolower( $request->input('email') );
-        $qualification = $request->input("qualification") == null ? '' : $request->input('qualification');   
-        
+        $qualification = $request->input("qualification") == null ? '' : $request->input('qualification');
+
 
         $student = new_student::where("full_name",$full_name)
         ->where('email',$email)
@@ -35,6 +35,7 @@ class checkUserController extends Controller
             cookie('s_name',$full_name,60),
             cookie('s_email',$email,60),
             cookie('s_id',$student->id),
+            cookie('s_qualification',$qualification),
         ] );
     }
 }

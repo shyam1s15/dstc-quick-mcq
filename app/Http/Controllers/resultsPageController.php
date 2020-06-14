@@ -29,6 +29,13 @@ class resultsPageController extends Controller
         $sendLevels = array();
         // the below id we used to allocate the students to the correct id
         $app_id = $req->input('app_id');
+        $qualification_recommendation = '';
+
+        if( $req->cookie('s_qualification') ){
+            $qualification_recommendation = $req->cookie('s_qualification') == "12th Science" ? "Bachelor" : "Diploma";
+        }else{
+            $qualification_recommendation = "It's in testing mode, please sign up first";
+        }
 
         foreach( $combo as $index => $marks ){
             if( $marks != null){
@@ -88,7 +95,7 @@ class resultsPageController extends Controller
             $max_subjects = null;
         }
 
-        return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subjects"=> $max_subjects,"higgest_marks"=>$higgest_marks ]);
+        return response()->view('test.results',["levels"=>$levels,"marks"=>$sendMarks,"higgest_subjects"=> $max_subjects,"higgest_marks"=>$higgest_marks,"qualification_recommendation"=>$qualification_recommendation ]);
         // return response()->json(["marks"=>$sendMarks]);
     }
     public function showTestResults(Request $req){
