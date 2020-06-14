@@ -21,7 +21,7 @@
     .first-letter-capital{
         text-transform: capitalize;
     }
-    
+
 </style>
 @section('content')
 
@@ -33,7 +33,7 @@
         <div class="container">
 
             <!-- Navbar brand -->
-            <img src="{{ url('/logos/dstc-named-bg.png ') }}" width="160" alt="" class="d-inline-block align-middle mr-2">
+            <img src="{{ url('/logos/cleared_logo.png ') }}" width="160" alt="" class="d-inline-block align-middle mr-2">
 
             <span class="navbar-brand font-weight-bold white-text"></span>
 
