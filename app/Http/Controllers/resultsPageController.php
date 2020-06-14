@@ -32,7 +32,7 @@ class resultsPageController extends Controller
         $qualification_recommendation = '';
 
         if( $req->cookie('s_qualification') ){
-            $qualification_recommendation = strcmp(trim($req->cookie('s_qualification')),"12th Science")==0 ? "Bachelors" : "Diploma";
+            $qualification_recommendation = strcmp(trim($req->cookie('s_qualification')),"12th Science A group")==0 ? "Bachelors" : "Diploma";
         }else{
             $qualification_recommendation = "It's in testing mode, please sign up first";
         }
