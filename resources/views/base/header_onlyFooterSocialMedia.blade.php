@@ -106,7 +106,7 @@
 @yield('main-content')
 
 {{--  <br class="mt-5">  --}}
-<div class="mt-5"></div>
+<div class="mt-4"></div>
 <!--Footer-->
 <footer class="page-footer font-small blue">
 
