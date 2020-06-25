@@ -23,6 +23,7 @@
     }
 
 </style>
+<title> DSTC </title>
 @section('content')
 
 <!--header-->
