@@ -22,7 +22,7 @@
                     <a href="#">
                         <div class="mask rgba-white-slight"></div>
                     </a>
-                    
+
                 </div>
 
                 <!--Card content-->
@@ -59,7 +59,7 @@
             questionSeries : [],
             app_id : '',
             obtainedSeries : [],
-            rawQuestionData : [],   
+            rawQuestionData : [],
 
         }
         var correctAns = {
@@ -80,7 +80,7 @@
     var temp = "";
     $("#cover").delegate("#optClick11, #optClick21, #optClick31, #optClick41","click",function(){
         temp = $(this).attr("id").slice(8);
-        
+
         $("#option"+temp).click();
     });
     $("#cover").delegate("#optClick12, #optClick22, #optClick32, #optClick42","click",function(){
@@ -101,34 +101,34 @@
     });
 
     $("#cover").delegate("#option11, #option21, #option31, #option41",  "click" ,function(){
-        $("#option11, #option21, #option31, #option41").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $("#option11, #option21, #option31, #option41").attr("class","fas fa-thumbs-up prefix red-text");
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[0] = $(this).attr("id").slice(0,7);
         {{--  console.log(correctAns[0]);  --}}
     });
 
     $("#cover").delegate("#option12, #option22, #option32, #option42",  "click" ,function(){
-        $("#option12, #option22, #option32, #option42").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $("#option12, #option22, #option32, #option42").attr("class","fas fa-thumbs-up prefix red-text");
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[1] = $(this).attr("id").slice(0,7);
         {{--  console.log(correctAns[1]);  --}}
     });
-    
+
     $("#cover").delegate("#option13, #option23, #option33, #option43",  "click" ,function(){
-        $("#option13, #option23, #option33, #option43").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $("#option13, #option23, #option33, #option43").attr("class","fas fa-thumbs-up prefix red-text");
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
-        correctAns[2] = $(this).attr("id").slice(0,7); 
+        correctAns[2] = $(this).attr("id").slice(0,7);
 
     });
-    
+
     $("#cover").delegate("#option14, #option24, #option34, #option44",  "click" ,function(){
-        $("#option14, #option24, #option34, #option44").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $("#option14, #option24, #option34, #option44").attr("class","fas fa-thumbs-up prefix red-text");
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[3] = $(this).attr("id").slice(0,7);
     });
 
     $("#cover").delegate("#option15, #option25, #option35, #option45",  "click" ,function(){
-        $("#option15, #option25, #option35, #option45").attr("class","fas fa-thumbs-up prefix red-text"); 
+        $("#option15, #option25, #option35, #option45").attr("class","fas fa-thumbs-up prefix red-text");
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns[4] = $(this).attr("id").slice(0,7);
     });
@@ -141,8 +141,8 @@
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
           });
-          
-    
+
+
     function loadAppQuestions(){
         correctAns = [];
         logic.obtainedSeries = [];
@@ -161,7 +161,7 @@
                 $.each(data.questionSeries, function(index,value){
                     logic.obtainedSeries.push( value[0] );
                 });
-                
+
                 console.log("series obtained");
                 console.log(logic.obtainedSeries);
 
@@ -172,8 +172,8 @@
 
                 $("#cover").load(
                     "{{ env('APP_URL') }}/compile/app/questions",
-                    {   
-                        Logic    :   logic.obtainedSeries , 
+                    {
+                        Logic    :   logic.obtainedSeries ,
                     },
                     function(data){
 
@@ -191,9 +191,9 @@
             if( marks[ logic.rawQuestionData[index][1] ] == null){
                 marks [ logic.rawQuestionData[index][1] ] = 0;
             }// no else part
-            
-            marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;  
-             
+
+            marks[ logic.rawQuestionData[index][1] ] += logic.rawQuestionData[index][2] == correctAns[index] ? 1 : 0;
+
             //console.log("correct ans");
             console.log("correct ans = " + correctAns[index]);
         });
@@ -203,14 +203,14 @@
         console.log("Below is the marks, note first value indicates unqiue level ID");
         console.log( marks );
         loadAppQuestions();
-        
+
     }
     function endMcq(){
         console.log("App_id = " + logic.app_id);
         $("#cover").load(
                     "{{ env('APP_URL') }}/compile/app/result",
-                    {   
-                        Marks    :   marks , 
+                    {
+                        Marks    :   marks ,
                         app_id : logic.app_id,
                     },
                     function(data){
@@ -218,11 +218,11 @@
                     });
     }
 
-    
+
 
     {{--  $("#cover").delegate("#optInp1, #optInp2, #optInp2, #optInp3,",  "click" ,function(){
-        $("#option1, #option2, #option3, #option4").attr("class","fas fa-thumbs-up prefix red-text"); 
-        
+        $("#option1, #option2, #option3, #option4").attr("class","fas fa-thumbs-up prefix red-text");
+
         $(this).attr("class","fas fa-thumbs-up prefix green-text");
         correctAns = $(this).attr("id");
     });  --}}
@@ -236,7 +236,7 @@
         if(logic.app_id !== null){
             logic.app_id = $(this).val();
         }
-        loadAppQuestions(); 
+        loadAppQuestions();
     });
 
 

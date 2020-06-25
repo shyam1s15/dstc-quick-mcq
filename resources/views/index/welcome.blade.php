@@ -135,8 +135,7 @@
                         <!--Title-->
                         <h4 class="card-title cust-dstc-nav-color">DSTC</h4>
                         <!--Text-->
-                        <p class="card-text">Here in the DSTC, we respect the knowledge, Our goals are straight for
-                            sharing and caring of knowledge</p>
+                        <p class="card-text">For us, EDUCATION is a TRADITION</p>
                     </div>
                 </div>
             </div>

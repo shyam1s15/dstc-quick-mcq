@@ -192,11 +192,11 @@
                     <i class="fas fa-lightbulb yellow-text ml-2"></i>
                 </h4>
                 <!--Text-->
-                <p class="card-text" id="">Here in the DSTC, we respect the knowledge, Our goals
+                {{-- <p class="card-text" id="">Here in the DSTC, we respect the knowledge, Our goals
                     are
                     straight
                     for
-                    sharing and caring of knowledge</p>
+                    sharing and caring of knowledge</p> --}}
 
             </div>
 
